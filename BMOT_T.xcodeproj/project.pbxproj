@@ -18,7 +18,6 @@
 		4C513819272F941800BF1D5C /* BMOT_TUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C513818272F941800BF1D5C /* BMOT_TUITests.swift */; };
 		4C51381B272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51381A272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift */; };
 		4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D684272FA600003E1AA1 /* Pacifico-Regular.ttf */; };
-		4C54D686272FA63D003E1AA1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C513805272F941700BF1D5C /* Info.plist */; };
 		4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D68A27304428003E1AA1 /* Bassy.ttf */; };
 		5030A1801644BEC4ABB68CF2 /* Pods_BMOT_TTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */; };
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
@@ -319,7 +318,6 @@
 				4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */,
 				4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */,
 				4C513801272F941700BF1D5C /* Assets.xcassets in Resources */,
-				4C54D686272FA63D003E1AA1 /* Info.plist in Resources */,
 				4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

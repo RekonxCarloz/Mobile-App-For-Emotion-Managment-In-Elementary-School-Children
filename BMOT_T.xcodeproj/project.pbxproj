@@ -10,7 +10,6 @@
 		29AB6E8F68C9BA6DD5094D71 /* Pods_BMOT_T.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020788D54BEC4812972B7508 /* Pods_BMOT_T.framework */; };
 		4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F7272F940F00BF1D5C /* AppDelegate.swift */; };
 		4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */; };
-		4C5137FC272F940F00BF1D5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137FB272F940F00BF1D5C /* ViewController.swift */; };
 		4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5137FD272F940F00BF1D5C /* Main.storyboard */; };
 		4C513801272F941700BF1D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C513800272F941700BF1D5C /* Assets.xcassets */; };
 		4C513804272F941700BF1D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C513802272F941700BF1D5C /* LaunchScreen.storyboard */; };
@@ -19,6 +18,16 @@
 		4C51381B272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51381A272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift */; };
 		4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D684272FA600003E1AA1 /* Pacifico-Regular.ttf */; };
 		4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D68A27304428003E1AA1 /* Bassy.ttf */; };
+		4C9407C827318A830036805A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407C727318A830036805A /* Constants.swift */; };
+		4C9407CF27318B400036805A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407CE27318B400036805A /* HomeViewController.swift */; };
+		4C9407D127318B830036805A /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D027318B830036805A /* JuegosViewController.swift */; };
+		4C9407D327318B8F0036805A /* BmotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D227318B8F0036805A /* BmotViewController.swift */; };
+		4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D427318B9A0036805A /* StatsViewController.swift */; };
+		4C9407D727318BA70036805A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D627318BA70036805A /* ConfigViewController.swift */; };
+		4C9407D927318C650036805A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D827318C650036805A /* LoginViewController.swift */; };
+		4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DA27318C6F0036805A /* RegisterViewController.swift */; };
+		4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DD27318E320036805A /* ChooseProfileViewController.swift */; };
+		4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DF27318E590036805A /* CreateProfileViewController.swift */; };
 		5030A1801644BEC4ABB68CF2 /* Pods_BMOT_TTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */; };
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +56,6 @@
 		4C5137F4272F940F00BF1D5C /* BMOT_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMOT_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5137F7272F940F00BF1D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C5137FB272F940F00BF1D5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C5137FE272F940F00BF1D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C513800272F941700BF1D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C513803272F941700BF1D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +67,16 @@
 		4C51381A272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOT_TUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C54D684272FA600003E1AA1 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		4C54D68A27304428003E1AA1 /* Bassy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bassy.ttf; sourceTree = "<group>"; };
+		4C9407C727318A830036805A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4C9407CE27318B400036805A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4C9407D027318B830036805A /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
+		4C9407D227318B8F0036805A /* BmotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmotViewController.swift; sourceTree = "<group>"; };
+		4C9407D427318B9A0036805A /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		4C9407D627318BA70036805A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		4C9407D827318C650036805A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4C9407DA27318C6F0036805A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4C9407DD27318E320036805A /* ChooseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileViewController.swift; sourceTree = "<group>"; };
+		4C9407DF27318E590036805A /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_TTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA19BC27624F830EF0136C /* Pods-BMOT_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.release.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.release.xcconfig"; sourceTree = "<group>"; };
 		A187C92374E35FA6063C2380 /* Pods-BMOT_T-BMOT_TUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; path = "Target Support Files/Pods-BMOT_T-BMOT_TUITests/Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +156,7 @@
 				4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */,
 				4C513800272F941700BF1D5C /* Assets.xcassets */,
 				4C513805272F941700BF1D5C /* Info.plist */,
+				4C9407C727318A830036805A /* Constants.swift */,
 			);
 			path = BMOT_T;
 			sourceTree = "<group>";
@@ -171,7 +190,9 @@
 		4C54D68727303F3D003E1AA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C5137FB272F940F00BF1D5C /* ViewController.swift */,
+				4C9407C927318AB00036805A /* Tab Controllers */,
+				4C9407DC27318C740036805A /* Manage Account Controllers */,
+				4C9407E127318E630036805A /* Manage Profile Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +211,36 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4C9407C927318AB00036805A /* Tab Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C9407CE27318B400036805A /* HomeViewController.swift */,
+				4C9407D027318B830036805A /* JuegosViewController.swift */,
+				4C9407D227318B8F0036805A /* BmotViewController.swift */,
+				4C9407D427318B9A0036805A /* StatsViewController.swift */,
+				4C9407D627318BA70036805A /* ConfigViewController.swift */,
+			);
+			path = "Tab Controllers";
+			sourceTree = "<group>";
+		};
+		4C9407DC27318C740036805A /* Manage Account Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C9407D827318C650036805A /* LoginViewController.swift */,
+				4C9407DA27318C6F0036805A /* RegisterViewController.swift */,
+			);
+			path = "Manage Account Controllers";
+			sourceTree = "<group>";
+		};
+		4C9407E127318E630036805A /* Manage Profile Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C9407DD27318E320036805A /* ChooseProfileViewController.swift */,
+				4C9407DF27318E590036805A /* CreateProfileViewController.swift */,
+			);
+			path = "Manage Profile Controllers";
 			sourceTree = "<group>";
 		};
 		94C5C928EBE8A32A85E7455F /* Pods */ = {
@@ -446,9 +497,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5137FC272F940F00BF1D5C /* ViewController.swift in Sources */,
+				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
+				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
+				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,
+				4C9407CF27318B400036805A /* HomeViewController.swift in Sources */,
+				4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */,
+				4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */,
 				4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */,
+				4C9407D127318B830036805A /* JuegosViewController.swift in Sources */,
 				4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */,
+				4C9407C827318A830036805A /* Constants.swift in Sources */,
+				4C9407D327318B8F0036805A /* BmotViewController.swift in Sources */,
+				4C9407D727318BA70036805A /* ConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,25 @@
 //
 
 import Foundation
+import UIKit
 
 
 struct K{
+    static let appName = "🤖 BMOT 🤖"
     
     struct Segues{
-        let registerToChooseProfile = "RegisterToChooseProfile"
-        let loginToChooseProfile = "LoginToChooseProfile"
-        let chooseProfileToHome = "chooseProfileToHome"
-        let createProfileToHome = "createProfileToHome"
+        static let registerToChooseProfile = "RegisterToChooseProfile"
+        static let loginToChooseProfile = "LoginToChooseProfile"
+        static let chooseProfileToHome = "chooseProfileToHome"
+        static let createProfileToHome = "createProfileToHome"
+    }
+    
+    struct BrandColors{
+        static let green = UIColor.systemGreen
+        static let  orange = UIColor.systemOrange
+        static let red = UIColor.systemRed
+        static let pink = UIColor.systemPink
+        static let blue = UIColor.systemBlue
     }
     
 }

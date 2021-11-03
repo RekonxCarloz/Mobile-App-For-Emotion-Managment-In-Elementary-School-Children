@@ -29,7 +29,7 @@ public class DatabaseManager{
     ///     Username: usuario
     ///     Completion: llamada asincrona si la entrada en base de datos se ejecutó correctamente
     public func insertarUsuarioNuevo(with email: String, username: String, profesor: Int, completion: @escaping (Bool)->Void){
-        database.child(email.safeDatabaseKey()).setValue(["username": username]){ error, _ in
+        database.child(email.safeDatabaseKey()).setValue(["username": username, "profesor": profesor]){ error, _ in
             if error == nil {
                 completion(true)
                 return

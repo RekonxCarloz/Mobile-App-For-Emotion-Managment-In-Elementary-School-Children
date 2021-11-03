@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var isTeacher: UISwitch!
     @IBOutlet weak var registroBoton: UIButton!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfTextField: UITextField!
     private var professor: Int = 0
@@ -34,6 +33,8 @@ class RegisterViewController: UIViewController {
     
     // MARK: - Declaration of IBActions
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        userTextField.resignFirstResponder()
+        
         if isTeacher.isOn{
             professor = 1
         }
@@ -50,6 +51,8 @@ class RegisterViewController: UIViewController {
                 DispatchQueue.main.async {
                     if registro{
                         // Se registró correctamente
+                        print("REGISTRO EXITOSO")
+                        self.performSegue(withIdentifier: K.Segues.registerToChooseProfile, sender: self)
                     }else{
                         // Falló el registro
                     }
@@ -83,6 +86,7 @@ class RegisterViewController: UIViewController {
 
 
 extension RegisterViewController: UITextFieldDelegate{
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userTextField{
             emailTextField.becomeFirstResponder()
@@ -96,4 +100,5 @@ extension RegisterViewController: UITextFieldDelegate{
         }
         return true
     }
+    
 }

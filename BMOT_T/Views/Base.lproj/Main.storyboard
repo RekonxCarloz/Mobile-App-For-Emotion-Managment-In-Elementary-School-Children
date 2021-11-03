@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p0C-aZ-wu0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDu-VU-ubj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="height" constant="40" id="l91-wu-T3P"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-mF-pTM">
                                         <rect key="frame" x="10" y="654" width="354" height="50"/>
@@ -79,6 +79,9 @@
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesión"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOP-gU-buJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01k-Ev-QeG">
                                         <rect key="frame" x="44.5" y="714" width="285" height="30"/>
@@ -118,6 +121,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QNd-Ty-IcV"/>
                     <connections>
+                        <outlet property="emailUserTextField" destination="jbr-ch-zIK" id="mkV-vz-hve"/>
+                        <outlet property="passwordTextField" destination="en4-MU-WBb" id="3LQ-oC-9hy"/>
                         <segue destination="exo-2i-gPx" kind="show" identifier="LoginToChooseProfile" id="Ofd-z9-jyL"/>
                     </connections>
                 </viewController>
@@ -445,7 +450,7 @@
                                             <constraint firstAttribute="height" constant="45" id="bVY-sv-LTb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar contraseña*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-58-jzX">
                                         <rect key="frame" x="0.0" y="536" width="374" height="18"/>
@@ -461,7 +466,7 @@
                                             <constraint firstAttribute="height" constant="45" id="vOM-Xp-LdN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" smartInsertDeleteType="no"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Ju-uG-vZ7">
                                         <rect key="frame" x="0.0" y="629" width="374" height="30"/>
@@ -489,6 +494,9 @@
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Registrarme"/>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="hik-zk-y0x" eventType="touchUpInside" id="348-wW-0v2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -508,6 +516,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="BWy-G0-6Xo"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Jzz-RV-hfI" id="bah-G8-xWE"/>
+                        <outlet property="isTeacher" destination="xNM-8U-Jhh" id="zDw-Q5-pLB"/>
+                        <outlet property="passwordConfTextField" destination="rpZ-EJ-cvI" id="Tzu-Cm-Bel"/>
+                        <outlet property="passwordTextField" destination="j2e-LJ-iaQ" id="nVg-z5-Mfl"/>
+                        <outlet property="registroBoton" destination="oI3-EW-fwj" id="seP-I1-qhi"/>
+                        <outlet property="userTextField" destination="a4E-bN-hGN" id="1Qb-Zm-A1X"/>
                         <segue destination="exo-2i-gPx" kind="show" identifier="RegisterToChooseProfile" id="zta-Ot-bZa"/>
                     </connections>
                 </viewController>
@@ -723,7 +737,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ghM-m6-S00"/>
-        <segue reference="Ofd-z9-jyL"/>
+        <segue reference="zta-Ot-bZa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="550" height="999"/>

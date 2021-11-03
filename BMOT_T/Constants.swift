@@ -10,4 +10,11 @@ import Foundation
 
 struct K{
     
+    struct Segues{
+        let registerToChooseProfile = "RegisterToChooseProfile"
+        let loginToChooseProfile = "LoginToChooseProfile"
+        let chooseProfileToHome = "chooseProfileToHome"
+        let createProfileToHome = "createProfileToHome"
+    }
+    
 }

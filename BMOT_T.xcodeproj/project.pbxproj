@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		29AB6E8F68C9BA6DD5094D71 /* Pods_BMOT_T.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020788D54BEC4812972B7508 /* Pods_BMOT_T.framework */; };
+		4C5016902731CA1000F14F65 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50168F2731CA1000F14F65 /* AuthManager.swift */; };
+		4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016912731CD5400F14F65 /* DatabaseManager.swift */; };
+		4C5016942731CD8D00F14F65 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016932731CD8D00F14F65 /* extensions.swift */; };
+		4C5016962731D34000F14F65 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016952731D34000F14F65 /* ProfileSettings.swift */; };
 		4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F7272F940F00BF1D5C /* AppDelegate.swift */; };
 		4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */; };
 		4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5137FD272F940F00BF1D5C /* Main.storyboard */; };
@@ -54,6 +58,10 @@
 		020788D54BEC4812972B7508 /* Pods_BMOT_T.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_T.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DE70574AAE1CF1BF49E1C7 /* Pods-BMOT_T.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.debug.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.debug.xcconfig"; sourceTree = "<group>"; };
 		457C5FCB792F27175489BA62 /* Pods-BMOT_TTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_TTests.release.xcconfig"; path = "Target Support Files/Pods-BMOT_TTests/Pods-BMOT_TTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C50168F2731CA1000F14F65 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		4C5016912731CD5400F14F65 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4C5016932731CD8D00F14F65 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		4C5016952731D34000F14F65 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		4C5137F4272F940F00BF1D5C /* BMOT_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMOT_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5137F7272F940F00BF1D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +133,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C50168E2731C9F200F14F65 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4C50168F2731CA1000F14F65 /* AuthManager.swift */,
+				4C5016912731CD5400F14F65 /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		4C5137EB272F940F00BF1D5C = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +167,7 @@
 		4C5137F6272F940F00BF1D5C /* BMOT_T */ = {
 			isa = PBXGroup;
 			children = (
+				4C50168E2731C9F200F14F65 /* Database */,
 				4C54D68927303F65003E1AA1 /* Models */,
 				4C54D68827303F51003E1AA1 /* Views */,
 				4C54D68727303F3D003E1AA1 /* Controllers */,
@@ -160,6 +178,7 @@
 				4C9407E2273191BA0036805A /* GoogleService-Info.plist */,
 				4C513805272F941700BF1D5C /* Info.plist */,
 				4C9407C727318A830036805A /* Constants.swift */,
+				4C5016932731CD8D00F14F65 /* extensions.swift */,
 			);
 			path = BMOT_T;
 			sourceTree = "<group>";
@@ -212,6 +231,7 @@
 		4C54D68927303F65003E1AA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4C5016952731D34000F14F65 /* ProfileSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -503,9 +523,13 @@
 			files = (
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
+				4C5016962731D34000F14F65 /* ProfileSettings.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,
+				4C5016902731CA1000F14F65 /* AuthManager.swift in Sources */,
 				4C9407CF27318B400036805A /* HomeViewController.swift in Sources */,
+				4C5016942731CD8D00F14F65 /* extensions.swift in Sources */,
 				4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */,
+				4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */,
 				4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */,
 				4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */,
 				4C9407D127318B830036805A /* JuegosViewController.swift in Sources */,

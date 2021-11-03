@@ -11,7 +11,7 @@
 		4C5016902731CA1000F14F65 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50168F2731CA1000F14F65 /* AuthManager.swift */; };
 		4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016912731CD5400F14F65 /* DatabaseManager.swift */; };
 		4C5016942731CD8D00F14F65 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016932731CD8D00F14F65 /* extensions.swift */; };
-		4C5016962731D34000F14F65 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016952731D34000F14F65 /* ProfileSettings.swift */; };
+		4C5016962731D34000F14F65 /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016952731D34000F14F65 /* ProfileList.swift */; };
 		4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F7272F940F00BF1D5C /* AppDelegate.swift */; };
 		4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */; };
 		4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5137FD272F940F00BF1D5C /* Main.storyboard */; };
@@ -33,6 +33,8 @@
 		4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DD27318E320036805A /* ChooseProfileViewController.swift */; };
 		4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DF27318E590036805A /* CreateProfileViewController.swift */; };
 		4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9407E2273191BA0036805A /* GoogleService-Info.plist */; };
+		4C9F9E592732E49400E904EF /* CustomProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F9E582732E49400E904EF /* CustomProfileCell.swift */; };
+		4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE81FF12733143F00F1943E /* ProfileSettings.swift */; };
 		5030A1801644BEC4ABB68CF2 /* Pods_BMOT_TTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */; };
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +63,7 @@
 		4C50168F2731CA1000F14F65 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		4C5016912731CD5400F14F65 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C5016932731CD8D00F14F65 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		4C5016952731D34000F14F65 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
+		4C5016952731D34000F14F65 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		4C5137F4272F940F00BF1D5C /* BMOT_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMOT_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5137F7272F940F00BF1D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C5137F9272F940F00BF1D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		4C9407DD27318E320036805A /* ChooseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407DF27318E590036805A /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407E2273191BA0036805A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C9F9E582732E49400E904EF /* CustomProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileCell.swift; sourceTree = "<group>"; };
+		4CE81FF12733143F00F1943E /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_TTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA19BC27624F830EF0136C /* Pods-BMOT_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.release.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.release.xcconfig"; sourceTree = "<group>"; };
 		A187C92374E35FA6063C2380 /* Pods-BMOT_T-BMOT_TUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; path = "Target Support Files/Pods-BMOT_T-BMOT_TUITests/Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 			children = (
 				4C513802272F941700BF1D5C /* LaunchScreen.storyboard */,
 				4C5137FD272F940F00BF1D5C /* Main.storyboard */,
+				4C9F9E582732E49400E904EF /* CustomProfileCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,7 +236,8 @@
 		4C54D68927303F65003E1AA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4C5016952731D34000F14F65 /* ProfileSettings.swift */,
+				4C5016952731D34000F14F65 /* ProfileList.swift */,
+				4CE81FF12733143F00F1943E /* ProfileSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -523,7 +529,7 @@
 			files = (
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
-				4C5016962731D34000F14F65 /* ProfileSettings.swift in Sources */,
+				4C5016962731D34000F14F65 /* ProfileList.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,
 				4C5016902731CA1000F14F65 /* AuthManager.swift in Sources */,
 				4C9407CF27318B400036805A /* HomeViewController.swift in Sources */,
@@ -532,8 +538,10 @@
 				4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */,
 				4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */,
 				4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */,
+				4C9F9E592732E49400E904EF /* CustomProfileCell.swift in Sources */,
 				4C9407D127318B830036805A /* JuegosViewController.swift in Sources */,
 				4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */,
+				4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */,
 				4C9407C827318A830036805A /* Constants.swift in Sources */,
 				4C9407D327318B8F0036805A /* BmotViewController.swift in Sources */,
 				4C9407D727318BA70036805A /* ConfigViewController.swift in Sources */,

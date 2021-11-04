@@ -8,22 +8,73 @@
 import UIKit
 
 class CreateProfileViewController: UIViewController {
-
+    
+    //MARK: Variables
+    let avatars = ["dolphinMascot", "eyesMascot", "hairyMascot", "octopusMascot", "seriousMascot"]
+    var color:String?
+    
+    @IBOutlet weak var greenColorButton: UIButton!
+    @IBOutlet weak var redColorButton: UIButton!
+    @IBOutlet weak var orangeColorButton: UIButton!
+    @IBOutlet weak var pinkColorButton: UIButton!
+    @IBOutlet weak var blueColorbutton: UIButton!
+    
+    
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        avatar.layer.cornerRadius = 40
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        greenColorButton.alpha = 0.4
+        orangeColorButton.alpha = 0.4
+        redColorButton.alpha = 0.4
+        pinkColorButton.alpha = 0.4
+        blueColorbutton.alpha = 0.4
+    }
+    //MARK: - Funciones IBActions
+    @IBAction func selectColorButton(_ sender: UIButton) {
+        greenColorButton.isSelected = false
+        orangeColorButton.isSelected = false
+        redColorButton.isSelected = false
+        pinkColorButton.isSelected = false
+        blueColorbutton.isSelected = false
+        greenColorButton.alpha = 0.4
+        orangeColorButton.alpha = 0.4
+        redColorButton.alpha = 0.4
+        pinkColorButton.alpha = 0.4
+        blueColorbutton.alpha = 0.4
+        sender.isSelected = true
+        sender.alpha = 1
+    }
+}
 
-        // Do any additional setup after loading the view.
+
+
+
+
+
+
+
+
+// MARK: - PickerViewDelegate & DataSource
+extension CreateProfileViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return avatars.count
     }
-    */
-
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return avatars[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        avatar.image = UIImage(named: avatars[row])
+    }
+    
 }

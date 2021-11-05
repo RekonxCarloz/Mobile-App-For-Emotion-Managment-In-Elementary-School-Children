@@ -11,14 +11,17 @@ class CreateProfileViewController: UIViewController {
     
     //MARK: Variables
     let avatars = ["dolphinMascot", "eyesMascot", "hairyMascot", "octopusMascot", "seriousMascot"]
-    var color:String?
+    var colorSelected = ""
+    var avatarSelected = ""
     
+    
+    @IBOutlet weak var edadTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var greenColorButton: UIButton!
     @IBOutlet weak var redColorButton: UIButton!
     @IBOutlet weak var orangeColorButton: UIButton!
     @IBOutlet weak var pinkColorButton: UIButton!
     @IBOutlet weak var blueColorbutton: UIButton!
-    
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -48,7 +51,19 @@ class CreateProfileViewController: UIViewController {
         blueColorbutton.alpha = 0.4
         sender.isSelected = true
         sender.alpha = 1
+        colorSelected = sender.titleLabel?.text ?? "no hay valor"
+        print(colorSelected)
     }
+    
+    
+    @IBAction func crearPerfilPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: K.Segues.createProfileToHome, sender: self)
+        
+    }
+    
+    
+    
 }
 
 
@@ -75,6 +90,8 @@ extension CreateProfileViewController: UIPickerViewDelegate, UIPickerViewDataSou
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         avatar.image = UIImage(named: avatars[row])
+        avatarSelected = avatars[row]
+        print(avatarSelected)
     }
     
 }

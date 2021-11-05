@@ -29,7 +29,7 @@ class ConfigViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -47,7 +47,11 @@ class ConfigViewController: UIViewController {
                 DispatchQueue.main.async {
                     if success {
                         // Se regresa a la vista de Login en caso de que todo funcionó correctamente
-                        self.navigationController?.popToRootViewController(animated: true)
+                        let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController
+                        loginVC?.modalPresentationStyle = .fullScreen
+                        //Mostrar el view controller
+                        self.present(loginVC!, animated: true, completion: nil)
+                        print("Logout exitoso")
                     }
                     else{
                         // Error en cerrar sesión
@@ -64,6 +68,9 @@ class ConfigViewController: UIViewController {
         present(alertaCierre, animated: true)
         
     }
+    
+    
+    
 }
 
 extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {

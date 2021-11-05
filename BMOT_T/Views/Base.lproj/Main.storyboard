@@ -17,7 +17,7 @@
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,10 +276,10 @@
                                 <rect key="frame" x="20" y="88" width="374" height="674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mascot5" translatesAutoresizingMaskIntoConstraints="NO" id="B7Q-HX-zjQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="99.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="146"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear perfil nuevo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syf-3i-hyZ">
-                                        <rect key="frame" x="0.0" y="119.5" width="374" height="116.5"/>
+                                        <rect key="frame" x="0.0" y="166" width="374" height="70"/>
                                         <fontDescription key="fontDescription" name="BassyRegular" family="Bassy" pointSize="50"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
@@ -367,7 +367,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="34.5" height="31.5"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="systemGreen">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="selectColorButton:" destination="c3h-SW-gXY" eventType="touchUpInside" id="rxl-mr-fr5"/>
                                                                 </connections>
@@ -376,7 +378,9 @@
                                                                 <rect key="frame" x="42.5" y="0.0" width="34.5" height="31.5"/>
                                                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="systemOrange">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="selectColorButton:" destination="c3h-SW-gXY" eventType="touchUpInside" id="fW7-8w-o8t"/>
                                                                 </connections>
@@ -385,16 +389,20 @@
                                                                 <rect key="frame" x="85" y="0.0" width="34" height="31.5"/>
                                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="systemRed">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="selectColorButton:" destination="c3h-SW-gXY" eventType="touchUpInside" id="6t8-Ta-Cjb"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q74-oT-p6D">
                                                                 <rect key="frame" x="127" y="0.0" width="34.5" height="31.5"/>
-                                                                <color key="tintColor" red="1" green="0.1764705882" blue="0.80778732070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" systemColor="systemPinkColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="systemPink">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="selectColorButton:" destination="c3h-SW-gXY" eventType="touchUpInside" id="Xiq-5v-uNP"/>
                                                                 </connections>
@@ -403,7 +411,9 @@
                                                                 <rect key="frame" x="169.5" y="0.0" width="34.5" height="31.5"/>
                                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <buttonConfiguration key="configuration" style="filled"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="systemBlue">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="selectColorButton:" destination="c3h-SW-gXY" eventType="touchUpInside" id="AVa-F4-Eo5"/>
                                                                 </connections>
@@ -422,6 +432,9 @@
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Crear perfil"/>
+                                        <connections>
+                                            <action selector="crearPerfilPressed:" destination="c3h-SW-gXY" eventType="touchUpInside" id="vyB-BO-TH9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -443,7 +456,9 @@
                     <connections>
                         <outlet property="avatar" destination="eAg-HD-rtT" id="V3a-9f-lUj"/>
                         <outlet property="blueColorbutton" destination="hmH-5V-weN" id="9Tl-AP-bAw"/>
+                        <outlet property="edadTextField" destination="sQ0-NG-zj2" id="Dn2-ey-whk"/>
                         <outlet property="greenColorButton" destination="ZEg-b6-kzm" id="Aq5-rS-ZSL"/>
+                        <outlet property="nameTextField" destination="iGg-rh-8EY" id="7KI-DP-I9r"/>
                         <outlet property="orangeColorButton" destination="Pb5-IO-qvq" id="oFs-0t-fpe"/>
                         <outlet property="pickerView" destination="eor-Ow-G5W" id="fNA-lP-ban"/>
                         <outlet property="pinkColorButton" destination="q74-oT-p6D" id="2sV-UH-EBy"/>
@@ -639,7 +654,7 @@
         <!--TabBarController-->
         <scene sceneID="Nos-dX-g5R">
             <objects>
-                <tabBarController title="TabBarController" id="p0C-aZ-wu0" sceneMemberID="viewController">
+                <tabBarController title="TabBarController" id="p0C-aZ-wu0" customClass="TabBarController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rvg-TH-hv0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5bA-F6-mgV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -817,6 +832,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDu-VU-ubj" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7rt-gI-Jee"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Row-wz-rrE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

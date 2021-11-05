@@ -34,6 +34,7 @@
 		4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DF27318E590036805A /* CreateProfileViewController.swift */; };
 		4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9407E2273191BA0036805A /* GoogleService-Info.plist */; };
 		4C9F9E592732E49400E904EF /* CustomProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F9E582732E49400E904EF /* CustomProfileCell.swift */; };
+		4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD312182734438C00CDFE32 /* TabBarController.swift */; };
 		4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE81FF12733143F00F1943E /* ProfileSettings.swift */; };
 		5030A1801644BEC4ABB68CF2 /* Pods_BMOT_TTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */; };
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
@@ -90,6 +91,7 @@
 		4C9407DF27318E590036805A /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407E2273191BA0036805A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C9F9E582732E49400E904EF /* CustomProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileCell.swift; sourceTree = "<group>"; };
+		4CD312182734438C00CDFE32 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4CE81FF12733143F00F1943E /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_TTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA19BC27624F830EF0136C /* Pods-BMOT_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.release.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				4C9407D227318B8F0036805A /* BmotViewController.swift */,
 				4C9407D427318B9A0036805A /* StatsViewController.swift */,
 				4C9407D627318BA70036805A /* ConfigViewController.swift */,
+				4CD312182734438C00CDFE32 /* TabBarController.swift */,
 			);
 			path = "Tab Controllers";
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
+				4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
 				4C5016962731D34000F14F65 /* ProfileList.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,

@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateProfileViewController: UIViewController {
+    
+    
+    var ref = Database.database().reference()
     
     //MARK: Variables
     let avatars = ["dolphinMascot", "eyesMascot", "hairyMascot", "octopusMascot", "seriousMascot"]
@@ -57,8 +61,24 @@ class CreateProfileViewController: UIViewController {
     
     
     @IBAction func crearPerfilPressed(_ sender: UIButton) {
+        if let name = nameTextField.text, let edad = edadTextField.text{
+            DatabaseManager.shared.insertarPerfilNuevo(with: name, edad: Int(edad) ?? 0, color: colorSelected, avatar: avatarSelected){ success in
+                if success{
+                    DispatchQueue.main.async{
+                        self.performSegue(withIdentifier: K.Segues.createProfileToHome, sender: self)
+                    }
+                }else{
+                    let alert = UIAlertController(title: "Error", message: "No fue posible crear perfil", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cerrar", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
         
-        performSegue(withIdentifier: K.Segues.createProfileToHome, sender: self)
+        
+        
+        
+        
         
     }
     
@@ -91,7 +111,6 @@ extension CreateProfileViewController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         avatar.image = UIImage(named: avatars[row])
         avatarSelected = avatars[row]
-        print(avatarSelected)
     }
     
 }

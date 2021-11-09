@@ -33,8 +33,9 @@
 		4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DD27318E320036805A /* ChooseProfileViewController.swift */; };
 		4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DF27318E590036805A /* CreateProfileViewController.swift */; };
 		4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9407E2273191BA0036805A /* GoogleService-Info.plist */; };
-		4C9F9E592732E49400E904EF /* CustomProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F9E582732E49400E904EF /* CustomProfileCell.swift */; };
 		4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD312182734438C00CDFE32 /* TabBarController.swift */; };
+		4CD3121E27397E1000CDFE32 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */; };
+		4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */; };
 		4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE81FF12733143F00F1943E /* ProfileSettings.swift */; };
 		5030A1801644BEC4ABB68CF2 /* Pods_BMOT_TTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */; };
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
@@ -90,8 +91,9 @@
 		4C9407DD27318E320036805A /* ChooseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407DF27318E590036805A /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407E2273191BA0036805A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4C9F9E582732E49400E904EF /* CustomProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileCell.swift; sourceTree = "<group>"; };
 		4CD312182734438C00CDFE32 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		4CE81FF12733143F00F1943E /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_TTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA19BC27624F830EF0136C /* Pods-BMOT_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.release.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,7 +232,8 @@
 			children = (
 				4C513802272F941700BF1D5C /* LaunchScreen.storyboard */,
 				4C5137FD272F940F00BF1D5C /* Main.storyboard */,
-				4C9F9E582732E49400E904EF /* CustomProfileCell.swift */,
+				4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */,
+				4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				4C513804272F941700BF1D5C /* LaunchScreen.storyboard in Resources */,
 				4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */,
 				4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */,
+				4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */,
 				4C513801272F941700BF1D5C /* Assets.xcassets in Resources */,
 				4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */,
 				4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */,
@@ -542,12 +546,12 @@
 				4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */,
 				4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */,
 				4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */,
-				4C9F9E592732E49400E904EF /* CustomProfileCell.swift in Sources */,
 				4C9407D127318B830036805A /* JuegosViewController.swift in Sources */,
 				4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */,
 				4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */,
 				4C9407C827318A830036805A /* Constants.swift in Sources */,
 				4C9407D327318B8F0036805A /* BmotViewController.swift in Sources */,
+				4CD3121E27397E1000CDFE32 /* ProfileCollectionViewCell.swift in Sources */,
 				4C9407D727318BA70036805A /* ConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

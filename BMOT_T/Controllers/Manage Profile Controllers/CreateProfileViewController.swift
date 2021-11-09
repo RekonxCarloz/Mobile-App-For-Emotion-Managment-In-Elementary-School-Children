@@ -35,11 +35,11 @@ class CreateProfileViewController: UIViewController {
         avatar.layer.cornerRadius = 40
         pickerView.delegate = self
         pickerView.dataSource = self
-        greenColorButton.alpha = 0.4
-        orangeColorButton.alpha = 0.4
-        redColorButton.alpha = 0.4
-        pinkColorButton.alpha = 0.4
-        blueColorbutton.alpha = 0.4
+        greenColorButton.alpha = 0.5
+        orangeColorButton.alpha = 0.5
+        redColorButton.alpha = 0.5
+        pinkColorButton.alpha = 0.5
+        blueColorbutton.alpha = 0.5
     }
     //MARK: - Funciones IBActions
     @IBAction func selectColorButton(_ sender: UIButton) {
@@ -48,14 +48,14 @@ class CreateProfileViewController: UIViewController {
         redColorButton.isSelected = false
         pinkColorButton.isSelected = false
         blueColorbutton.isSelected = false
-        greenColorButton.alpha = 0.4
-        orangeColorButton.alpha = 0.4
-        redColorButton.alpha = 0.4
-        pinkColorButton.alpha = 0.4
-        blueColorbutton.alpha = 0.4
+        greenColorButton.alpha = 0.5
+        orangeColorButton.alpha = 0.5
+        redColorButton.alpha = 0.5
+        pinkColorButton.alpha = 0.5
+        blueColorbutton.alpha = 0.5
         sender.isSelected = true
         sender.alpha = 1
-        colorSelected = sender.titleLabel?.text ?? "no hay valor"
+        colorSelected = sender.titleLabel?.text ?? "No se elegió color"
         print(colorSelected)
     }
     

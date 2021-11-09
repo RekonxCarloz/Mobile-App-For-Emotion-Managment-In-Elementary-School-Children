@@ -6,24 +6,71 @@
 //
 
 import UIKit
+import Firebase
 
 class ChooseProfileViewController: UIViewController {
+    
+    var ref = Database.database().reference()
     
     //MARK: - Declaración de IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var listaPerfiles:[ProfileList] = [ProfileList(nombre: "Carlos", avatar: "seriousMascot")]
     
-    var listaPerfiles:[ProfileList] = []
-    
+    //MARK: - viewWillAppear()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 170, height: 170)
+        collectionView.collectionViewLayout = layout
+        collectionView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellWithReuseIdentifier: K.cellIdentifier)
+        collectionView.layer.backgroundColor = .none
+        
         navigationItem.hidesBackButton = true
+        loadData()
+    }
+    
+    
+    
+    // MARK: - Load Data func
+    
+    private func loadData(){
         
-        
-        
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            ref.child(userEmail).child("perfiles").observe(DataEventType.value, with: { snapshot in
+                
+                self.listaPerfiles = []
+                
+                print("----------*****-----------")
+                
+                for child in snapshot.children{
+                    
+                    let snap = child as! DataSnapshot
+                    let dict = snap.value as! [String: Any]
+                    let name = dict["nombre"] as? String ?? ""
+                    let avatar = dict["avatar"] as? String ?? ""
+                    
+                    let newProfile = ProfileList(nombre: name, avatar: avatar)
+                    self.listaPerfiles.append(newProfile)
+                }
+                print(self.listaPerfiles)
+                print(self.collectionView!)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                print("----------*****-----------")
+            })
+        }
         
     }
     
@@ -43,10 +90,10 @@ class ChooseProfileViewController: UIViewController {
             }
         })
     }
-
+    
 }
 
-extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listaPerfiles.count
     }
@@ -55,11 +102,16 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
         
         let perfil = listaPerfiles[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellProfile", for: indexPath) as! CustomProfileCell
-        cell.nameProfile.text = perfil.nombre
-        cell.avatarImage.image = perfil.avatar
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.cellIdentifier, for: indexPath) as! ProfileCollectionViewCell
+        cell.nameProfile.setTitle(perfil.nombre, for: .normal)
+        cell.profilePicture.image = UIImage(named: perfil.avatar)
+        
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 170, height: 170)
     }
     
     

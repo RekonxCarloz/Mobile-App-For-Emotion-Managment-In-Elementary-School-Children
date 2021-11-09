@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct ProfileSettings{
-    let name: String
-    let age: Int
-    let avatar: UIImage
-    let color: UIColor
+    let avatar: String
+    let color: String
+    let edad: Int
+    let nombre: String
 }

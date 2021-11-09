@@ -30,7 +30,7 @@ public class DatabaseManager{
     ///     Username: usuario
     ///     Completion: llamada asincrona si la entrada en base de datos se ejecutó correctamente
     public func insertarUsuarioNuevo(with email: String, username: String, profesor: Int, completion: @escaping (Bool)->Void){
-        database.child(email.safeDatabaseKey()).setValue(["username": username, "profesor": profesor, "perfiles": []]){ error, _ in
+        database.child(email.safeDatabaseKey()).setValue(["username": username, "profesor": profesor]){ error, _ in
             if error == nil {
                 completion(true)
                 return
@@ -53,7 +53,7 @@ public class DatabaseManager{
                     return
                 }
                 else{
-                    print("-------------------------------------- El error es: \(error?.localizedDescription)")
+                    print("El error es: \(error!)")
                     completion(false)
                     return
                 }
@@ -62,5 +62,26 @@ public class DatabaseManager{
         
         
     }
+    
+    public func getProfiles(completion: @escaping (Result<[[String: String]], Error>) -> Void){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            database.child(userEmail).child("perfiles").observe(.value, with: { snapshot in
+                guard let value = snapshot.value as? [[String: String]] else{
+                    completion(.failure(DatabaseError.failedToFet))
+                    return
+                }
+                print("----------------------------------*******-------------------------------")
+                print(value)
+                print("----------------------------------*******-------------------------------")
+                
+                completion(.success(value))
+            })
+        }
+    }
+    
+    public enum DatabaseError: Error{
+        case failedToFet
+    }
+    
 
 }

@@ -11,20 +11,14 @@ import UIKit
 
 struct K{
     static let appName = "🤖 BMOT 🤖"
+    static let cellIdentifier = "profileCell"
+    static let cellNibName = "ProfileCollectionViewCell"
     
     struct Segues{
         static let registerToChooseProfile = "RegisterToChooseProfile"
         static let loginToChooseProfile = "LoginToChooseProfile"
         static let chooseProfileToHome = "chooseProfileToHome"
         static let createProfileToHome = "createProfileToHome"
-    }
-    
-    struct BrandColors{
-        static let green = UIColor.systemGreen
-        static let  orange = UIColor.systemOrange
-        static let red = UIColor.systemRed
-        static let pink = UIColor.systemPink
-        static let blue = UIColor.systemBlue
     }
     
 }

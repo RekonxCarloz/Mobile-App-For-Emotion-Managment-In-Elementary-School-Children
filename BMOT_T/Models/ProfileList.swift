@@ -9,6 +9,5 @@ import UIKit
 
 struct ProfileList{
     let nombre: String
-    let color: UIColor
-    let avatar: UIImage
+    let avatar: String
 }

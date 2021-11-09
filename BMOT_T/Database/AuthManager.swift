@@ -55,9 +55,9 @@ public class AuthManager{
     }
     
     public func loginUsuario(username: String?, email: String?, password: String, completion: @escaping (Bool) -> Void){
-        if let email = email{
+        if let emailLogin = email{
             // login con email
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            Auth.auth().signIn(withEmail: emailLogin, password: password) { authResult, error in
                 guard authResult != nil, error == nil else{
                     completion(false)
                     return
@@ -66,7 +66,7 @@ public class AuthManager{
             }
         }
         else if let username = username{
-            // login con username
+            print(username)
             
         }
     }

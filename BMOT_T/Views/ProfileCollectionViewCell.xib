@@ -34,9 +34,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Nombre">
                                     <fontDescription key="titleFontDescription" name="BassyRegular" family="Bassy" pointSize="40"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="accessProfilePressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="P4Q-mc-t0i"/>
-                                </connections>
                             </button>
                         </subviews>
                     </stackView>

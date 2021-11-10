@@ -11,8 +11,4 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameProfile: UIButton!
-
-    @IBAction func accessProfilePressed(_ sender: UIButton) {
-        
-    }
 }

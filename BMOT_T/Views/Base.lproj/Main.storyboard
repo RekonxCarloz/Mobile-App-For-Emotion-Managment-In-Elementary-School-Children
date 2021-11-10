@@ -588,10 +588,10 @@
             </objects>
             <point key="canvasLocation" x="-716" y="-635"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--inicioTab-->
         <scene sceneID="7rS-lI-ESu">
             <objects>
-                <navigationController id="e3z-cK-KTd" sceneMemberID="viewController">
+                <navigationController title="inicioTab" id="e3z-cK-KTd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="ZLR-BE-yP0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dvd-gL-ggL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -603,7 +603,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfb-6L-GbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1616" y="1613"/>
+            <point key="canvasLocation" x="-1925" y="1491"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="Nos-dX-g5R">
@@ -772,14 +772,26 @@
                     <view key="view" contentMode="scaleToFill" id="SHX-Yb-OM4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-3R-xFd">
+                                <rect key="frame" x="143" y="415" width="129" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BM0-57-fZ3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="qki-bg-5kk"/>
+                    <connections>
+                        <outlet property="label" destination="3d0-3R-xFd" id="Brt-92-otf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZT-qV-fLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1617" y="2296"/>
+            <point key="canvasLocation" x="-1617.3913043478262" y="2295.5357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2hC-Dh-hDm">

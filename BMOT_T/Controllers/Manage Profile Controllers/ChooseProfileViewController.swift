@@ -17,12 +17,7 @@ class ChooseProfileViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var listaPerfiles:[ProfileList] = [ProfileList(nombre: "Carlos", avatar: "seriousMascot")]
-    
-    //MARK: - viewWillAppear()
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+    var nameToProfile: String?
     
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
@@ -38,6 +33,8 @@ class ChooseProfileViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         loadData()
+        
+        
     }
     
     
@@ -91,6 +88,8 @@ class ChooseProfileViewController: UIViewController {
         })
     }
     
+    
+    
 }
 
 extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -105,7 +104,7 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.cellIdentifier, for: indexPath) as! ProfileCollectionViewCell
         cell.nameProfile.setTitle(perfil.nombre, for: .normal)
         cell.profilePicture.image = UIImage(named: perfil.avatar)
-        
+        cell.nameProfile.addTarget(self, action: #selector(homeView), for: .touchUpInside)
         
         return cell
     }
@@ -114,5 +113,19 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
         return CGSize(width: 170, height: 170)
     }
     
+    @objc func homeView(sender: UIButton){
+        
+        nameToProfile = sender.title(for: .normal)
+        performSegue(withIdentifier: K.Segues.chooseProfileToHome, sender: sender.tag)
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.chooseProfileToHome{
+            let tabCtrl = segue.destination as! UITabBarController
+            let navCtrl = tabCtrl.viewControllers![0] as! UINavigationController
+            let destinoVC = navCtrl.topViewController as! HomeViewController
+            destinoVC.nombrePerfil = nameToProfile
+        }
+    }
 }

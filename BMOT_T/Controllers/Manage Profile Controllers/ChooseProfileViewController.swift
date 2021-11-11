@@ -56,7 +56,6 @@ class ChooseProfileViewController: UIViewController {
                     let dict = snap.value as! [String: Any]
                     let name = dict["nombre"] as? String ?? ""
                     let avatar = dict["avatar"] as? String ?? ""
-                    
                     let newProfile = ProfileList(nombre: name, avatar: avatar)
                     self.listaPerfiles.append(newProfile)
                 }

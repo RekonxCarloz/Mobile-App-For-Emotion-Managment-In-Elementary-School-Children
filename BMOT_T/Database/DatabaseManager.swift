@@ -45,9 +45,9 @@ public class DatabaseManager{
     /// Insertar nuevo perfil
     ///  - Parameters
     ///
-    public func insertarPerfilNuevo(with nombre: String, edad: Int, color: String, avatar: String, completion: @escaping (Bool)->Void){
+    public func insertarPerfilNuevo(with nombre: String, avatar: String, completion: @escaping (Bool)->Void){
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
-            database.child(userEmail).child("perfiles").child(nombre).setValue(["nombre": nombre, "edad": edad, "color": color, "avatar": avatar]){ error, _ in
+            database.child(userEmail).child("perfiles").child(nombre).setValue(["nombre": nombre, "avatar": avatar]){ error, _ in
                 if error == nil{
                     completion(true)
                     return
@@ -61,22 +61,6 @@ public class DatabaseManager{
         }
         
         
-    }
-    
-    public func getProfiles(completion: @escaping (Result<[[String: String]], Error>) -> Void){
-        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
-            database.child(userEmail).child("perfiles").observe(.value, with: { snapshot in
-                guard let value = snapshot.value as? [[String: String]] else{
-                    completion(.failure(DatabaseError.failedToFet))
-                    return
-                }
-                print("----------------------------------*******-------------------------------")
-                print(value)
-                print("----------------------------------*******-------------------------------")
-                
-                completion(.success(value))
-            })
-        }
     }
     
     public enum DatabaseError: Error{

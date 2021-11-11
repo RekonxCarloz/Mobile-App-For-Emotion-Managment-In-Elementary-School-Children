@@ -9,16 +9,39 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController {
-
-    var nombrePerfil:String?
     
-    @IBOutlet weak var label: UILabel!
+    var nombrePerfil:String?
+    var ref = Database.database().reference()
+    
+    
+    @IBOutlet weak var avatarSelected: UIImageView!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationItem.hidesBackButton = true
+        loadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
-        label.text = nombrePerfil
     }
     
+    private func loadData(){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfileName = nombrePerfil {
+                ref.child(userEmail).child("perfiles").child(safeProfileName).observe(.value){ snapshot in
+                    
+                    let dict = snapshot.value as! [String: Any]
+                    let nombre = dict["nombre"] as? String ?? ""
+                    let avatar = dict["avatar"] as? String ?? ""
+                    self.welcomeLabel.text = "Hola, \(nombre)!"
+                    self.avatarSelected.image = UIImage(named: avatar)
+                }
+            }
+        }
+        
+        
+        
+    }
     
-
 }

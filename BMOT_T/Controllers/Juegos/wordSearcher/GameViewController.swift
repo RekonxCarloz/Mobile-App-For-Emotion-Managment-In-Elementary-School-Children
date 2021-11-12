@@ -46,8 +46,8 @@ class GameViewController: UIViewController {
     /// to draw the lines.
     /// This should be updated properly in case orientation changes.
     private var cellSize: CGSize {
-        let w = gridCollectionView.bounds.width / CGFloat(nCol)
-        let h = gridCollectionView.bounds.height / CGFloat(nRow)
+        let w = gridCollectionView.bounds.width / 13
+        let h = gridCollectionView.bounds.height / 11.7
         return CGSize(width: w, height: h)
     }
 

@@ -111,8 +111,8 @@ class WordGridGenerator {
     // This is efficient to get back the word when user is swiping
     // Where we only know the start and end position of the line.
     var wordsMap: [String: String] = [:]
-    var nRow: Int = 10
-    var nCol: Int = 10
+    var nRow: Int = 8
+    var nCol: Int = 8
 
     private var directions = Direction.allCases
 

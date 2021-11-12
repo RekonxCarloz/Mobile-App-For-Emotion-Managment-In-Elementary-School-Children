@@ -29,7 +29,7 @@ class Line: CAShapeLayer {
     /// Line style
     var lineStyle: LineStyle = LineStyle(
         opacity: 0.5,
-        lineWidth: 10,
+        lineWidth: 1000,
         strokeColor: UIColor.blue.cgColor
     )
 

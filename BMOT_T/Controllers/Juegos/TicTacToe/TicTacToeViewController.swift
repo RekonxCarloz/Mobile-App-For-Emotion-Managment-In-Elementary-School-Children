@@ -18,10 +18,7 @@ class TicTacToeViewController: UIViewController {
     @IBOutlet weak var cell6: UIButton!
     @IBOutlet weak var cell7: UIButton!
     @IBOutlet weak var cell8: UIButton!
-    @IBOutlet weak var player1Name: UILabel!
-    @IBOutlet weak var player2Name: UILabel!
-    @IBOutlet weak var playerNamesView: UIStackView!
-    @IBOutlet weak var winnerView: UIStackView!
+    @IBOutlet weak var turnoJugador: UILabel!
     @IBOutlet weak var winnerName: UILabel!
     
     var currentPlayer = 1
@@ -55,8 +52,7 @@ class TicTacToeViewController: UIViewController {
             cell8,
         ]
         clearBoard()
-        print("Done initializing...")
-        winnerView.isHidden = true
+        winnerName.isHidden = true
     }
     
     @IBAction func cellPressed(_ sender: UIButton) {
@@ -67,10 +63,8 @@ class TicTacToeViewController: UIViewController {
     }
     
     @IBAction func resetGamePressed(_ sender: UIButton) {
-        print("Resseting Game")
         clearBoard()
-        playerNamesView.isHidden = false
-        winnerView.isHidden = true
+        winnerName.isHidden = true
     }
     
     func clearBoard (){
@@ -79,7 +73,7 @@ class TicTacToeViewController: UIViewController {
             0,0,0,
             0,0,0
         ]
-        player1Name.font = UIFont.init(name: "TradeWinds", size: 21)
+        turnoJugador.text = "Jugador 1"
         for cell in boardCells{
             cell!.setBackgroundImage(UIImage.init(named: "emptyCell"), for: .normal)
         }
@@ -88,14 +82,12 @@ class TicTacToeViewController: UIViewController {
     func play (player:Int, cell:Int){
         board[cell] = player
         if(player == 1){
-            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "oCell"), for: .normal)
-            player1Name.font = UIFont.init(name: "TradeWinds", size: 17)
-            player2Name.font = UIFont.init(name: "TradeWinds", size: 21)
+            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "Enojo"), for: .normal)
+            turnoJugador.text = "Jugador 2"
             
         }else{
-            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "xCell"), for: .normal)
-            player2Name.font = UIFont.init(name: "TradeWinds", size: 17)
-            player1Name.font = UIFont.init(name: "TradeWinds", size: 21)
+            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "Alegre"), for: .normal)
+            turnoJugador.text = "Jugador 1"
             
         }
         let winner: Int? = checkWinner()
@@ -104,6 +96,7 @@ class TicTacToeViewController: UIViewController {
         }else{
             endGame()
         }
+        print(currentPlayer)
     }
     
     func changePlayer(_ player: Int)-> Int{
@@ -138,13 +131,10 @@ class TicTacToeViewController: UIViewController {
             3,3,3
         ]
         if(currentPlayer == 1 ){
-            winnerName.textColor = UIColor.init(red: 245/255, green: 239/255, blue: 211/255, alpha: 1.0)
-            winnerName.text = "Jugador 1"
+            winnerName.text = "Jugador 1 Gana!"
         }else{
-            winnerName.text = "Jugador 2"
-            winnerName.textColor = UIColor.init(named: "Black")
+            winnerName.text = "Jugador 2 Gana!"
         }
-        playerNamesView.isHidden = true
-        winnerView.isHidden = false
+        winnerName.isHidden = false
     }
 }

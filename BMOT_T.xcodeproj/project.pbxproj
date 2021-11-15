@@ -45,6 +45,7 @@
 		4CB70D95273D9BDE00713082 /* WordListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D94273D9BDE00713082 /* WordListCollectionView.swift */; };
 		4CB70D97273D9C1B00713082 /* LinesOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D96273D9C1B00713082 /* LinesOverlay.swift */; };
 		4CB70D99273DB09700713082 /* SelectEmotionWordSearcherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */; };
+		4CC27C882742C6520051CB08 /* TictactoeFichasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC27C872742C6520051CB08 /* TictactoeFichasViewController.swift */; };
 		4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD312182734438C00CDFE32 /* TabBarController.swift */; };
 		4CD3121E27397E1000CDFE32 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */; };
 		4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */; };
@@ -116,6 +117,7 @@
 		4CB70D94273D9BDE00713082 /* WordListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCollectionView.swift; sourceTree = "<group>"; };
 		4CB70D96273D9C1B00713082 /* LinesOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesOverlay.swift; sourceTree = "<group>"; };
 		4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmotionWordSearcherViewController.swift; sourceTree = "<group>"; };
+		4CC27C872742C6520051CB08 /* TictactoeFichasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TictactoeFichasViewController.swift; sourceTree = "<group>"; };
 		4CD312182734438C00CDFE32 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				4CB70D87273D99B600713082 /* wordSearcher */,
 				4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */,
 				4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */,
+				4CC27C872742C6520051CB08 /* TictactoeFichasViewController.swift */,
 			);
 			path = Juegos;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				4CB70D99273DB09700713082 /* SelectEmotionWordSearcherViewController.swift in Sources */,
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
 				4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */,
+				4CC27C882742C6520051CB08 /* TictactoeFichasViewController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
 				4C5016962731D34000F14F65 /* ProfileList.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,

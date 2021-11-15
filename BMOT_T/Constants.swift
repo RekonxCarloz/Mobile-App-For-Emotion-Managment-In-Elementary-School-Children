@@ -23,6 +23,7 @@ struct K{
         struct gamesSegues{
             static let emotionWordSearcher = "emotionWordSearcherSegue"
             static let emotionMemorama = "emotionMemoramaSegue"
+            static let emotionTicTacToe = "startTicTacToeSegue"
         }
     }
     

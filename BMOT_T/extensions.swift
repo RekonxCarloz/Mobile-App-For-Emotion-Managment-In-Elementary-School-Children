@@ -31,10 +31,16 @@ extension String{
 }
 
 extension Int {
-    /// Get display formatted time from number of seconds
-    /// E.g. 65s = 01:05
-    ///
-    /// - Returns: the display string
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
+    }
+    
     func formattedTime() -> String {
         let seconds: Int = self % 60
         let minutes: Int = self / 60

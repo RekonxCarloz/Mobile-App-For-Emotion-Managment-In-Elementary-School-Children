@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectEmotionViewController: UIViewController {
+class SelectEmotionWordSearcherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,6 @@ class SelectEmotionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func emotionPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.Segues.Games.emotionSelectedGame, sender: self)
+        performSegue(withIdentifier: K.Segues.gamesSegues.emotionWordSearcher, sender: self)
     }
 }

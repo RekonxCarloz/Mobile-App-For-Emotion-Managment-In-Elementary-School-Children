@@ -33,6 +33,10 @@
 		4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DD27318E320036805A /* ChooseProfileViewController.swift */; };
 		4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407DF27318E590036805A /* CreateProfileViewController.swift */; };
 		4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9407E2273191BA0036805A /* GoogleService-Info.plist */; };
+		4CA85181273EFDE2003191EF /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA85180273EFDE2003191EF /* MemoryGame.swift */; };
+		4CA85183273EFE7B003191EF /* MemoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA85182273EFE7B003191EF /* MemoramaViewController.swift */; };
+		4CA85185273F00AD003191EF /* SelectEmotionMemoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */; };
+		4CAF61EF2741F32500019915 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF61EE2741F32500019915 /* TicTacToeViewController.swift */; };
 		4CB70D8A273D9A1D00713082 /* WordGridGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D89273D9A1D00713082 /* WordGridGenerator.swift */; };
 		4CB70D8D273D9A6F00713082 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D8C273D9A6F00713082 /* GridCollectionViewCell.swift */; };
 		4CB70D8F273D9A8F00713082 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D8E273D9A8F00713082 /* WordCollectionViewCell.swift */; };
@@ -40,7 +44,7 @@
 		4CB70D93273D9BAD00713082 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D92273D9BAD00713082 /* Line.swift */; };
 		4CB70D95273D9BDE00713082 /* WordListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D94273D9BDE00713082 /* WordListCollectionView.swift */; };
 		4CB70D97273D9C1B00713082 /* LinesOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D96273D9C1B00713082 /* LinesOverlay.swift */; };
-		4CB70D99273DB09700713082 /* SelectEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D98273DB09700713082 /* SelectEmotionViewController.swift */; };
+		4CB70D99273DB09700713082 /* SelectEmotionWordSearcherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */; };
 		4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD312182734438C00CDFE32 /* TabBarController.swift */; };
 		4CD3121E27397E1000CDFE32 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */; };
 		4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */; };
@@ -99,6 +103,10 @@
 		4C9407DD27318E320036805A /* ChooseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407DF27318E590036805A /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		4C9407E2273191BA0036805A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4CA85180273EFDE2003191EF /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		4CA85182273EFE7B003191EF /* MemoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoramaViewController.swift; sourceTree = "<group>"; };
+		4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmotionMemoramaViewController.swift; sourceTree = "<group>"; };
+		4CAF61EE2741F32500019915 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		4CB70D84273D967700713082 /* Manis Banget.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manis Banget.otf"; sourceTree = "<group>"; };
 		4CB70D89273D9A1D00713082 /* WordGridGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGridGenerator.swift; sourceTree = "<group>"; };
 		4CB70D8C273D9A6F00713082 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -107,7 +115,7 @@
 		4CB70D92273D9BAD00713082 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		4CB70D94273D9BDE00713082 /* WordListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCollectionView.swift; sourceTree = "<group>"; };
 		4CB70D96273D9C1B00713082 /* LinesOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesOverlay.swift; sourceTree = "<group>"; };
-		4CB70D98273DB09700713082 /* SelectEmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmotionViewController.swift; sourceTree = "<group>"; };
+		4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmotionWordSearcherViewController.swift; sourceTree = "<group>"; };
 		4CD312182734438C00CDFE32 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4CD3121C27397E1000CDFE32 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CD3121D27397E1000CDFE32 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -298,6 +306,23 @@
 			path = "Manage Profile Controllers";
 			sourceTree = "<group>";
 		};
+		4CA8517F273EFD82003191EF /* memorama */ = {
+			isa = PBXGroup;
+			children = (
+				4CA85180273EFDE2003191EF /* MemoryGame.swift */,
+				4CA85182273EFE7B003191EF /* MemoramaViewController.swift */,
+			);
+			path = memorama;
+			sourceTree = "<group>";
+		};
+		4CAF61ED2741F29300019915 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF61EE2741F32500019915 /* TicTacToeViewController.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
 		4CB70D85273D995100713082 /* SopaDeLetras */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,8 +336,11 @@
 		4CB70D86273D99B000713082 /* Juegos */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF61ED2741F29300019915 /* TicTacToe */,
+				4CA8517F273EFD82003191EF /* memorama */,
 				4CB70D87273D99B600713082 /* wordSearcher */,
-				4CB70D98273DB09700713082 /* SelectEmotionViewController.swift */,
+				4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */,
+				4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */,
 			);
 			path = Juegos;
 			sourceTree = "<group>";
@@ -600,12 +628,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB70D99273DB09700713082 /* SelectEmotionViewController.swift in Sources */,
+				4CB70D99273DB09700713082 /* SelectEmotionWordSearcherViewController.swift in Sources */,
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
 				4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
 				4C5016962731D34000F14F65 /* ProfileList.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,
+				4CA85183273EFE7B003191EF /* MemoramaViewController.swift in Sources */,
+				4CA85181273EFDE2003191EF /* MemoryGame.swift in Sources */,
 				4C5016902731CA1000F14F65 /* AuthManager.swift in Sources */,
 				4C9407CF27318B400036805A /* HomeViewController.swift in Sources */,
 				4CB70D91273D9B2A00713082 /* GameViewController.swift in Sources */,
@@ -615,6 +645,7 @@
 				4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */,
 				4C5016922731CD5400F14F65 /* DatabaseManager.swift in Sources */,
 				4CB70D95273D9BDE00713082 /* WordListCollectionView.swift in Sources */,
+				4CA85185273F00AD003191EF /* SelectEmotionMemoramaViewController.swift in Sources */,
 				4C9407D527318B9A0036805A /* StatsViewController.swift in Sources */,
 				4CB70D8A273D9A1D00713082 /* WordGridGenerator.swift in Sources */,
 				4C5137F8272F940F00BF1D5C /* AppDelegate.swift in Sources */,
@@ -626,6 +657,7 @@
 				4CB70D8D273D9A6F00713082 /* GridCollectionViewCell.swift in Sources */,
 				4CB70D93273D9BAD00713082 /* Line.swift in Sources */,
 				4CD3121E27397E1000CDFE32 /* ProfileCollectionViewCell.swift in Sources */,
+				4CAF61EF2741F32500019915 /* TicTacToeViewController.swift in Sources */,
 				4C9407D727318BA70036805A /* ConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

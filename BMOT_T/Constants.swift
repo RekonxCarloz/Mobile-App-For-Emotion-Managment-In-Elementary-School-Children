@@ -20,8 +20,9 @@ struct K{
         static let chooseProfileToHome = "chooseProfileToHome"
         static let createProfileToHome = "createProfileToHome"
         
-        struct Games{
-            static let emotionSelectedGame = "emotionSelectedGame"
+        struct gamesSegues{
+            static let emotionWordSearcher = "emotionWordSearcherSegue"
+            static let emotionMemorama = "emotionMemoramaSegue"
         }
     }
     

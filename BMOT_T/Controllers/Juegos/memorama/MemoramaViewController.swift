@@ -16,7 +16,7 @@ class MemoramaViewController: UIViewController {
     
     
     private lazy var memoryGame = MemoryGame(numberOfCardPairs: (cardButtons.count + 1) / 2)
-    var randomThemeIndex = 0;
+    var randomThemeIndex = 1
     
     @IBAction private func flipCard(_ sender: UIButton) {
         if let cardNumber = cardButtons.firstIndex(of: sender) {
@@ -51,7 +51,6 @@ class MemoramaViewController: UIViewController {
         memoryGame.newGame()
         updateViewFromModel()
         emoji = [Card:String]()
-        randomThemeIndex = 3
         if let theme = emojiThemes[randomThemeIndex] {
             currentEmojiTheme = theme
         } else {
@@ -70,18 +69,18 @@ class MemoramaViewController: UIViewController {
                 button.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
             } else {
-                button.backgroundColor = card.isMatch ? #colorLiteral(red: 1, green: 0.5768225789, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.1764705882, blue: 0.8077873207, alpha: 1)
+                button.backgroundColor = card.isMatch ? #colorLiteral(red: 1, green: 0.5768225789, blue: 0, alpha: 0) : #colorLiteral(red: 0.9475790858, green: 0.7731348276, blue: 0.8264791369, alpha: 1)
                 button.setTitle("", for: UIControl.State.normal)
             }
         }
     }
     
     private var emojiThemes =
-        [0: ["Miedo", "Pavor", "Espanto", "Desprotección", "Pánico", "😫", "Temor", "😣", "😧", "😥", "😰", "😨"],
-         1: ["Afecto", "Apoyo", "Amor", "Comprensión", "Ternura", "Solidaridad", "🫂", "🤗", "😚", "😊", "💙", "🥰"],
-         2: ["Tristeza", "Soledad", "Timidez", "Abandono", "Decepción", "Melancolía", "😢", "😭", "😔", "🥺", "☹️", "😞"],
-         3: ["Injusticia", "Enojo", "Rabia", "Molestia", "Enfado", "Disgusto", "😖", "😡", "😤", "😠", "😓", "😑"],
-         4: ["Alegría", "Encanto", "Admiración", "Paz", "Felicidad", "Motivación", "😋", "😌", "☺️", "😂", "😁", "😃"]]
+        [1: ["Miedo", "Pavor", "Espanto", "Desprotección", "Pánico", "😫", "Temor", "😣", "😧", "😥", "😰", "😨"],
+         2: ["Alegría", "Encanto", "Admiración", "Paz", "Felicidad", "Motivación", "😋", "😌", "☺️", "😂", "😁", "😃"],
+         3: ["Tristeza", "Soledad", "Timidez", "Abandono", "Decepción", "Melancolía", "😢", "😭", "😔", "🥺", "☹️", "😞"],
+         4: ["Injusticia", "Enojo", "Rabia", "Molestia", "Enfado", "Disgusto", "😖", "😡", "😤", "😠", "😓", "😑"],
+         5: ["Afecto", "Apoyo", "Amor", "Comprensión", "Ternura", "Solidaridad", "🫂", "🤗", "😚", "😊", "💙", "🥰"]]
     
     private var currentEmojiTheme = [String]()
     

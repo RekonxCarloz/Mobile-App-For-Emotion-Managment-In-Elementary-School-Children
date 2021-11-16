@@ -12,7 +12,7 @@
         <array key="Bassy.ttf">
             <string>BassyRegular</string>
         </array>
-        <array key="Manis Banget.otf">
+        <array key="Manis-Banget.ttf">
             <string>ManisBanget-Line</string>
         </array>
     </customFonts>
@@ -81,7 +81,9 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesión"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesión">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOP-gU-buJ"/>
                                         </connections>
@@ -162,7 +164,9 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.80778732070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Nuevo Perfil"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Nuevo Perfil">
+                                            <color key="baseBackgroundColor" red="1" green="0.1764705882" blue="0.80778732070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="c3h-SW-gXY" kind="show" id="krh-At-UDE"/>
                                         </connections>
@@ -288,9 +292,10 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="WdU-NW-ovx"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Crear perfil"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Crear perfil">
+                                            <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="crearPerfilPressed:" destination="c3h-SW-gXY" eventType="touchUpInside" id="vyB-BO-TH9"/>
                                         </connections>
@@ -451,7 +456,10 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Registrarme"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Registrarme">
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="registerButtonPressed:" destination="hik-zk-y0x" eventType="touchUpInside" id="348-wW-0v2"/>
                                         </connections>
@@ -610,7 +618,9 @@
                                 <rect key="frame" x="122" y="135" width="171" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Sopa de letras"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sopa de letras">
+                                    <color key="baseBackgroundColor" red="1" green="0.0" blue="0.33097293398795874" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="Ocp-QP-3xp" kind="show" id="tap-HG-af2"/>
                                 </connections>
@@ -619,7 +629,9 @@
                                 <rect key="frame" x="122" y="262" width="171" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Memorama"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Memorama">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="nKK-JS-pW1" kind="show" id="vjv-LK-P5Y"/>
                                 </connections>
@@ -628,9 +640,11 @@
                                 <rect key="frame" x="122" y="391" width="171" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones">
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="wCH-Bq-ZiB" kind="show" id="IFT-Xt-5W3"/>
+                                    <segue destination="wCH-Bq-ZiB" kind="show" id="hQG-O1-MMx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -719,7 +733,7 @@
                                 <rect key="frame" x="20" y="88" width="374" height="625"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UQw-pk-EaP">
-                                        <rect key="frame" x="10.5" y="0.0" width="353" height="294.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="294.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dolphinMascot" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-Tn-Nq6">
                                                 <rect key="frame" x="0.0" y="0.0" width="130.5" height="294.5"/>
@@ -729,7 +743,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Usuario!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-3R-xFd">
-                                                <rect key="frame" x="150.5" y="0.0" width="202.5" height="294.5"/>
+                                                <rect key="frame" x="150.5" y="0.0" width="223.5" height="294.5"/>
                                                 <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="60"/>
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
@@ -803,42 +817,76 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqe-Hu-mG2">
-                                <rect key="frame" x="160" y="198" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Miedo"/>
-                                <connections>
-                                    <action selector="emotionPressed:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="VSs-5M-0mV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmK-Fl-u5G">
-                                <rect key="frame" x="160" y="266" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Alegría"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agr-2J-EdX">
-                                <rect key="frame" x="160" y="345" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Tristeza"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypJ-M8-2Uk">
-                                <rect key="frame" x="160" y="411" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Enojo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvS-gj-c8s">
-                                <rect key="frame" x="160" y="482" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Afecto"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tJK-zl-WqU">
+                                <rect key="frame" x="20" y="98" width="374" height="675"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una emoción para la sopa de letras" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFa-g9-V94">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-AE-w93">
+                                        <rect key="frame" x="0.0" y="116" width="374" height="95.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Miedo"/>
+                                        <connections>
+                                            <action selector="testButton:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="1OX-sm-v3l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERK-ZC-Kla">
+                                        <rect key="frame" x="0.0" y="231.5" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Alegría"/>
+                                        <connections>
+                                            <action selector="testButton:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="8ze-q9-NWZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-pm-5sd">
+                                        <rect key="frame" x="0.0" y="347.5" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tristeza"/>
+                                        <connections>
+                                            <action selector="testButton:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="F4b-SE-uZF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkN-pG-eGG">
+                                        <rect key="frame" x="0.0" y="463.5" width="374" height="95.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enojo"/>
+                                        <connections>
+                                            <action selector="testButton:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="a5R-nX-UXJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gID-pp-yhm">
+                                        <rect key="frame" x="0.0" y="579" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" red="1" green="0.266985692" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="AFecto"/>
+                                        <connections>
+                                            <action selector="testButton:" destination="Ocp-QP-3xp" eventType="touchUpInside" id="dyz-oy-4aS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1yP-p1-3AE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tJK-zl-WqU" firstAttribute="leading" secondItem="vyj-CW-srx" secondAttribute="leadingMargin" id="LuN-Ok-oZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJK-zl-WqU" secondAttribute="trailing" id="TJd-0X-aXc"/>
+                            <constraint firstItem="1yP-p1-3AE" firstAttribute="bottom" secondItem="tJK-zl-WqU" secondAttribute="bottom" constant="40" id="iaj-jf-jLd"/>
+                            <constraint firstItem="tJK-zl-WqU" firstAttribute="top" secondItem="1yP-p1-3AE" secondAttribute="top" constant="10" id="lKB-qq-6o5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j0R-na-Xhv"/>
                     <connections>
@@ -857,46 +905,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-Qe-Fqf">
-                                <rect key="frame" x="160" y="198" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Miedo"/>
-                                <connections>
-                                    <action selector="emotionSelected:" destination="nKK-JS-pW1" eventType="touchUpInside" id="iVC-UI-mYH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhm-uq-GAG">
-                                <rect key="frame" x="160" y="266" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Alegría"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-bo-uR3">
-                                <rect key="frame" x="160" y="345" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Tristeza"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-HW-isE">
-                                <rect key="frame" x="160" y="411" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Enojo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCt-6c-JZf">
-                                <rect key="frame" x="160" y="482" width="95" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Afecto"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="U6y-Ih-mOx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NHo-dQ-m1H">
+                                <rect key="frame" x="20" y="98" width="374" height="675"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una emoción para el memorama" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usg-4m-jCZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2W-5K-zUj">
+                                        <rect key="frame" x="0.0" y="116" width="374" height="95.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Miedo"/>
+                                        <connections>
+                                            <action selector="emotionSelectedPressed:" destination="nKK-JS-pW1" eventType="touchUpInside" id="hJp-bw-67j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-wR-DCQ">
+                                        <rect key="frame" x="0.0" y="231.5" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Alegría"/>
+                                        <connections>
+                                            <action selector="emotionSelectedPressed:" destination="nKK-JS-pW1" eventType="touchUpInside" id="Obj-X9-xrs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP7-oR-383">
+                                        <rect key="frame" x="0.0" y="347.5" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tristeza"/>
+                                        <connections>
+                                            <action selector="emotionSelectedPressed:" destination="nKK-JS-pW1" eventType="touchUpInside" id="CUR-wH-6b2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf7-Lg-yNk">
+                                        <rect key="frame" x="0.0" y="463.5" width="374" height="95.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enojo"/>
+                                        <connections>
+                                            <action selector="emotionSelectedPressed:" destination="nKK-JS-pW1" eventType="touchUpInside" id="RQh-Qk-g0i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyw-LZ-gKg">
+                                        <rect key="frame" x="0.0" y="579" width="374" height="96"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="70"/>
+                                        <color key="tintColor" red="1" green="0.266985692" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="AFecto"/>
+                                        <connections>
+                                            <action selector="emotionSelectedPressed:" destination="nKK-JS-pW1" eventType="touchUpInside" id="wxy-bY-fsA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GAY-dN-XFJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NHo-dQ-m1H" firstAttribute="top" secondItem="GAY-dN-XFJ" secondAttribute="top" constant="10" id="6lZ-sX-Hy7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NHo-dQ-m1H" secondAttribute="trailing" id="DRK-Ab-DFj"/>
+                            <constraint firstItem="GAY-dN-XFJ" firstAttribute="bottom" secondItem="NHo-dQ-m1H" secondAttribute="bottom" constant="40" id="FTQ-FM-zyf"/>
+                            <constraint firstItem="NHo-dQ-m1H" firstAttribute="leading" secondItem="3gG-7z-tkg" secondAttribute="leadingMargin" id="ooa-Oy-P8g"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FuT-Yv-7zk"/>
                     <connections>
@@ -915,27 +997,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-M2-l8s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-M2-l8s">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escoge ficha para jugador 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-2r-H14">
-                                <rect key="frame" x="102" y="151" width="210" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoge ficha para jugador 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-2r-H14">
+                                <rect key="frame" x="47.5" y="131.5" width="319" height="47.5"/>
+                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escoge ficha para jugador 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phy-ll-U7e">
-                                <rect key="frame" x="102" y="469" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-Rt-352">
-                                <rect key="frame" x="176" y="753" width="63" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-Rt-352">
+                                <rect key="frame" x="175.5" y="753" width="63" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tb0-r3-S6x"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1470551491" green="0.25844687220000001" blue="0.27842259409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Iniciar"/>
@@ -943,72 +1018,208 @@
                                     <action selector="startGamePressed:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="ger-fC-ZEE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR5-Oh-ALf">
-                                <rect key="frame" x="59" y="219" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Miedo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-n9-ssn">
-                                <rect key="frame" x="168" y="219" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Alegre"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-Ki-yiJ">
-                                <rect key="frame" x="279" y="219" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Tristeza"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24N-zU-aQR">
-                                <rect key="frame" x="235" y="322" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Afecto"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-mz-iWS">
-                                <rect key="frame" x="59" y="523" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Tristeza"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-dg-62r">
-                                <rect key="frame" x="168" y="523" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Enojo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pZ-2E-TAb">
-                                <rect key="frame" x="279" y="523" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Miedo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-pw-6Hr">
-                                <rect key="frame" x="102" y="626" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Afecto"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gai-2o-c0v">
-                                <rect key="frame" x="235" y="626" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Alegre"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-E8-8dd">
-                                <rect key="frame" x="102" y="322" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="Enojo"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cDb-iL-Q13">
+                                <rect key="frame" x="59" y="219" width="300" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR5-Oh-ALf">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0Ku-Zb-YQP"/>
+                                            <constraint firstAttribute="height" constant="80" id="QLU-fU-j3P"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Miedo1" backgroundImage="Miedo">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer1:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="9BD-67-Gdk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-n9-ssn">
+                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="CzI-2l-z3f"/>
+                                            <constraint firstAttribute="height" constant="80" id="ZoR-8f-fvP"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Alegre1" backgroundImage="Alegre">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer1:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="Ckl-qT-DIv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-Ki-yiJ">
+                                        <rect key="frame" x="220" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="QaA-nx-h8I"/>
+                                            <constraint firstAttribute="height" constant="80" id="aib-YG-d7H"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tristeza1" backgroundImage="Tristeza">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer1:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="dgq-1R-B1b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="hrh-Wy-ZwT">
+                                <rect key="frame" x="102.5" y="322.5" width="213" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-E8-8dd">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0T0-xj-R3N"/>
+                                            <constraint firstAttribute="height" constant="80" id="vfz-kZ-GJP"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enojo1" backgroundImage="Enojo">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer1:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="ixz-Ax-d7l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24N-zU-aQR">
+                                        <rect key="frame" x="133" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="JsY-7d-tTy"/>
+                                            <constraint firstAttribute="width" constant="80" id="MSM-xu-p08"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Afecto1" backgroundImage="Afecto">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer1:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="uBV-nf-RkB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="62H-WG-WLo">
+                                <rect key="frame" x="59" y="523" width="300" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-mz-iWS">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="OuL-Pd-vse"/>
+                                            <constraint firstAttribute="width" constant="80" id="Rjp-qh-7aq"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tristeza2" backgroundImage="Tristeza">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer2:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="Tnh-TO-Acw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-dg-62r">
+                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0fc-M9-UjC"/>
+                                            <constraint firstAttribute="height" constant="80" id="UTo-W7-L1E"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enojo2" backgroundImage="Enojo">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer2:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="JCc-er-5gN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pZ-2E-TAb">
+                                        <rect key="frame" x="220" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="I1A-gd-NuM"/>
+                                            <constraint firstAttribute="height" constant="80" id="VsW-1j-YgI"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Miedo2" backgroundImage="Miedo">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer2:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="4pI-uI-BeD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="1Dj-iT-iiw">
+                                <rect key="frame" x="102.5" y="626" width="213" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-pw-6Hr">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="AqX-cL-Zx2"/>
+                                            <constraint firstAttribute="height" constant="80" id="MVD-ib-NdJ"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Afecto2" backgroundImage="Afecto">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer2:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="CHj-JN-1GG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gai-2o-c0v">
+                                        <rect key="frame" x="133" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="R3b-fo-mem"/>
+                                            <constraint firstAttribute="width" constant="80" id="eTI-e6-Krc"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Alegre2" backgroundImage="Alegre">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fichaElegidaPlayer2:" destination="wCH-Bq-ZiB" eventType="touchUpInside" id="bNh-QM-uoF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoge ficha para jugador 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phy-ll-U7e">
+                                <rect key="frame" x="45" y="454.5" width="324" height="47.5"/>
+                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UlK-Bm-G0L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cDb-iL-Q13" firstAttribute="top" secondItem="Cyd-2r-H14" secondAttribute="bottom" constant="40" id="90x-xl-vzE"/>
+                            <constraint firstItem="9Wp-Rt-352" firstAttribute="top" secondItem="1Dj-iT-iiw" secondAttribute="bottom" constant="47" id="Alo-KI-wcl"/>
+                            <constraint firstItem="hrh-Wy-ZwT" firstAttribute="top" secondItem="cDb-iL-Q13" secondAttribute="bottom" constant="23.5" id="GFa-Kr-2KA"/>
+                            <constraint firstItem="Phy-ll-U7e" firstAttribute="top" secondItem="hrh-Wy-ZwT" secondAttribute="bottom" constant="52" id="HHt-Fo-Qcc"/>
+                            <constraint firstItem="CTA-M2-l8s" firstAttribute="centerY" secondItem="fyY-44-2Gw" secondAttribute="centerY" id="UOs-Ji-su6"/>
+                            <constraint firstItem="Phy-ll-U7e" firstAttribute="centerX" secondItem="9Wp-Rt-352" secondAttribute="centerX" id="fXO-sv-pta"/>
+                            <constraint firstItem="Phy-ll-U7e" firstAttribute="centerX" secondItem="Cyd-2r-H14" secondAttribute="centerX" id="ir9-Z3-QQY"/>
+                            <constraint firstItem="Phy-ll-U7e" firstAttribute="centerX" secondItem="CTA-M2-l8s" secondAttribute="centerX" id="jA3-eg-cAT"/>
+                            <constraint firstItem="62H-WG-WLo" firstAttribute="leading" secondItem="cDb-iL-Q13" secondAttribute="leading" id="kGR-ba-7ec"/>
+                            <constraint firstItem="CTA-M2-l8s" firstAttribute="leading" secondItem="UlK-Bm-G0L" secondAttribute="leading" id="kyR-cm-3fg"/>
+                            <constraint firstAttribute="bottom" secondItem="Phy-ll-U7e" secondAttribute="bottom" constant="394" id="lCw-BJ-fpG"/>
+                            <constraint firstItem="1Dj-iT-iiw" firstAttribute="top" secondItem="62H-WG-WLo" secondAttribute="bottom" constant="23" id="mI2-fP-MJi"/>
+                            <constraint firstItem="CTA-M2-l8s" firstAttribute="top" secondItem="fyY-44-2Gw" secondAttribute="topMargin" constant="-88" id="p5s-iT-saC"/>
+                            <constraint firstItem="9Wp-Rt-352" firstAttribute="centerX" secondItem="fyY-44-2Gw" secondAttribute="centerX" id="pca-c9-eCE"/>
+                            <constraint firstItem="62H-WG-WLo" firstAttribute="leading" secondItem="UlK-Bm-G0L" secondAttribute="leading" constant="59" id="rqh-DV-qNX"/>
+                            <constraint firstItem="62H-WG-WLo" firstAttribute="centerX" secondItem="1Dj-iT-iiw" secondAttribute="centerX" id="tDL-HY-uEQ"/>
+                            <constraint firstItem="62H-WG-WLo" firstAttribute="top" secondItem="Phy-ll-U7e" secondAttribute="bottom" constant="21" id="u9o-bo-bBF"/>
+                            <constraint firstItem="62H-WG-WLo" firstAttribute="centerX" secondItem="hrh-Wy-ZwT" secondAttribute="centerX" id="uz3-qI-LZV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MSa-NH-wwN"/>
                     <connections>
+                        <outlet property="affectionToken1" destination="24N-zU-aQR" id="yMR-I5-w9V"/>
+                        <outlet property="affectionToken2" destination="ZC7-pw-6Hr" id="uTz-ZP-twX"/>
+                        <outlet property="angerToken1" destination="GY8-E8-8dd" id="J4b-se-8Vm"/>
+                        <outlet property="angerToken2" destination="KCK-dg-62r" id="9Sa-0Z-h5b"/>
+                        <outlet property="fearToken1" destination="zR5-Oh-ALf" id="KXP-E4-X6K"/>
+                        <outlet property="fearToken2" destination="6pZ-2E-TAb" id="0ia-Q2-NKi"/>
+                        <outlet property="happyToken1" destination="kYa-n9-ssn" id="K9T-E4-LgP"/>
+                        <outlet property="happyToken2" destination="gai-2o-c0v" id="M4X-rb-Men"/>
+                        <outlet property="sadToken1" destination="OdH-Ki-yiJ" id="Izr-4V-RhD"/>
+                        <outlet property="sadToken2" destination="cob-mz-iWS" id="0Yt-Ec-nRY"/>
                         <segue destination="JlD-JY-UGG" kind="show" identifier="startTicTacToeSegue" id="JiT-Yk-xWb"/>
                     </connections>
                 </viewController>
@@ -1698,7 +1909,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ghM-m6-S00"/>
+        <segue reference="c6q-dC-FSD"/>
         <segue reference="Ofd-z9-jyL"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1746,8 +1957,17 @@
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -22,6 +22,7 @@
 		4C51381B272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51381A272F941800BF1D5C /* BMOT_TUITestsLaunchTests.swift */; };
 		4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D684272FA600003E1AA1 /* Pacifico-Regular.ttf */; };
 		4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C54D68A27304428003E1AA1 /* Bassy.ttf */; };
+		4C9066A627441935007AA00D /* Manis-Banget.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB70D84273D967700713082 /* Manis-Banget.ttf */; };
 		4C9407C827318A830036805A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407C727318A830036805A /* Constants.swift */; };
 		4C9407CF27318B400036805A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407CE27318B400036805A /* HomeViewController.swift */; };
 		4C9407D127318B830036805A /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9407D027318B830036805A /* JuegosViewController.swift */; };
@@ -108,7 +109,7 @@
 		4CA85182273EFE7B003191EF /* MemoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoramaViewController.swift; sourceTree = "<group>"; };
 		4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmotionMemoramaViewController.swift; sourceTree = "<group>"; };
 		4CAF61EE2741F32500019915 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
-		4CB70D84273D967700713082 /* Manis Banget.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manis Banget.otf"; sourceTree = "<group>"; };
+		4CB70D84273D967700713082 /* Manis-Banget.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manis-Banget.ttf"; sourceTree = "<group>"; };
 		4CB70D89273D9A1D00713082 /* WordGridGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGridGenerator.swift; sourceTree = "<group>"; };
 		4CB70D8C273D9A6F00713082 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CB70D8E273D9A8F00713082 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -239,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				4C54D68A27304428003E1AA1 /* Bassy.ttf */,
-				4CB70D84273D967700713082 /* Manis Banget.otf */,
+				4CB70D84273D967700713082 /* Manis-Banget.ttf */,
 				4C54D684272FA600003E1AA1 /* Pacifico-Regular.ttf */,
 			);
 			path = fonts;
@@ -499,6 +500,7 @@
 			files = (
 				4C513804272F941700BF1D5C /* LaunchScreen.storyboard in Resources */,
 				4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */,
+				4C9066A627441935007AA00D /* Manis-Banget.ttf in Resources */,
 				4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */,
 				4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */,
 				4C513801272F941700BF1D5C /* Assets.xcassets in Resources */,

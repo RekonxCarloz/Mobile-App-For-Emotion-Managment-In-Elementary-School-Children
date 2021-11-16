@@ -21,6 +21,10 @@ class TicTacToeViewController: UIViewController {
     @IBOutlet weak var turnoJugador: UILabel!
     @IBOutlet weak var winnerName: UILabel!
     
+    
+    var ficha1 = "Miedo"
+    var ficha2 = "Tristeza"
+    
     var currentPlayer = 1
     var boardCells: [(UIButton?)] = []
     var board = [
@@ -82,11 +86,11 @@ class TicTacToeViewController: UIViewController {
     func play (player:Int, cell:Int){
         board[cell] = player
         if(player == 1){
-            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "Enojo"), for: .normal)
+            boardCells[cell]?.setBackgroundImage(UIImage.init(named: ficha1), for: .normal)
             turnoJugador.text = "Jugador 2"
             
         }else{
-            boardCells[cell]?.setBackgroundImage(UIImage.init(named: "Alegre"), for: .normal)
+            boardCells[cell]?.setBackgroundImage(UIImage.init(named: ficha2), for: .normal)
             turnoJugador.text = "Jugador 1"
             
         }

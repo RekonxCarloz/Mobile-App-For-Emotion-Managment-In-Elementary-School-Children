@@ -15,14 +15,45 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gridCollectionView: UICollectionView!
     @IBOutlet weak var wordListCollectionView: WordListCollectionView!
 
+    var emocionNum = 1
     lazy private var gradientLayer: CAGradientLayer = CAGradientLayer()
     lazy fileprivate var gridGenerator: WordGridGenerator = {
-        return WordGridGenerator(words: words, row: nRow, column: nCol)
+        return WordGridGenerator(words: emocionElegida(emocionNum), row: nRow, column: nCol)
     }()
     fileprivate let nRow = 10
     fileprivate let nCol = 10
     fileprivate var grid: Grid = Grid()
-    private let words = ["ENOJO", "ALEGRIA", "MIEDO", "TRISTEZA", "APEGO", "ENFADO"]
+    
+    
+    
+    private func emocionElegida(_ emocion: Int) -> [String]{
+    
+         let miedoPalabras = ["MIEDO", "PAVOR", "ESPANTO", "TEMOR", "PANICO"]
+        
+         let alegriaPalabras = ["ALEGRIA", "ENCANTO", "ADMIRACION", "PAZ", "FELICIDAD", "MOTIVACION"]
+        
+         let tristezaPalabras = ["TRISTEZA", "SOLEDAD", "TIMIDEZ", "ABANDONO", "DECEPCION", "MELANCOLIA"]
+        
+         let enojoPalabras = ["INJUSTICIA", "ENOJO", "RABIA", "MOLESTIA", "ENFADO", "DISGUSTO"]
+        
+         let afectoPalabras = ["AFECTO", "APOYO", "AMOR", "RESPETO", "TERNURA", "EMPATIA"]
+        
+        switch emocion {
+        case 1:
+            return miedoPalabras
+        case 2:
+            return alegriaPalabras
+        case 3:
+            return tristezaPalabras
+        case 4:
+            return enojoPalabras
+        case 5:
+            return afectoPalabras
+        default:
+            return alegriaPalabras
+        }
+        
+    }
 
     /// Used to display elapsed time of the game.
     /// The timer can be paused and resumed.

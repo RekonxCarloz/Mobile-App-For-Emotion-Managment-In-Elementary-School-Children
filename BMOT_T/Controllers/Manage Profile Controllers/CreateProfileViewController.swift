@@ -44,14 +44,18 @@ class CreateProfileViewController: UIViewController {
                 }
             }
         }
-        
-        
-        
-        
-        
-        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let name = nameTextField.text{
+            if segue.identifier == K.Segues.createProfileToHome{
+                let tabCtrl = segue.destination as! UITabBarController
+                let navCtrl = tabCtrl.viewControllers![0] as! UINavigationController
+                let destinoVC = navCtrl.topViewController as! HomeViewController
+                destinoVC.nombrePerfil = name
+            }
+        }
+    }
     
     
 }

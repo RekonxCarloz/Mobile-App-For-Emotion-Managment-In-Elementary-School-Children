@@ -11,8 +11,11 @@ import Firebase
 class HomeViewController: UIViewController {
     
     var nombrePerfil:String?
+    var mascotName = "Rick"
     var ref = Database.database().reference()
     
+    @IBOutlet weak var globo2: UIView!
+    @IBOutlet weak var presentMascot: UILabel!
     
     @IBOutlet weak var avatarSelected: UIImageView!
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -24,6 +27,7 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     private func loadData(){
@@ -40,7 +44,8 @@ class HomeViewController: UIViewController {
             }
         }
         
-        
+        presentMascot.text = "Yo soy \(mascotName). Hoy vamos a conocer más sobre las emociones."
+        globo2.layer.cornerRadius = 20
         
     }
     

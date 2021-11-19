@@ -14,7 +14,7 @@ class CreateProfileViewController: UIViewController {
     var ref = Database.database().reference()
     
     //MARK: Variables
-    let avatars = ["dolphinMascot", "eyesMascot", "hairyMascot", "octopusMascot", "seriousMascot"]
+    let avatars = ["Billy", "Coco", "Hairy", "Frankie", "Wilt"]
     var avatarSelected = ""
     @IBOutlet weak var nameTextField: UITextField!
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDu-VU-ubj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDu-VU-ubj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -259,7 +259,7 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aZE-aO-aN7">
                                         <rect key="frame" x="0.0" y="384" width="374" height="125"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dolphinMascot" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-HD-rtT">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frankie" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-HD-rtT">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="125"/>
                                             </imageView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eor-Ow-G5W">
@@ -747,6 +747,64 @@
             </objects>
             <point key="canvasLocation" x="1286" y="2296"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="InG-Fh-7b1">
+            <objects>
+                <viewController id="HRO-BF-tm8" customClass="InfoViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hju-Kw-JBW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-or-GAM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrF-Yg-gbo">
+                                <rect key="frame" x="20" y="97" width="374" height="486"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68428861100000005" green="1" blue="0.56885089529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KVi-DS-HZC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JYS-or-GAM" secondAttribute="bottom" id="Ye0-eQ-ma7"/>
+                            <constraint firstItem="JYS-or-GAM" firstAttribute="leading" secondItem="Hju-Kw-JBW" secondAttribute="leading" id="gQY-ln-5m7"/>
+                            <constraint firstItem="JYS-or-GAM" firstAttribute="trailing" secondItem="Hju-Kw-JBW" secondAttribute="trailing" id="jyf-ow-9Yb"/>
+                            <constraint firstItem="JYS-or-GAM" firstAttribute="top" secondItem="Hju-Kw-JBW" secondAttribute="top" id="yaQ-u4-fj5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Da4-Jy-Ar0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7e-e2-EiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2572.463768115942" y="2220.5357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p6j-PN-BSi">
+            <objects>
+                <viewController id="YtG-eV-FKI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0mC-7G-t81">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-ek-0Qb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RpG-Te-CYv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Me-ek-0Qb" secondAttribute="trailing" id="STg-m6-ohU"/>
+                            <constraint firstItem="8Me-ek-0Qb" firstAttribute="top" secondItem="0mC-7G-t81" secondAttribute="top" id="fP9-iU-JY2"/>
+                            <constraint firstAttribute="bottom" secondItem="8Me-ek-0Qb" secondAttribute="bottom" id="fuL-U4-GjG"/>
+                            <constraint firstItem="8Me-ek-0Qb" firstAttribute="leading" secondItem="0mC-7G-t81" secondAttribute="leading" id="njc-YV-N2i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BC8-CC-Ohf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2564" y="2971"/>
+        </scene>
         <!--HomeViewController-->
         <scene sceneID="tyc-bO-aLO">
             <objects>
@@ -763,19 +821,10 @@
                                 <rect key="frame" x="130" y="79" width="258" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dolphinMascot" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-Tn-Nq6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascot4" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-Tn-Nq6">
                                 <rect key="frame" x="22" y="192" width="139" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-mv-vfC">
-                                <rect key="frame" x="22" y="703" width="372" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.266985692" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="No, quiero conocerlas">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola, Usuario!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-3R-xFd">
                                 <rect key="frame" x="164" y="172" width="190" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -784,7 +833,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.45000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5N-Ec-bUB">
-                                <rect key="frame" x="22" y="389" width="372" height="275"/>
+                                <rect key="frame" x="22" y="389" width="372" height="424"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68428861104034922" green="1" blue="0.56885089531934374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -794,12 +843,22 @@
                                 <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Sabes qué son las emociones?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-MG-Rod">
-                                <rect key="frame" x="55" y="580" width="307" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Sabias qué las emociones son importantes para expresarnos y comunicarnos con los demás?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-MG-Rod">
+                                <rect key="frame" x="33" y="549" width="347" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q27-FD-WSZ">
+                                <rect key="frame" x="120" y="752" width="176" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="HRO-BF-tm8" kind="show" id="lQZ-Tb-Efa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BM0-57-fZ3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2167,12 +2226,12 @@
         <image name="Afecto" width="233" height="233"/>
         <image name="Alegre" width="233" height="233"/>
         <image name="Enojo" width="233" height="233"/>
+        <image name="Frankie" width="166.5" height="166.5"/>
         <image name="Miedo" width="233" height="233"/>
         <image name="Tristeza" width="233" height="233"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="background" width="550" height="999"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
-        <image name="dolphinMascot" width="166.5" height="166.5"/>
         <image name="emptyCell" width="60" height="60"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="globo" width="700" height="700"/>
@@ -2180,6 +2239,7 @@
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="mascot2" width="880" height="900"/>
         <image name="mascot3" width="880" height="900"/>
+        <image name="mascot4" width="880" height="900"/>
         <image name="mascot5" width="880" height="900"/>
         <image name="mesa_fondo" width="800" height="620"/>
         <image name="message" catalog="system" width="128" height="113"/>

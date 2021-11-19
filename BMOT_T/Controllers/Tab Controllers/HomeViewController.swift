@@ -11,7 +11,6 @@ import Firebase
 class HomeViewController: UIViewController {
     
     var nombrePerfil:String?
-    var mascotName = "Rick"
     var ref = Database.database().reference()
     
     @IBOutlet weak var globo2: UIView!
@@ -39,12 +38,13 @@ class HomeViewController: UIViewController {
                     let nombre = dict["nombre"] as? String ?? ""
                     let avatar = dict["avatar"] as? String ?? ""
                     self.welcomeLabel.text = "Hola, \(nombre)!"
+                    self.presentMascot.text = "Yo soy \(avatar). Hoy vamos a conocer más sobre las emociones."
                     self.avatarSelected.image = UIImage(named: avatar)
                 }
             }
         }
         
-        presentMascot.text = "Yo soy \(mascotName). Hoy vamos a conocer más sobre las emociones."
+        
         globo2.layer.cornerRadius = 20
         
     }

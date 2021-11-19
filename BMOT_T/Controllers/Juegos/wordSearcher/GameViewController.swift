@@ -4,7 +4,7 @@
 //
 //  Created by Carlos Cobian on 11/11/21.
 //
-
+import Firebase
 import UIKit
 
 class GameViewController: UIViewController {
@@ -14,6 +14,17 @@ class GameViewController: UIViewController {
     @IBOutlet weak var overlayView: LinesOverlay!
     @IBOutlet weak var gridCollectionView: UICollectionView!
     @IBOutlet weak var wordListCollectionView: WordListCollectionView!
+    
+    ///Referencia para la base de datos.
+    private var dabatabase = Database.database().reference()
+    var nombrePerfil: String?
+    
+    ///Datos para la base de datos.
+    private var emocionselc: Int = 0 // Emocion seleccionada
+    private var fecha: String = ""
+    private let name_juego = "Sopa_de_Letras"
+    private var dateText = ""
+    private var name_jugador : String?
 
     var emocionNum = 1
     lazy private var gradientLayer: CAGradientLayer = CAGradientLayer()
@@ -90,6 +101,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emocionselc = emocionNum
         setupWordListCollectionView()
         setupGridCollectionView()
         setupOverlayView()
@@ -118,9 +130,18 @@ class GameViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.gridCollectionView.reloadData()
                     self.startTimer()
+                    self.obtener_fecha()
                 }
             }
         }
+    }
+    
+    private func obtener_fecha(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY.HH:mm"
+        self.dateText = dateFormatter.string(from: date)
+        
     }
 
     private func setupWordListCollectionView() {
@@ -175,6 +196,10 @@ class GameViewController: UIViewController {
     }
 
     @objc func panHandling(gestureRecognizer: UIPanGestureRecognizer) {
+        //Seleccion de emocion:
+        let emocion = emocionselc
+        var name_emocion = ""
+        var duracion = ""
         let point = gestureRecognizer.location(in: gridCollectionView)
         guard let indexPath = gridCollectionView.indexPathForItem(at: point) else {
             return
@@ -207,6 +232,29 @@ class GameViewController: UIViewController {
                 if overlayView.permanentLines.count == gridGenerator.words.count {
                     // Pause the time because user has won the game.
                     timer?.invalidate()
+                    /// Finalizacion del juego:
+                    dump(gridGenerator.words)
+                    dump(gridGenerator.words.count)
+                    switch emocion {
+                    case 1:
+                        name_emocion = "Miedo"
+                    case 2:
+                        name_emocion = "Afecto"
+                    case 3:
+                        name_emocion = "Triztesa"
+                    case 4:
+                        name_emocion = "Enojo"
+                    case 5:
+                        name_emocion = "Afecto"
+                    default:
+                        name_emocion = "Ninguna"
+                    }
+                    print(name_emocion)
+                    duracion = elapsedSeconds.formattedTime()
+                    print(elapsedSeconds.formattedTime())
+                    print(name_juego)
+                    print(dateText)
+                    self.Consulta(nombre_emocion: name_emocion,fecha_partida: dateText, duracion: duracion)
                 }
             }
             // Remove the temp line
@@ -220,6 +268,29 @@ class GameViewController: UIViewController {
             // Force re-draw the collection views when orientation changes.
             self.gridCollectionView.collectionViewLayout.invalidateLayout()
             self.wordListCollectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
+    
+    //Funcion Para enviar datos a la base de datos.
+    /// Para esta funcion se tiene que reacudar los valores que se agregaran a la base de datos:
+    /// Datos:
+    /// - Fecha de la partida.
+    /// - La emción que se selecciono.
+    /// - Tiempo que duro en la partida.
+    /// - "Las palabras que puedo encontrar."
+    ///
+    private func Consulta(nombre_emocion:String, fecha_partida: String, duracion : String ){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfileName = nombrePerfil {
+                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("emociones").child(nombre_emocion).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "duracion" : duracion ]){ error, _ in
+                        if error == nil{
+                            print("Se guardo exitosa la partida")
+                        }else{
+                            print("El error es: \(error!)")
+                       
+                            }
+                    }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MemoramaViewController: UIViewController {
 
@@ -14,6 +15,16 @@ class MemoramaViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     var timer: Timer?
     
+    ///Referencia para la base de datos.
+    private var dabatabase = Database.database().reference()
+    var nombrePerfil: String?
+    ///Variables para almacenamiento de la base de datos.
+    private var emocionselc: Int = 0
+    private var fecha: String = ""
+    private var duracion_partida : String = ""
+    private let name_juego = "Memorama"
+    private var dateText = ""
+    private var name_emotion: String?
     
     private lazy var memoryGame = MemoryGame(numberOfCardPairs: (cardButtons.count + 1) / 2)
     var randomThemeIndex = 1
@@ -48,6 +59,10 @@ class MemoramaViewController: UIViewController {
     }
     
     @IBAction private func newGame() {
+        obtener_fecha()
+        self.duracion_partida =  elapsedSeconds.formattedTime()
+        self.emotion_name(selecion: randomThemeIndex)
+        self.save_game(nombre_emocion: name_emotion!, fecha_partida: dateText, duracion_partida: duracion_partida, score: memoryGame.score)
         memoryGame.newGame()
         updateViewFromModel()
         emoji = [Card:String]()
@@ -94,5 +109,54 @@ class MemoramaViewController: UIViewController {
             return selectedEmoji
         }
         return "?"
+    }
+    
+    //Funcion para saber el nombre de la emocion que se esta jugando
+    private func emotion_name(selecion:Int){
+        switch selecion {
+        case 1:
+            name_emotion = "Miedo"
+        case 2:
+            name_emotion = "Afecto"
+        case 3:
+            name_emotion = "Triztesa"
+        case 4:
+            name_emotion = "Enojo"
+        case 5:
+            name_emotion = "Afecto"
+        default:
+            name_emotion = "Ninguna"
+        }
+        print(name_emotion ?? "")
+        
+    }
+    
+    
+    //Funcion para la obtener la fecha de la partida
+    private func obtener_fecha(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY.HH:mm"
+        self.dateText = dateFormatter.string(from: date)
+        
+    }
+    
+    
+    //Funcion que almacena los datos de la partida.
+    private func save_game (nombre_emocion:String, fecha_partida: String, duracion_partida : String, score : Int){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfileName = nombrePerfil {
+                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("emociones").child(nombre_emocion).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "duracion" : duracion_partida, "puntaje" : score ]){ error, _ in
+                        if error == nil{
+                            print("Se guardo exitosa la partida")
+                        }
+                        else{
+                            print("El error es: \(error!)")
+                       
+                            }
+                    }
+            }
+        }
+        
     }
 }

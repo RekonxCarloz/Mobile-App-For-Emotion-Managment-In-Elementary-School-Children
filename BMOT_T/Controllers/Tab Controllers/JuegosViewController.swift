@@ -9,6 +9,9 @@ import UIKit
 
 class JuegosViewController: UIViewController {
 
+//    Varible para mandar en el segue
+    var nombrePerfil:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

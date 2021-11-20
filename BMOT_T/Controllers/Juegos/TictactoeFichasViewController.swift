@@ -11,6 +11,7 @@ class TictactoeFichasViewController: UIViewController {
     
     var ficha1:String = "Miedo"
     var ficha2:String = "Tristeza"
+    var nombrePerfil:String?
     
     // Fichas del jugador 1
     @IBOutlet weak var fearToken1: UIButton!
@@ -108,6 +109,7 @@ class TictactoeFichasViewController: UIViewController {
             let destinoVC = segue.destination as! TicTacToeViewController
             destinoVC.ficha1 = ficha1
             destinoVC.ficha2 = ficha2
+            destinoVC.nombrePerfil = nombrePerfil
         }
     }
     

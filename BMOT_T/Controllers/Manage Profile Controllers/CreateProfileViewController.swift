@@ -53,6 +53,10 @@ class CreateProfileViewController: UIViewController {
                 let navCtrl = tabCtrl.viewControllers![0] as! UINavigationController
                 let destinoVC = navCtrl.topViewController as! HomeViewController
                 destinoVC.nombrePerfil = name
+                
+                let navCtrlGames = tabCtrl.viewControllers![1] as! UINavigationController
+                let destinoVCGames = navCtrlGames.topViewController as! JuegosViewController
+                destinoVCGames.nombrePerfil = name
             }
         }
     }

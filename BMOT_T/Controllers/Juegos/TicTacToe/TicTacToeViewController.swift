@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TicTacToeViewController: UIViewController {
     
@@ -20,6 +21,20 @@ class TicTacToeViewController: UIViewController {
     @IBOutlet weak var cell8: UIButton!
     @IBOutlet weak var turnoJugador: UILabel!
     @IBOutlet weak var winnerName: UILabel!
+    
+    ///Referencia para la base de datos.
+    private var dabatabase = Database.database().reference()
+    var nombrePerfil:String?
+    //Nombre del juego:
+    private let name_juego = "Gato_Emociones"
+   
+    //Variables para la base de datos.
+    private var fecha: String = ""
+    private var duracion_partida : String = ""
+    private var dateText = ""
+    private var P1_emocion: String?
+    private var P2_emocion: String?
+    private var jugador_ganador: String?
     
     
     var ficha1 = "Miedo"
@@ -69,6 +84,8 @@ class TicTacToeViewController: UIViewController {
     @IBAction func resetGamePressed(_ sender: UIButton) {
         clearBoard()
         winnerName.isHidden = true
+        obtener_fecha()
+
     }
     
     func clearBoard (){
@@ -99,6 +116,11 @@ class TicTacToeViewController: UIViewController {
             currentPlayer = changePlayer(player)
         }else{
             endGame()
+            //Finaliza el juego -> Agregar la funcion de la de guardar en la base de datos
+            self.P1_emocion = ficha1
+            self.P2_emocion = ficha2
+            
+            save_game(fecha_partida: dateText, duracion_partida: "0", jugador_1: P1_emocion!, jugador_2: P2_emocion!, ganador: jugador_ganador!)
         }
         print(currentPlayer)
     }
@@ -136,9 +158,39 @@ class TicTacToeViewController: UIViewController {
         ]
         if(currentPlayer == 1 ){
             winnerName.text = "Jugador 1 Gana!"
+            jugador_ganador = winnerName.text
         }else{
             winnerName.text = "Jugador 2 Gana!"
+            jugador_ganador = winnerName.text
         }
         winnerName.isHidden = false
     }
+    
+    //Funcion para la obtener la fecha de la partida
+    private func obtener_fecha(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY.HH:mm"
+        self.dateText = dateFormatter.string(from: date)
+        
+    }
+    
+    //Funcion que almacena los datos de la partida.
+    private func save_game(fecha_partida: String, duracion_partida : String, jugador_1 : String, jugador_2 : String, ganador : String){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfileName = nombrePerfil {
+                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "duracion" : duracion_partida, "jugador_1" : jugador_1 , "jugador_2" : jugador_2]){ error, _ in
+                        if error == nil{
+                            print("Se guardo exitosa la partida")
+                        }
+                        else{
+                            print("El error es: \(error!)")
+                       
+                            }
+                    }
+            }
+        }
+        
+    }
+    
 }

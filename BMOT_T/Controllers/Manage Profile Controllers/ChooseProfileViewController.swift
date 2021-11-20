@@ -125,6 +125,11 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
             let navCtrl = tabCtrl.viewControllers![0] as! UINavigationController
             let destinoVC = navCtrl.topViewController as! HomeViewController
             destinoVC.nombrePerfil = nameToProfile
+            
+            let navCtrlGames = tabCtrl.viewControllers![1] as! UINavigationController
+            let destinoVCGames = navCtrlGames.topViewController as! JuegosViewController
+            destinoVCGames.nombrePerfil = nameToProfile
         }
+        
     }
 }

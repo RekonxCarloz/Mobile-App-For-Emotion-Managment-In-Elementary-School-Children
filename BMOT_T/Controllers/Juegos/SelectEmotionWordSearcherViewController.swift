@@ -10,6 +10,7 @@ import UIKit
 class SelectEmotionWordSearcherViewController: UIViewController {
     
     var emotionSelected = ""
+    var nombrePerfil:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +29,19 @@ class SelectEmotionWordSearcherViewController: UIViewController {
             switch emotionSelected{
             case "Miedo":
                 destinoVC.emocionNum = 1
+                destinoVC.nombrePerfil = nombrePerfil
             case "Alegría":
                 destinoVC.emocionNum = 2
+                destinoVC.nombrePerfil = nombrePerfil
             case "Tristeza":
                 destinoVC.emocionNum = 3
+                destinoVC.nombrePerfil = nombrePerfil
             case "Enojo":
                 destinoVC.emocionNum = 4
+                destinoVC.nombrePerfil = nombrePerfil
             default:
                 destinoVC.emocionNum = 5
+                destinoVC.nombrePerfil = nombrePerfil
             }
         }
     }

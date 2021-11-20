@@ -9,6 +9,7 @@ import UIKit
 
 class SelectEmotionMemoramaViewController: UIViewController{
     var emotionSelected = ""
+    var nombrePerfil:String?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,14 +27,19 @@ class SelectEmotionMemoramaViewController: UIViewController{
             switch emotionSelected{
             case "Miedo":
                 destinoVC.randomThemeIndex = 1
+                destinoVC.nombrePerfil = nombrePerfil
             case "Alegría":
                 destinoVC.randomThemeIndex = 2
+                destinoVC.nombrePerfil = nombrePerfil
             case "Tristeza":
                 destinoVC.randomThemeIndex = 3
+                destinoVC.nombrePerfil = nombrePerfil
             case "Enojo":
                 destinoVC.randomThemeIndex = 4
+                destinoVC.nombrePerfil = nombrePerfil
             default:
                 destinoVC.randomThemeIndex = 5
+                destinoVC.nombrePerfil = nombrePerfil
             }
             
         }

@@ -14,6 +14,8 @@ struct settingCellModel{
 
 class ConfigViewController: UIViewController {
     
+    var nombrePerfil:String?
+    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

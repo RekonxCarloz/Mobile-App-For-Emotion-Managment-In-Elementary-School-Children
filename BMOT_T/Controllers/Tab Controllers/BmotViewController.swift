@@ -9,6 +9,8 @@ import UIKit
 
 class BmotViewController: UIViewController {
 
+    var nombrePerfil:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

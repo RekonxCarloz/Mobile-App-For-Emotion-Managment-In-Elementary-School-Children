@@ -624,9 +624,6 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Sopa de letras">
                                     <color key="baseBackgroundColor" red="1" green="0.0" blue="0.33097293398795874" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Ocp-QP-3xp" kind="show" id="tap-HG-af2"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moF-TD-UJ8">
                                 <rect key="frame" x="122" y="262" width="170" height="97"/>
@@ -638,9 +635,6 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Memorama">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="nKK-JS-pW1" kind="show" id="vjv-LK-P5Y"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-Nu-ASN">
                                 <rect key="frame" x="122" y="391" width="170" height="97"/>
@@ -648,9 +642,6 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="wCH-Bq-ZiB" kind="show" id="hQG-O1-MMx"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYq-oI-Lmj">
                                 <rect key="frame" x="122" y="514" width="170" height="97"/>
@@ -661,9 +652,6 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Pizza de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="u9M-8g-oaF" kind="show" id="v2H-74-4xx"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jU3-88-1rc"/>
@@ -688,6 +676,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Juegos" id="Hzp-n9-boL"/>
+                    <connections>
+                        <segue destination="Ocp-QP-3xp" kind="show" identifier="wordSearcherToEmotions" id="LwC-QK-BwZ"/>
+                        <segue destination="nKK-JS-pW1" kind="show" identifier="memoramaToEmotions" id="jmR-Mn-2Jf"/>
+                        <segue destination="wCH-Bq-ZiB" kind="show" identifier="ticTacToeToEmotions" id="4VF-B8-2Rv"/>
+                        <segue destination="u9M-8g-oaF" kind="show" identifier="pizzaGameSegue" id="nvL-Cc-d6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ue1-3e-XuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

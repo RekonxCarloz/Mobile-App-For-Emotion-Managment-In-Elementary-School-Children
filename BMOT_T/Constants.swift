@@ -19,6 +19,10 @@ struct K{
         static let loginToChooseProfile = "LoginToChooseProfile"
         static let chooseProfileToHome = "chooseProfileToHome"
         static let createProfileToHome = "createProfileToHome"
+        static let wordSearcherGameToEmotions = "wordSearcherToEmotions"
+        static let memoramaGameToEmotions = "memoramaToEmotions"
+        static let ticTacToeGameToEmotions = "ticTacToeToEmotions"
+        static let pizzaGameSegue = "pizzaGameSegue"
         
         struct gamesSegues{
             static let emotionWordSearcher = "emotionWordSearcherSegue"

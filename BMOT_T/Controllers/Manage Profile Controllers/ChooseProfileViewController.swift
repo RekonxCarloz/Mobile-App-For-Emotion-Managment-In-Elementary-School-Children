@@ -122,13 +122,25 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Segues.chooseProfileToHome{
             let tabCtrl = segue.destination as! UITabBarController
-            let navCtrl = tabCtrl.viewControllers![0] as! UINavigationController
-            let destinoVC = navCtrl.topViewController as! HomeViewController
-            destinoVC.nombrePerfil = nameToProfile
+            let homeNavCtrl = tabCtrl.viewControllers![0] as! UINavigationController
+            let destinoHome = homeNavCtrl.topViewController as! HomeViewController
+            destinoHome.nombrePerfil = nameToProfile
             
-            let navCtrlGames = tabCtrl.viewControllers![1] as! UINavigationController
-            let destinoVCGames = navCtrlGames.topViewController as! JuegosViewController
-            destinoVCGames.nombrePerfil = nameToProfile
+            let gamesNavCtrl = tabCtrl.viewControllers![1] as! UINavigationController
+            let destinoGames = gamesNavCtrl.topViewController as! JuegosViewController
+            destinoGames.nombrePerfil = nameToProfile
+            
+            let botNavCtrl = tabCtrl.viewControllers![2] as! UINavigationController
+            let destinoBot = botNavCtrl.topViewController as! JuegosViewController
+            destinoBot.nombrePerfil = nameToProfile
+            
+            let statsNavCtrl = tabCtrl.viewControllers![3] as! UINavigationController
+            let destinoStats = statsNavCtrl.topViewController as! JuegosViewController
+            destinoStats.nombrePerfil = nameToProfile
+            
+            let configNavCtrl = tabCtrl.viewControllers![4] as! UINavigationController
+            let destinoConfig = configNavCtrl.topViewController as! JuegosViewController
+            destinoConfig.nombrePerfil = nameToProfile
         }
         
     }

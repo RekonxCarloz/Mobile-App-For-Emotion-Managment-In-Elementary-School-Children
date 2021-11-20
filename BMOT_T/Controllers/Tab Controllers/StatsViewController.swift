@@ -9,6 +9,8 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    var nombrePerfil:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true

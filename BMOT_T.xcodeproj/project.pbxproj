@@ -275,6 +275,7 @@
 		4C54D68827303F51003E1AA1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CD3EE9A27488006001CCC3C /* PizzaEmociones */,
 				4CB70D85273D995100713082 /* SopaDeLetras */,
 				4C513802272F941700BF1D5C /* LaunchScreen.storyboard */,
 				4C5137FD272F940F00BF1D5C /* Main.storyboard */,
@@ -396,9 +397,16 @@
 			isa = PBXGroup;
 			children = (
 				6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */,
-				6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */,
 			);
 			path = PizzaDragDrop;
+			sourceTree = "<group>";
+		};
+		6CD3EE9A27488006001CCC3C /* PizzaEmociones */ = {
+			isa = PBXGroup;
+			children = (
+				6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */,
+			);
+			path = PizzaEmociones;
 			sourceTree = "<group>";
 		};
 		94C5C928EBE8A32A85E7455F /* Pods */ = {

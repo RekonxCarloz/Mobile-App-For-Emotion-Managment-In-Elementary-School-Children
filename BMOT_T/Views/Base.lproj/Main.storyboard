@@ -624,6 +624,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Sopa de letras">
                                     <color key="baseBackgroundColor" red="1" green="0.0" blue="0.33097293398795874" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="wordSearcherButtonPressed:" destination="W3t-kp-lbk" eventType="touchUpInside" id="yTR-bh-twL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moF-TD-UJ8">
                                 <rect key="frame" x="122" y="262" width="170" height="97"/>
@@ -635,6 +638,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Memorama">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="memoramaButtonPressed:" destination="W3t-kp-lbk" eventType="touchUpInside" id="toX-Dx-MQs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-Nu-ASN">
                                 <rect key="frame" x="122" y="391" width="170" height="97"/>
@@ -642,6 +648,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tictactoeButtonPressed:" destination="W3t-kp-lbk" eventType="touchUpInside" id="lQ3-45-Vb9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYq-oI-Lmj">
                                 <rect key="frame" x="122" y="514" width="170" height="97"/>
@@ -652,6 +661,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Pizza de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pizzaButtonPressed:" destination="W3t-kp-lbk" eventType="touchUpInside" id="kq7-db-OYy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jU3-88-1rc"/>

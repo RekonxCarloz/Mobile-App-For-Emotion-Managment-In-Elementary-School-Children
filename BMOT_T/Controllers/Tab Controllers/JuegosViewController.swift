@@ -54,7 +54,7 @@ class JuegosViewController: UIViewController {
             
         }else if segue.identifier == K.Segues.pizzaGameSegue{
             let vc = segue.destination as! PizzaGameViewController
-            vc.nombrePerfil = nombrePerfil
+//            vc.nombrePerfil = nombrePerfil
         }
     }
     

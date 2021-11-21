@@ -131,15 +131,15 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
             destinoGames.nombrePerfil = nameToProfile
             
             let botNavCtrl = tabCtrl.viewControllers![2] as! UINavigationController
-            let destinoBot = botNavCtrl.topViewController as! JuegosViewController
+            let destinoBot = botNavCtrl.topViewController as! BmotViewController
             destinoBot.nombrePerfil = nameToProfile
             
             let statsNavCtrl = tabCtrl.viewControllers![3] as! UINavigationController
-            let destinoStats = statsNavCtrl.topViewController as! JuegosViewController
+            let destinoStats = statsNavCtrl.topViewController as! StatsViewController
             destinoStats.nombrePerfil = nameToProfile
             
             let configNavCtrl = tabCtrl.viewControllers![4] as! UINavigationController
-            let destinoConfig = configNavCtrl.topViewController as! JuegosViewController
+            let destinoConfig = configNavCtrl.topViewController as! ConfigViewController
             destinoConfig.nombrePerfil = nameToProfile
         }
         

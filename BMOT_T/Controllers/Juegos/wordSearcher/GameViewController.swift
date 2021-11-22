@@ -47,29 +47,29 @@ class GameViewController: UIViewController {
         
         let miedoPalabras = ["miedo", "pavor", "espanto", "temor", "panico"]
         
-        let alegriaPalabras = ["ALEGRIA", "ENCANTO", "ADMIRACION", "PAZ", "FELICIDAD", "MOTIVACION"]
+        let alegriaPalabras = ["alegria", "encanto", "admiracion", "paz", "felicidad", "motivacion"]
         
-        let tristezaPalabras = ["TRISTEZA", "SOLEDAD", "TIMIDEZ", "ABANDONO", "DECEPCION", "MELANCOLIA"]
+        let tristezaPalabras = ["tristeza", "soledad", "timidez", "abandono", "decepcion", "melancolia"]
         
-        let enojoPalabras = ["INJUSTICIA", "ENOJO", "RABIA", "MOLESTIA", "ENFADO", "DISGUSTO"]
+        let enojoPalabras = ["injusticia", "enojo", "rabia", "molestia", "enfado", "disgusto"]
         
-        let afectoPalabras = ["AFECTO", "APOYO", "AMOR", "RESPETO", "TERNURA", "EMPATIA"]
+        let afectoPalabras = ["afecto", "apoyo", "amor", "respeto", "ternura", "empatia"]
         
         switch emocion {
         case 1:
-            name_emocion = "Miedo"
+            name_emocion = "miedo"
             return miedoPalabras
         case 2:
-            name_emocion = "Alegría"
+            name_emocion = "alegría"
             return alegriaPalabras
         case 3:
-            name_emocion = "Tristeza"
+            name_emocion = "tristeza"
             return tristezaPalabras
         case 4:
-            name_emocion = "Enojo"
+            name_emocion = "enojo"
             return enojoPalabras
         default:
-            name_emocion = "Afecto"
+            name_emocion = "afecto"
             return afectoPalabras
         }
     }

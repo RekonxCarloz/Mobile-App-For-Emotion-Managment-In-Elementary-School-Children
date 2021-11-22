@@ -6,8 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class PizzaGameViewController: UIViewController {
+    
+    var nombrePerfil:String?
+    ///Referencia para la base de datos.
+    private var dabatabase = Database.database().reference()
+    //Nombre del juego:
+    private let name_juego = "Pizza_Emociones"
+
+    //Variables para la base de datos.
+    private var fecha: String = ""
+    //private var duracion_partida : String = ""
+    private var dateText = ""
+    private var tiempo_partida : String = ""
     
     //MARK: Variables privadas de uso
     private let emocion_color = [
@@ -62,6 +75,23 @@ class PizzaGameViewController: UIViewController {
     private var timer = Timer()
     private var pressbtn = false
     
+    private var elapsedSeconds: Int = 0 {
+        didSet {
+            tiempo_partida = elapsedSeconds.formattedTime()
+            //dump(tiempo_partida)
+        }
+    }
+    
+    //Version 2 del timer:
+    private var timer_2: Timer?
+    private var isPaused: Bool = false {
+        didSet {
+            if isPaused == true {
+                timer_2?.invalidate()
+            }
+        }
+    }
+    
     //MARK: Outlets
     @IBOutlet weak var collectionview1: UICollectionView!
     
@@ -100,18 +130,41 @@ class PizzaGameViewController: UIViewController {
         
     }
     
+    /// Start and display clock time.
+    private func startTimer() {
+        timer_2?.invalidate()
+        timer_2 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
+            self.elapsedSeconds += 1
+            print("Timer:\(self.elapsedSeconds)")
+        })
+    }
+    
     //MARK: Metodos de los botones
     // Metodo del boton de inicar.
     @IBAction func IniciarActionButton(_ sender: UIButton) {
         timer.invalidate()
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer_action), userInfo: nil, repeats: true)
+        
+        //Version de timer 2.
+        startTimer()
+        
         self.collectionview1.dragInteractionEnabled = true
+        obtener_fecha()
     }
     
     @IBAction func PararActionButton(_ sender: UIButton) {
         self.collectionview1.dragInteractionEnabled = false
         timer.invalidate()
+        
+        if isPaused {
+            isPaused = false
+            print("Tiempo de la partida:\(elapsedSeconds)")
+        } else {
+            isPaused = true
+            print("Tiempo de la partida:\(elapsedSeconds)")
+        }
+        
         
         //Declaracion de variables
         var cont_emociones = [
@@ -142,7 +195,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 1 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto, tristeza y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto, Tristeza y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -151,7 +204,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 1 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -159,7 +212,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 1 ,Enojo = 0 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto y tristeza", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto y Tristeza", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -168,7 +221,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 0 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto, enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto, Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -177,7 +230,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 0 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -186,7 +239,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 0 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, afecto y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Afecto y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -195,7 +248,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor == cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 1 ,Tristeza = 0 ,Enojo = 0 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo y afecto", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo y Afecto", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -204,7 +257,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 1 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, tristeza, enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Tristeza, Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -213,7 +266,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 1 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, tristeza y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Tristeza y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -222,7 +275,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 1 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, tristeza y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Tristeza y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -231,7 +284,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 1 ,Enojo = 0 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo y tristeza", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo y Tristeza", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -240,7 +293,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 0 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo, enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo, Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -248,7 +301,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 0 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -257,7 +310,7 @@ class PizzaGameViewController: UIViewController {
             
             if(emocion == "Miedo" && valor > 0 && valor > cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!){
                 //Miedo = 1, Afecto = 0 ,Tristeza = 0 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son miedo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Miedo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -267,7 +320,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor == cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 1 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto, tristeza, enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto, Tristeza, Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -275,7 +328,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor == cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 1 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto, tristeza y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto, Tristeza y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -283,7 +336,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 1 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto, tristeza y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto, Tristeza y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -291,7 +344,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor == cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 1 ,Enojo = 0 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto y tristeza", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto y Tristeza", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -300,7 +353,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 0 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto, enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto, Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -308,7 +361,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 0 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  afecto y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Afecto y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -316,7 +369,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Afecto"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Tristeza"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 1 ,Tristeza = 0 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son  alegria y afecto", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Alegria y Afecto", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -324,7 +377,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Tristeza"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]! ) {
                 
                 //Miedo = 0, Afecto = 0 ,Tristeza = 1 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son tristeza, alegria y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Tristeza, Alegria y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
 
@@ -333,7 +386,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Tristeza"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Afecto"]! && valor == cont_emociones["Enojo"]! && valor > cont_emociones["Alegria"]! ) {
                 
                 //Miedo = 0, Afecto = 0 ,Tristeza = 1 ,Enojo = 1 , Alegria = 0
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son tristeza  y enojo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Tristeza  y Enojo", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -341,7 +394,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Tristeza"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Afecto"]! && valor > cont_emociones["Enojo"]! && valor == cont_emociones["Alegria"]! ) {
                 
                 //Miedo = 0, Afecto = 0 ,Tristeza = 1 ,Enojo = 0 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son tristeza  y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Tristeza  y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -350,7 +403,7 @@ class PizzaGameViewController: UIViewController {
             if (emocion == "Enojo"  && valor > 0 && valor > cont_emociones["Miedo"]! && valor > cont_emociones["Afecto"]! && valor > cont_emociones["Tristeza"]! && valor == cont_emociones["Alegria"]!) {
                 
                 //Miedo = 0, Afecto = 0 ,Tristeza = 0 ,Enojo = 1 , Alegria = 1
-                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son enojo y alegria", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Las emociones que sobre salen son Enojo y Alegria", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
@@ -372,7 +425,7 @@ class PizzaGameViewController: UIViewController {
                 print("Cambio de color a: \(emocion_color[emocion]!)")
                 
                 self.fondoImage.backgroundColor = UIColor.init(red: 0, green: 123, blue: 0, alpha: 1)
-                let alert = UIAlertController(title: "", message: "Se muestra que el miedo es mayor :s", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Se muestra que el Miedo es mayor :s", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -383,7 +436,7 @@ class PizzaGameViewController: UIViewController {
                 print("Cambio de color a: \(emocion_color[emocion]!)")
                 
                 self.fondoImage.backgroundColor = UIColor.init(red: 0, green: 255, blue: 77, alpha: 0.9)
-                let alert = UIAlertController(title: "", message: "Se muestra que el afecto es mayor :3", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Se muestra que el Afecto es mayor :3", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -393,7 +446,7 @@ class PizzaGameViewController: UIViewController {
                 print("Cambio de color a: \(emocion_color[emocion]!)")
                 self.fondoImage.backgroundColor = UIColor.init(red: 91, green: 0, blue: 255, alpha: 1)
                 
-                let alert = UIAlertController(title: "", message: "Se muestra que la tristeza es mayor :(", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Se muestra que la Tristeza es mayor :(", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -404,7 +457,7 @@ class PizzaGameViewController: UIViewController {
                 
                 self.fondoImage.backgroundColor = UIColor.init(red: 255, green: 0, blue: 0, alpha: 1)
                 
-                let alert = UIAlertController(title: "", message: "Se muestra que el enojo es mayor >:|", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Se muestra que el Enojo es mayor >:|", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
@@ -415,16 +468,57 @@ class PizzaGameViewController: UIViewController {
                
                 self.fondoImage.backgroundColor = UIColor.init(red: 255, green: 255, blue: 0, alpha: 1)
                 
-                let alert = UIAlertController(title: "", message: "Se muestra que la alegria es mayor =D", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: "Se muestra que la Alegria es mayor =D", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
                 self.present(alert, animated: true)
             }
         
         
         }
-        dump(cont_emociones)
+        dump(cont_emociones) //-> es el diccionario de las emociones para el conteo de las rebanadas.
+        //        Hacer llamar los valores que se van a ocupar para encontrar el almacenamiento de los datos
+        //        de la partidas
+        self.tiempo_partida  = elapsedSeconds.formattedTime()
+
+        self.guardar_partida(name_juego: self.name_juego, fecha_partida: self.dateText, duracion_partida: tiempo_partida,
+                             miedo: cont_emociones["Miedo"]!,
+                             afecto: cont_emociones["Afecto"]!,
+                             tristeza: cont_emociones["Tristeza"]!,
+                             enojo: cont_emociones["Enojo"]!,
+                             alegria: cont_emociones["Alegria"]!)
+        
         
     }
+    
+    //Funcion que almacena los datos de la partida.
+    private func guardar_partida(name_juego : String,fecha_partida: String, duracion_partida : String, miedo : Int, afecto : Int, tristeza : Int, enojo : Int, alegria : Int){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfileName = nombrePerfil {
+                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "duracion" : duracion_partida, "Miedo" : miedo, "Afecto" : afecto, "Tristeza" : tristeza, "Enojo" : enojo , "Alegria" : alegria]){ error, _ in
+                        if error == nil{
+                            print("Se guardo exitosa la partida")
+                        }
+                        else{
+                            print("El error es: \(error!)")
+                       
+                            }
+                    }
+            }
+        }
+        
+    }
+    
+    
+    //Funcion para la obtener la fecha de la partida
+    private func obtener_fecha(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY"
+        self.dateText = dateFormatter.string(from: date)
+        
+    }
+  
+    
     
     @IBAction func ReiniciarActionButton(_ sender: UIButton) {
         //print("Se reincio el juego")
@@ -432,8 +526,10 @@ class PizzaGameViewController: UIViewController {
         if (self.pressbtn == true){
             self.items2 = [String]()
             self.cont = 0
-            self.fondoImage.backgroundColor = UIColor.white
+            self.elapsedSeconds = 0
+            self.fondoImage.backgroundColor = nil
             self.collectionview2.reloadData()
+            self.obtener_fecha()
             
         }
         self.collectionview1.dragInteractionEnabled = false
@@ -444,6 +540,9 @@ class PizzaGameViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    
+    
     
     //MARK: Metodos de funcionamiento
     

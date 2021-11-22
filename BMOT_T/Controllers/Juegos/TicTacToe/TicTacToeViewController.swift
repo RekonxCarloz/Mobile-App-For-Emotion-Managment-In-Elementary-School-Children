@@ -72,6 +72,7 @@ class TicTacToeViewController: UIViewController {
         ]
         clearBoard()
         winnerName.isHidden = true
+        obtener_fecha()
     }
     
     @IBAction func cellPressed(_ sender: UIButton) {
@@ -120,7 +121,7 @@ class TicTacToeViewController: UIViewController {
             self.P1_emocion = ficha1
             self.P2_emocion = ficha2
             
-            save_game(fecha_partida: dateText, duracion_partida: "0", jugador_1: P1_emocion!, jugador_2: P2_emocion!, ganador: jugador_ganador!)
+            save_game(fecha_partida: self.dateText, jugador_1: self.P1_emocion!, jugador_2: self.P2_emocion!, ganador: self.jugador_ganador!)
         }
         print(currentPlayer)
     }
@@ -158,10 +159,10 @@ class TicTacToeViewController: UIViewController {
         ]
         if(currentPlayer == 1 ){
             winnerName.text = "Jugador 1 Gana!"
-            jugador_ganador = winnerName.text
+            jugador_ganador = "jugador_1"
         }else{
             winnerName.text = "Jugador 2 Gana!"
-            jugador_ganador = winnerName.text
+            jugador_ganador = "jugador_2"
         }
         winnerName.isHidden = false
     }
@@ -176,10 +177,10 @@ class TicTacToeViewController: UIViewController {
     }
     
     //Funcion que almacena los datos de la partida.
-    private func save_game(fecha_partida: String, duracion_partida : String, jugador_1 : String, jugador_2 : String, ganador : String){
+    private func save_game(fecha_partida: String, jugador_1 : String, jugador_2 : String, ganador : String){
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
             if let safeProfileName = nombrePerfil {
-                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "duracion" : duracion_partida, "jugador_1" : jugador_1 , "jugador_2" : jugador_2]){ error, _ in
+                dabatabase.child(userEmail).child("perfiles").child(safeProfileName).child("juegos").child(name_juego).child("partidas").childByAutoId().setValue(["fecha_partida" : fecha_partida, "jugador_1" : jugador_1 , "jugador_2" : jugador_2, "jugador_ganador" : ganador]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida")
                         }

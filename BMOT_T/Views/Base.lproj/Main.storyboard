@@ -764,22 +764,87 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-or-GAM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrF-Yg-gbo">
-                                <rect key="frame" x="20" y="97" width="374" height="716"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrF-Yg-gbo">
+                                <rect key="frame" x="20" y="108" width="374" height="685"/>
                                 <color key="backgroundColor" red="0.68428861100000005" green="1" blue="0.56885089529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-JA-IYk">
+                                <rect key="frame" x="139" y="452" width="142" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Miedo">
+                                    <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-g5-d2r">
+                                <rect key="frame" x="113" y="519" width="189" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alegría">
+                                    <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zth-XR-taQ">
+                                <rect key="frame" x="112" y="592" width="189" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tristeza">
+                                    <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-KI-auR">
+                                <rect key="frame" x="112" y="658" width="189" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enojo">
+                                    <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-ac-O0k">
+                                <rect key="frame" x="112" y="727" width="189" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.266985692" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AFecto">
+                                    <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Las emociones son estados internos. Reflejan nuestros pensamientos, sensaciones y conductas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-ev-xy6">
+                                <rect key="frame" x="36" y="101" width="348" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Todos tenemos 5 emociones básicas. ¿Quieres conocerlas?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-2r-BNB">
+                                <rect key="frame" x="33" y="334" width="348" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KVi-DS-HZC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xrF-Yg-gbo" firstAttribute="leading" secondItem="Hju-Kw-JBW" secondAttribute="leadingMargin" id="Ml2-Dn-BqS"/>
                             <constraint firstAttribute="bottom" secondItem="JYS-or-GAM" secondAttribute="bottom" id="Ye0-eQ-ma7"/>
                             <constraint firstItem="JYS-or-GAM" firstAttribute="leading" secondItem="Hju-Kw-JBW" secondAttribute="leading" id="gQY-ln-5m7"/>
                             <constraint firstItem="JYS-or-GAM" firstAttribute="trailing" secondItem="Hju-Kw-JBW" secondAttribute="trailing" id="jyf-ow-9Yb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xrF-Yg-gbo" secondAttribute="trailing" id="k69-5m-oXG"/>
+                            <constraint firstItem="xrF-Yg-gbo" firstAttribute="top" secondItem="KVi-DS-HZC" secondAttribute="top" constant="20" id="rhK-hY-kvL"/>
+                            <constraint firstItem="KVi-DS-HZC" firstAttribute="bottom" secondItem="xrF-Yg-gbo" secondAttribute="bottom" constant="20" id="wUR-ma-7yw"/>
                             <constraint firstItem="JYS-or-GAM" firstAttribute="top" secondItem="Hju-Kw-JBW" secondAttribute="top" id="yaQ-u4-fj5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Da4-Jy-Ar0"/>
+                    <connections>
+                        <outlet property="viewBG" destination="xrF-Yg-gbo" id="Hqp-sT-wTC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7e-e2-EiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

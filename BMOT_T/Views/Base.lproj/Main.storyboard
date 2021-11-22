@@ -765,7 +765,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrF-Yg-gbo">
-                                <rect key="frame" x="20" y="97" width="374" height="486"/>
+                                <rect key="frame" x="20" y="97" width="374" height="716"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68428861100000005" green="1" blue="0.56885089529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -1095,8 +1095,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-M2-l8s">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoge ficha para jugador 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-2r-H14">
-                                <rect key="frame" x="47.5" y="131.5" width="319" height="47.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo te sientes hoy, usuario?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-2r-H14">
+                                <rect key="frame" x="42.5" y="131.5" width="329" height="47.5"/>
                                 <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1309,6 +1309,7 @@
                         <outlet property="affectionToken2" destination="ZC7-pw-6Hr" id="uTz-ZP-twX"/>
                         <outlet property="angerToken1" destination="GY8-E8-8dd" id="J4b-se-8Vm"/>
                         <outlet property="angerToken2" destination="KCK-dg-62r" id="9Sa-0Z-h5b"/>
+                        <outlet property="emocionUsuario" destination="Cyd-2r-H14" id="0hf-Zd-DUP"/>
                         <outlet property="fearToken1" destination="zR5-Oh-ALf" id="KXP-E4-X6K"/>
                         <outlet property="fearToken2" destination="6pZ-2E-TAb" id="0ia-Q2-NKi"/>
                         <outlet property="happyToken1" destination="kYa-n9-ssn" id="K9T-E4-LgP"/>
@@ -1563,9 +1564,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19b-rY-3fY">
                                         <rect key="frame" x="316" y="4.5" width="90" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Pausa"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Terminar"/>
                                         <connections>
-                                            <action selector="pauseToggle:" destination="bND-ro-WKD" eventType="touchUpInside" id="8ag-qw-h3f"/>
+                                            <action selector="endGamePressed:" destination="bND-ro-WKD" eventType="touchUpInside" id="78d-yz-ajU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9B-KX-2Nz">

@@ -10,6 +10,7 @@ import UIKit
 class WordCollectionViewCell: UICollectionViewCell {
 
     static let cellId = "WordCell"
+    var palabrasEncontradas = 0
     
     @IBOutlet weak var label: UILabel!
 
@@ -24,11 +25,13 @@ class WordCollectionViewCell: UICollectionViewCell {
                 ] as [NSAttributedString.Key : Any]
             attrString.addAttributes(attrsDict, range: NSRange(location: 0, length: text.count))
             label.attributedText = attrString
+            
         } else {
             label.text = text
             label.textColor = UIColor.black
             label.font = UIFont.systemFont(ofSize: 13)
         }
+        
         label.backgroundColor = isSelected ? UIColor.gray.withAlphaComponent(0.5) : UIColor.clear
     }
 }

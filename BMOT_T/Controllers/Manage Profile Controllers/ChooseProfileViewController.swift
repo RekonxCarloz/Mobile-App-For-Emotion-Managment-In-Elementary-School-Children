@@ -142,6 +142,5 @@ extension ChooseProfileViewController: UICollectionViewDelegate, UICollectionVie
             let destinoConfig = configNavCtrl.topViewController as! ConfigViewController
             destinoConfig.nombrePerfil = nameToProfile
         }
-        
     }
 }

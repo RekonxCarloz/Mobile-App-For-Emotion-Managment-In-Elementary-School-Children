@@ -63,8 +63,6 @@ class RegisterViewController: UIViewController {
             let alert = UIAlertController(title: "Las contraseñas no coinciden", message: "No fue posible completar el registro", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cerrar", style: .cancel, handler: nil))
             self.present(alert, animated: true)
-            print(passwordTextField!)
-            print(passwordConfTextField!)
         }
     }
     
@@ -74,15 +72,6 @@ class RegisterViewController: UIViewController {
 }
 
 
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
 
 
 extension RegisterViewController: UITextFieldDelegate{

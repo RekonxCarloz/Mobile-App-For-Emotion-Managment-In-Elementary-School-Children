@@ -28,6 +28,7 @@ class TictactoeFichasViewController: UIViewController {
     @IBOutlet weak var happyToken2: UIButton!
     @IBOutlet weak var affectionToken2: UIButton!
     
+    @IBOutlet weak var emocionUsuario: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ class TictactoeFichasViewController: UIViewController {
         happyToken2.alpha = 0.5
         affectionToken2.alpha = 0.5
         
-        
+        emocionUsuario.text = "¿Cómo te sientes hoy, \(nombrePerfil!)?"
     }
     
     

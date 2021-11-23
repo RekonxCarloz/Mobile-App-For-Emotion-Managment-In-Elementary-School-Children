@@ -753,6 +753,72 @@
             </objects>
             <point key="canvasLocation" x="1286" y="2296"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eLd-gS-P4k">
+            <objects>
+                <viewController id="Mmz-E7-q47" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2VX-Wm-EuD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alegriaBG" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-zc-oo5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VQy-FW-YJX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rh2-dP-SBf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yw-z0-WQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4253.623188405797" y="1848.8839285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YHi-s3-geR">
+            <objects>
+                <viewController id="WMN-sr-am8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAA-Q5-JoE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tristezaBG" translatesAutoresizingMaskIntoConstraints="NO" id="4zT-lr-Wl3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rDa-ap-7Ei"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O9f-Be-sH1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPX-GR-7Oc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4604.347826086957" y="2530.5803571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="897-D5-KHL">
+            <objects>
+                <viewController id="wM4-Km-9cj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kda-p1-D6E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="miedoBG" translatesAutoresizingMaskIntoConstraints="NO" id="b61-HS-S7r">
+                                <rect key="frame" x="-36" y="0.0" width="469" height="932"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="URW-d8-SHG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oJF-br-q52"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1L-Qe-h99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3307.2463768115945" y="1541.5178571428571"/>
+        </scene>
         <!--Info View Controller-->
         <scene sceneID="InG-Fh-7b1">
             <objects>
@@ -776,6 +842,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Miedo">
                                     <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wM4-Km-9cj" kind="show" id="8D1-FG-B0a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-g5-d2r">
                                 <rect key="frame" x="113" y="519" width="189" height="53"/>
@@ -785,6 +854,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Alegría">
                                     <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Mmz-E7-q47" kind="show" id="A5L-gB-o8a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zth-XR-taQ">
                                 <rect key="frame" x="112" y="592" width="189" height="53"/>
@@ -794,6 +866,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Tristeza">
                                     <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="WMN-sr-am8" kind="show" id="Ha4-Xn-sv0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-KI-auR">
                                 <rect key="frame" x="112" y="658" width="189" height="53"/>
@@ -803,6 +878,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Enojo">
                                     <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="qKS-ZE-WhW" kind="show" id="SUw-G3-zmm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-ac-O0k">
                                 <rect key="frame" x="112" y="727" width="189" height="53"/>
@@ -812,6 +890,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="AFecto">
                                     <fontDescription key="titleFontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="YtG-eV-FKI" kind="show" id="kQT-0W-8Y3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Las emociones son estados internos. Reflejan nuestros pensamientos, sensaciones y conductas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-ev-xy6">
                                 <rect key="frame" x="36" y="101" width="348" height="257"/>
@@ -851,6 +932,28 @@
             <point key="canvasLocation" x="-2572.463768115942" y="2220.5357142857142"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="f9b-LE-G6U">
+            <objects>
+                <viewController id="qKS-ZE-WhW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7MH-mi-MGI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="enojoBG" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-d7-dBB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="995"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GCd-jS-5xx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cxi-Pa-fge"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKS-Nv-wdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3771.0144927536235" y="2989.9553571428569"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="p6j-PN-BSi">
             <objects>
                 <viewController id="YtG-eV-FKI" sceneMemberID="viewController">
@@ -858,7 +961,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-ek-0Qb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afectoBG" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-ek-0Qb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
@@ -871,10 +974,11 @@
                             <constraint firstItem="8Me-ek-0Qb" firstAttribute="leading" secondItem="0mC-7G-t81" secondAttribute="leading" id="njc-YV-N2i"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1gS-rZ-bog"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BC8-CC-Ohf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2564" y="2971"/>
+            <point key="canvasLocation" x="-2572" y="3010"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="tyc-bO-aLO">
@@ -2127,148 +2231,174 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90D-t1-Jdw">
-                                <rect key="frame" x="40" y="427" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="0" backgroundImage="Afecto">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="dhF-1Y-ZlL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-i1-YfQ">
-                                <rect key="frame" x="294" y="427" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="2" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="XBa-Qy-mTK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg4-4o-bEb">
-                                <rect key="frame" x="169" y="426" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="1" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="v7d-i3-q42"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-vA-uxX">
-                                <rect key="frame" x="40" y="546" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="3" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="87L-Qb-CyO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKH-Rp-B17">
-                                <rect key="frame" x="294" y="546" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="5" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="x3u-oK-rnt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM9-rU-iOp">
-                                <rect key="frame" x="169" y="545" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="4" backgroundImage="Alegre">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="KEC-Sy-2DR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJq-Mz-Gln">
-                                <rect key="frame" x="40" y="672" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="6" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="ul3-sE-jd6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Qe-t0T">
-                                <rect key="frame" x="294" y="672" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="8" backgroundImage="Afecto">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="rV6-WZ-g9M"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-6m-k7E">
-                                <rect key="frame" x="169" y="671" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="7" backgroundImage="emptyCell">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="nYB-IM-hjT"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="plN-MU-9bL">
-                                <rect key="frame" x="151" y="193" width="113.5" height="123"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ij2-al-dgq">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turno de: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-f5-8lX">
-                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="47.5"/>
-                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
-                                        <color key="textColor" systemColor="systemTealColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gato de emociones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJB-tl-ejQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-UX-tVU">
-                                        <rect key="frame" x="1.5" y="75.5" width="110.5" height="47.5"/>
-                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="plN-MU-9bL">
+                                        <rect key="frame" x="0.0" y="105.5" width="374" height="91"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turno de: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-f5-8lX">
+                                                <rect key="frame" x="130.5" y="0.0" width="113.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemTealColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-UX-tVU">
+                                                <rect key="frame" x="132" y="45.5" width="110.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador X Gana!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-Rm-D8i">
+                                        <rect key="frame" x="0.0" y="211.5" width="374" height="90.5"/>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="40"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-VL-CKF">
+                                        <rect key="frame" x="0.0" y="317" width="374" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90D-t1-Jdw">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0" backgroundImage="Afecto">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="dhF-1Y-ZlL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg4-4o-bEb">
+                                                <rect key="frame" x="128" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="v7d-i3-q42"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-i1-YfQ">
+                                                <rect key="frame" x="256" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="XBa-Qy-mTK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-v0-bC5">
+                                        <rect key="frame" x="0.0" y="423" width="374" height="90.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keT-vA-uxX">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="90.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="87L-Qb-CyO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM9-rU-iOp">
+                                                <rect key="frame" x="128" y="0.0" width="118" height="90.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4" backgroundImage="Alegre">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="KEC-Sy-2DR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKH-Rp-B17">
+                                                <rect key="frame" x="256" y="0.0" width="118" height="90.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="x3u-oK-rnt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uqN-yl-71U">
+                                        <rect key="frame" x="0.0" y="528.5" width="374" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJq-Mz-Gln">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="ul3-sE-jd6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-6m-k7E">
+                                                <rect key="frame" x="128" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7" backgroundImage="emptyCell">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="nYB-IM-hjT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Qe-t0T">
+                                                <rect key="frame" x="256" y="0.0" width="118" height="91"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8" backgroundImage="Afecto">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cellPressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="rV6-WZ-g9M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HB-3r-M4g">
+                                        <rect key="frame" x="0.0" y="634.5" width="374" height="90.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-Bi-En0">
+                                                <rect key="frame" x="125.5" y="22.5" width="123" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="OGG-xO-HL4"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Reiniciar Juego"/>
+                                                <connections>
+                                                    <action selector="resetGamePressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="CwX-us-Cfu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8dL-Bi-En0" firstAttribute="centerX" secondItem="8HB-3r-M4g" secondAttribute="centerX" id="bOK-ON-cXD"/>
+                                            <constraint firstItem="8dL-Bi-En0" firstAttribute="centerY" secondItem="8HB-3r-M4g" secondAttribute="centerY" id="d6O-Iz-gFz"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-Bi-En0">
-                                <rect key="frame" x="115" y="789" width="182" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Reiniciar Juego"/>
-                                <connections>
-                                    <action selector="resetGamePressed:" destination="JlD-JY-UGG" eventType="touchUpInside" id="CwX-us-Cfu"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gato de emociones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJB-tl-ejQ">
-                                <rect key="frame" x="38" y="97" width="337" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jugador X Gana!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-Rm-D8i">
-                                <rect key="frame" x="69" y="343" width="276" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="40"/>
-                                <color key="textColor" systemColor="systemYellowColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jar-aD-iWe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ij2-al-dgq" firstAttribute="top" secondItem="jar-aD-iWe" secondAttribute="top" id="ERP-TP-BCA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ij2-al-dgq" secondAttribute="trailing" id="Mco-Ap-mTm"/>
+                            <constraint firstItem="ij2-al-dgq" firstAttribute="leading" secondItem="Iuv-N9-heU" secondAttribute="leadingMargin" id="PU7-tt-oLN"/>
+                            <constraint firstItem="jar-aD-iWe" firstAttribute="bottom" secondItem="ij2-al-dgq" secondAttribute="bottom" id="plh-dG-dcD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9l1-Iz-Wva"/>
                     <connections>
@@ -2301,10 +2431,13 @@
         <image name="Frankie" width="166.5" height="166.5"/>
         <image name="Miedo" width="233" height="233"/>
         <image name="Tristeza" width="233" height="233"/>
+        <image name="afectoBG" width="1125" height="2436"/>
+        <image name="alegriaBG" width="1125" height="2436"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="background" width="550" height="999"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
         <image name="emptyCell" width="60" height="60"/>
+        <image name="enojoBG" width="1125" height="2436"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="globo" width="700" height="700"/>
         <image name="house" catalog="system" width="128" height="106"/>
@@ -2315,11 +2448,13 @@
         <image name="mascot5" width="880" height="900"/>
         <image name="mesa_fondo" width="800" height="620"/>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="miedoBG" width="1125" height="2436"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="reb_felicidad" width="142" height="142"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <image name="tristezaBG" width="1125" height="2436"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

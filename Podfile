@@ -15,7 +15,8 @@ target 'BMOT_T' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Storage'
 
-
+  # Charts
+  pod 'Charts'
 
 
   target 'BMOT_TTests' do

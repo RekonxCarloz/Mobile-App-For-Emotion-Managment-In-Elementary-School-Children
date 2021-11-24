@@ -56,6 +56,11 @@
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
 		6C2EA8362744A87900199F16 /* PizzaGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */; };
 		6C2EA8382744A9B900199F16 /* PizzaGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */; };
+		6CD3EE9D274C3E56001CCC3C /* TimeGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EE9C274C3E56001CCC3C /* TimeGraphData.swift */; };
+		6CD3EE9F274C3EB4001CCC3C /* GraphRunningTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EE9E274C3EB4001CCC3C /* GraphRunningTimeView.swift */; };
+		6CD3EEA1274C3EEF001CCC3C /* RunningTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EEA0274C3EEF001CCC3C /* RunningTimeRepository.swift */; };
+		6CD3EEA3274C3F26001CCC3C /* GraphRunningTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EEA2274C3F25001CCC3C /* GraphRunningTimePresenter.swift */; };
+		6CD3EEA5274D7AFF001CCC3C /* GraphRunningTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EEA4274D7AFF001CCC3C /* GraphRunningTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +134,11 @@
 		4CE81FF12733143F00F1943E /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaGameViewController.swift; sourceTree = "<group>"; };
 		6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CD3EE9C274C3E56001CCC3C /* TimeGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGraphData.swift; sourceTree = "<group>"; };
+		6CD3EE9E274C3EB4001CCC3C /* GraphRunningTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRunningTimeView.swift; sourceTree = "<group>"; };
+		6CD3EEA0274C3EEF001CCC3C /* RunningTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimeRepository.swift; sourceTree = "<group>"; };
+		6CD3EEA2274C3F25001CCC3C /* GraphRunningTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRunningTimePresenter.swift; sourceTree = "<group>"; };
+		6CD3EEA4274D7AFF001CCC3C /* GraphRunningTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRunningTimeViewController.swift; sourceTree = "<group>"; };
 		7AE75A0CB2A71D49F5A2AFB6 /* Pods_BMOT_TTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMOT_TTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA19BC27624F830EF0136C /* Pods-BMOT_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T.release.xcconfig"; path = "Target Support Files/Pods-BMOT_T/Pods-BMOT_T.release.xcconfig"; sourceTree = "<group>"; };
 		A187C92374E35FA6063C2380 /* Pods-BMOT_T-BMOT_TUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; path = "Target Support Files/Pods-BMOT_T-BMOT_TUITests/Pods-BMOT_T-BMOT_TUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 		4C54D68727303F3D003E1AA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6CD3EE9B274C3E33001CCC3C /* Estadisticas */,
 				4C2D4BE02747474800E3D6E8 /* Info-Story */,
 				4CB70D86273D99B000713082 /* Juegos */,
 				4C9407C927318AB00036805A /* Tab Controllers */,
@@ -407,6 +418,18 @@
 				6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */,
 			);
 			path = PizzaEmociones;
+			sourceTree = "<group>";
+		};
+		6CD3EE9B274C3E33001CCC3C /* Estadisticas */ = {
+			isa = PBXGroup;
+			children = (
+				6CD3EE9C274C3E56001CCC3C /* TimeGraphData.swift */,
+				6CD3EE9E274C3EB4001CCC3C /* GraphRunningTimeView.swift */,
+				6CD3EEA0274C3EEF001CCC3C /* RunningTimeRepository.swift */,
+				6CD3EEA2274C3F25001CCC3C /* GraphRunningTimePresenter.swift */,
+				6CD3EEA4274D7AFF001CCC3C /* GraphRunningTimeViewController.swift */,
+			);
+			path = Estadisticas;
 			sourceTree = "<group>";
 		};
 		94C5C928EBE8A32A85E7455F /* Pods */ = {
@@ -679,7 +702,10 @@
 				6C2EA8362744A87900199F16 /* PizzaGameViewController.swift in Sources */,
 				4C9407CF27318B400036805A /* HomeViewController.swift in Sources */,
 				4CB70D91273D9B2A00713082 /* GameViewController.swift in Sources */,
+				6CD3EE9F274C3EB4001CCC3C /* GraphRunningTimeView.swift in Sources */,
+				6CD3EE9D274C3E56001CCC3C /* TimeGraphData.swift in Sources */,
 				4CB70D97273D9C1B00713082 /* LinesOverlay.swift in Sources */,
+				6CD3EEA5274D7AFF001CCC3C /* GraphRunningTimeViewController.swift in Sources */,
 				4C5016942731CD8D00F14F65 /* extensions.swift in Sources */,
 				4CB70D8F273D9A8F00713082 /* WordCollectionViewCell.swift in Sources */,
 				4C9407E027318E590036805A /* CreateProfileViewController.swift in Sources */,
@@ -694,6 +720,8 @@
 				4C5137FA272F940F00BF1D5C /* SceneDelegate.swift in Sources */,
 				4CE81FF22733143F00F1943E /* ProfileSettings.swift in Sources */,
 				4C9407C827318A830036805A /* Constants.swift in Sources */,
+				6CD3EEA3274C3F26001CCC3C /* GraphRunningTimePresenter.swift in Sources */,
+				6CD3EEA1274C3EEF001CCC3C /* RunningTimeRepository.swift in Sources */,
 				6C2EA8382744A9B900199F16 /* PizzaGameCollectionViewCell.swift in Sources */,
 				4C9407D327318B8F0036805A /* BmotViewController.swift in Sources */,
 				4CB70D8D273D9A6F00713082 /* GridCollectionViewCell.swift in Sources */,

@@ -930,6 +930,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Partidas totales">
                                     <color key="baseBackgroundColor" red="1" green="0.0" blue="0.330972934" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostrarPartidastotales:" destination="ehk-Ea-161" eventType="touchUpInside" id="izB-X7-rU1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-zp-Hfa">
                                 <rect key="frame" x="224" y="128" width="170" height="47"/>
@@ -941,6 +944,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Partidas por Semaforo">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostrarPartidassemaforo:" destination="ehk-Ea-161" eventType="touchUpInside" id="cdK-Um-AIY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IsP-fV-UCj"/>

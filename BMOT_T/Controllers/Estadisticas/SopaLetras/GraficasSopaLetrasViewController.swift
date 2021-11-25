@@ -19,15 +19,17 @@ class GraficasSopaLetrasViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func mostrarPartidastotales(_ sender: UIButton) {
+        
     }
-    */
+    
+    @IBAction func mostrarPartidassemaforo(_ sender: UIButton) {
+        
+    }
+    
+    
+//MARK: Consultas para cada uno de las graficas:
+    //Consulta para mostrar los datos de todas las partidas:
+    
 
 }

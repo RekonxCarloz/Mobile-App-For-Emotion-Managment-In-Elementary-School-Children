@@ -9,6 +9,8 @@ import UIKit
 
 class MenuJuegosViewController: UIViewController {
     var nombrePerfil:String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dump(nombrePerfil)

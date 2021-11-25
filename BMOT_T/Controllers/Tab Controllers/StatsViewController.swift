@@ -16,6 +16,8 @@ class StatsViewController: UIViewController {
     var nombrePerfil:String?
     var total_partidas = 0
     
+    var bandera = false
+    
     
     //Variable de las partidas de Sopa de Letras
     var partidas_juego_SL = [
@@ -69,12 +71,15 @@ class StatsViewController: UIViewController {
         consulta_memorama()
         consulta_gatoemociones()
         consulta_pizzaemociones()
+        self.bandera = true
+        
         
     }
     
     @IBAction func mostrardatosAction(_ sender: UIButton) {
         informacion_consulta()
         calculo_num_partidas()
+        creacionGrafica()
     }
     
     @IBAction func MenuJuegosAction(_ sender: UIButton) {
@@ -320,7 +325,7 @@ class StatsViewController: UIViewController {
                         if error == nil{
                             print("Se guardo exitosa la partida en Pizza")
                             //dump(num)
-                            self.partidas_juego_PE = Int(snapshot.childrenCount) 
+                            self.partidas_juego_PE = Int(snapshot.childrenCount)
                             dump(self.partidas_juego_PE)
                             
                         }else{
@@ -334,13 +339,56 @@ class StatsViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
+    //Funcion para creacion de grafica
+    private func creacionGrafica(){
+        informacion_consulta()
+        //Creacion de grafica de barras
+        let barGrafica = BarChartView(frame: CGRect(x: 0,
+                                                    y: 0,
+                                                    width: view.frame.size.width,
+                                                    height: view.frame.size.width))
+        
+        //Configuracion ejes
+        let xAxis = barGrafica.xAxis
+        let yAxis = barGrafica.rightAxis
+        
+        //Configuracion legend
+        
+        //Supply data
+        var entradas = [BarChartDataEntry]()
+        entradas.append(BarChartDataEntry(
+            x: Double(1),
+            y: Double( self.partidas_juego_SL["Total"]! )))
+        
+        entradas.append(BarChartDataEntry(
+            x: Double(2),
+            y: Double( self.partidas_juego_M["Total"]! )))
+        
+        entradas.append(BarChartDataEntry(
+            x: Double(3),
+            y: Double( self.partidas_juego_GE )))
+        
+        entradas.append(BarChartDataEntry(
+            x: Double(4),
+            y: Double( self.partidas_juego_PE )))
+        
+        let set = BarChartDataSet(entries: entradas, label: "Partidas")
+        set.colors = ChartColorTemplates.joyful()
+        let data = BarChartData(dataSet: set)
+        barGrafica.data = data
+        
+        if bandera == false {
+            view.willRemoveSubview(barGrafica)
+            view.addSubview(barGrafica)
+            barGrafica.center = view.center
+            
+        }else{
+            view.willRemoveSubview(barGrafica)
+            view.addSubview(barGrafica)
+            barGrafica.center = view.center
+        }
+       
+    }
     
     private func informacion_consulta(){
 //        print("Numero de partidas miedo:\(self.partidas_juego_SL["Miedo"]!)")

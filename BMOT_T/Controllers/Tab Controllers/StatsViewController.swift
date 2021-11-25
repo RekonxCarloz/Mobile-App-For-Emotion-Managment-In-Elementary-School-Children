@@ -91,7 +91,6 @@ class StatsViewController: UIViewController {
     //consulta_sopaletras: Saber el numero de partidas que hay por cada emocion en el juego de sopa de letras.
     private func consulta_sopaletras(){
         let name_juego = "Sopa_de_Letras"
-        print("Inico Partidas con miedo: \(self.partidas_juego_SL["Miedo"]!)")
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
             if let safeProfilename = nombrePerfil{
                 //Consulta para saber cuantas partidas hay en la emocion de miedo
@@ -166,6 +165,7 @@ class StatsViewController: UIViewController {
                             }
                     }
                 }
+                
             //Consulta para saber cuantas partidas hay en la emocion de Alegria
                 let consulta_alegria = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("alegria").queryOrdered(byChild: "partidas")
                 consulta_alegria.observe(.childAdded) { (snapshot)  in
@@ -349,8 +349,8 @@ class StatsViewController: UIViewController {
                                                     height: view.frame.size.width))
         
         //Configuracion ejes
-        let xAxis = barGrafica.xAxis
-        let yAxis = barGrafica.rightAxis
+//        let xAxis = barGrafica.xAxis
+//        let yAxis = barGrafica.rightAxis
         
         //Configuracion legend
         

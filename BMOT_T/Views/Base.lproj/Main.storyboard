@@ -733,34 +733,66 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c23-TP-88Y" userLabel="Actualizar Datos">
-                                <rect key="frame" x="71" y="139" width="123" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c23-TP-88Y" userLabel="Actualizar Datos">
+                                <rect key="frame" x="20" y="111" width="123" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="WCe-Pv-Vrd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="Z4Y-G9-ssR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Actulizar Datos"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Actulizar Datos">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="AddPartidas:" destination="14G-bo-sGf" eventType="touchUpInside" id="44d-M6-ro9"/>
+                                    <action selector="actualizardatosAction:" destination="14G-bo-sGf" eventType="touchUpInside" id="vtW-2p-u3t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyg-Cp-bRS" userLabel="Mostrar Gafrica">
-                                <rect key="frame" x="238" y="139" width="125" height="31"/>
+                                <rect key="frame" x="151" y="111" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="dse-DK-Tff"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ovN-hl-FO2"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Mostrar Grafica"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mostrar Grafica">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="pruebaAction:" destination="14G-bo-sGf" eventType="touchUpInside" id="W6l-O6-cgs"/>
+                                    <action selector="mostrardatosAction:" destination="14G-bo-sGf" eventType="touchUpInside" id="QHK-nQ-kgu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdu-ge-p6h">
+                                <rect key="frame" x="290" y="111" width="104" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="0bu-IG-Es7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="wnO-vE-PSf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Juegos">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="MenuJuegosAction:" destination="14G-bo-sGf" eventType="touchUpInside" id="eiS-cC-8lw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="APK-qH-hXR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c23-TP-88Y" firstAttribute="top" secondItem="APK-qH-hXR" secondAttribute="top" constant="51" id="KUj-9c-71m"/>
+                            <constraint firstItem="qdu-ge-p6h" firstAttribute="baseline" secondItem="Oyg-Cp-bRS" secondAttribute="baseline" id="FAY-Kt-w2A"/>
+                            <constraint firstItem="c23-TP-88Y" firstAttribute="top" secondItem="APK-qH-hXR" secondAttribute="top" constant="23" id="KUj-9c-71m"/>
                             <constraint firstItem="c23-TP-88Y" firstAttribute="baseline" secondItem="Oyg-Cp-bRS" secondAttribute="baseline" id="Rfb-18-ZgZ"/>
-                            <constraint firstItem="c23-TP-88Y" firstAttribute="leading" secondItem="APK-qH-hXR" secondAttribute="leading" constant="71" id="fKm-MW-x31"/>
-                            <constraint firstItem="Oyg-Cp-bRS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c23-TP-88Y" secondAttribute="trailing" symbolic="YES" id="gCY-eT-PNx"/>
-                            <constraint firstItem="APK-qH-hXR" firstAttribute="trailing" secondItem="Oyg-Cp-bRS" secondAttribute="trailing" constant="51" id="lxB-f1-PlV"/>
+                            <constraint firstItem="c23-TP-88Y" firstAttribute="leading" secondItem="APK-qH-hXR" secondAttribute="leading" constant="20" id="fKm-MW-x31"/>
+                            <constraint firstItem="Oyg-Cp-bRS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c23-TP-88Y" secondAttribute="trailing" constant="8" symbolic="YES" id="gCY-eT-PNx"/>
+                            <constraint firstItem="APK-qH-hXR" firstAttribute="trailing" secondItem="Oyg-Cp-bRS" secondAttribute="trailing" constant="138" id="lxB-f1-PlV"/>
+                            <constraint firstItem="qdu-ge-p6h" firstAttribute="trailing" secondItem="aOT-BR-VKo" secondAttribute="trailingMargin" id="mnK-cU-naB"/>
+                            <constraint firstItem="qdu-ge-p6h" firstAttribute="leading" secondItem="Oyg-Cp-bRS" secondAttribute="trailing" constant="14" id="vNi-5x-pUK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Estadísticas" id="aSt-Nh-dtV"/>
+                    <connections>
+                        <segue destination="F1r-gb-1Sw" kind="show" identifier="menuJuegosSegue" id="6Bv-25-q5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0S-A2-kjB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -793,6 +825,143 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="550-Z7-VAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1286" y="2296"/>
+        </scene>
+        <!--Juegos-->
+        <scene sceneID="PE8-Tn-Zck">
+            <objects>
+                <viewController id="F1r-gb-1Sw" customClass="MenuJuegosViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHC-kt-eA1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-Rs-09i">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNh-E6-ek9">
+                                <rect key="frame" x="122" y="147" width="160" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="Ka6-u8-5NX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sopa de letras">
+                                    <color key="baseBackgroundColor" red="1" green="0.0" blue="0.330972934" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SopaLetrasAction:" destination="F1r-gb-1Sw" eventType="touchUpInside" id="kp9-N6-TDB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-qT-CQo">
+                                <rect key="frame" x="122" y="288" width="160" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="eFo-7i-Com"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Memorama">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XA-EP-JMb">
+                                <rect key="frame" x="122" y="437" width="160" height="98"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones">
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqF-u6-844">
+                                <rect key="frame" x="122" y="588" width="170" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="Fi9-U2-BlJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Pizza de emociones">
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1uB-bz-Rrh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="leading" secondItem="1uB-bz-Rrh" secondAttribute="leading" constant="122" id="39a-jy-ftR"/>
+                            <constraint firstItem="c5K-Rs-09i" firstAttribute="leading" secondItem="PHC-kt-eA1" secondAttribute="leading" id="3IW-ae-Mgy"/>
+                            <constraint firstAttribute="trailing" secondItem="c5K-Rs-09i" secondAttribute="trailing" id="3MZ-hA-69w"/>
+                            <constraint firstItem="c5K-Rs-09i" firstAttribute="centerX" secondItem="WpK-qT-CQo" secondAttribute="centerX" constant="5" id="Ivy-9K-UKb"/>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="leading" secondItem="JqF-u6-844" secondAttribute="leading" id="KMU-42-my3"/>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WpK-qT-CQo" secondAttribute="trailing" id="NdG-EW-NsL"/>
+                            <constraint firstItem="WpK-qT-CQo" firstAttribute="top" secondItem="gNh-E6-ek9" secondAttribute="bottom" constant="44" id="VZW-5U-UAZ"/>
+                            <constraint firstAttribute="bottom" secondItem="c5K-Rs-09i" secondAttribute="bottom" id="VhA-9F-DFx"/>
+                            <constraint firstItem="8XA-EP-JMb" firstAttribute="top" secondItem="WpK-qT-CQo" secondAttribute="bottom" constant="52" id="Zwc-uv-WA3"/>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="leading" secondItem="8XA-EP-JMb" secondAttribute="leading" id="d1B-XS-riV"/>
+                            <constraint firstItem="JqF-u6-844" firstAttribute="top" secondItem="8XA-EP-JMb" secondAttribute="bottom" constant="53" id="icE-9T-ZAe"/>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WpK-qT-CQo" secondAttribute="leading" id="lwQ-d6-XJP"/>
+                            <constraint firstItem="8XA-EP-JMb" firstAttribute="centerX" secondItem="WpK-qT-CQo" secondAttribute="centerX" id="mBu-tk-J9s"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JqF-u6-844" secondAttribute="bottom" constant="128" id="q5i-bJ-rJG"/>
+                            <constraint firstItem="JqF-u6-844" firstAttribute="centerX" secondItem="8XA-EP-JMb" secondAttribute="centerX" constant="5" id="ucI-td-dWT"/>
+                            <constraint firstItem="gNh-E6-ek9" firstAttribute="top" secondItem="1uB-bz-Rrh" secondAttribute="top" constant="59" id="ukd-eW-liB"/>
+                            <constraint firstItem="c5K-Rs-09i" firstAttribute="top" secondItem="PHC-kt-eA1" secondAttribute="top" id="wpm-al-JX7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Juegos" id="01n-4a-mea"/>
+                    <connections>
+                        <segue destination="ehk-Ea-161" kind="show" identifier="estadisticaSLSegue" id="iPz-cm-I0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftc-St-e1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.753623188406" y="3043.5267857142858"/>
+        </scene>
+        <!--Sopa de letras-->
+        <scene sceneID="H3d-aO-YGm">
+            <objects>
+                <viewController id="ehk-Ea-161" customClass="GraficasSopaLetrasViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Db5-wC-Pgd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="u6m-8D-66k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KS-cy-MXr">
+                                <rect key="frame" x="20" y="128" width="170" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="4pg-Up-NIE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="7Ba-Wb-L5o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Partidas totales">
+                                    <color key="baseBackgroundColor" red="1" green="0.0" blue="0.330972934" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-zp-Hfa">
+                                <rect key="frame" x="224" y="128" width="170" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="7EL-bN-RJa"/>
+                                    <constraint firstAttribute="height" constant="47" id="KUn-1f-m94"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Partidas por Semaforo">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IsP-fV-UCj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IsP-fV-UCj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0KS-cy-MXr" secondAttribute="trailing" symbolic="YES" id="1MR-uj-702"/>
+                            <constraint firstItem="0KS-cy-MXr" firstAttribute="leading" secondItem="IsP-fV-UCj" secondAttribute="leading" constant="20" id="6Oc-mH-yOM"/>
+                            <constraint firstItem="u6m-8D-66k" firstAttribute="top" secondItem="Db5-wC-Pgd" secondAttribute="top" id="F3A-V6-7IW"/>
+                            <constraint firstAttribute="bottom" secondItem="u6m-8D-66k" secondAttribute="bottom" id="NBR-uc-90M"/>
+                            <constraint firstItem="g4H-zp-Hfa" firstAttribute="centerX" secondItem="u6m-8D-66k" secondAttribute="centerX" constant="102" id="QHh-Q8-TUu"/>
+                            <constraint firstItem="0KS-cy-MXr" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="40" id="Qmc-dy-J0N"/>
+                            <constraint firstItem="u6m-8D-66k" firstAttribute="leading" secondItem="Db5-wC-Pgd" secondAttribute="leading" id="Vnp-Hw-kt8"/>
+                            <constraint firstItem="g4H-zp-Hfa" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="40" id="hdP-cl-pd8"/>
+                            <constraint firstItem="g4H-zp-Hfa" firstAttribute="centerX" secondItem="Db5-wC-Pgd" secondAttribute="centerX" constant="102" id="mOo-d2-oTR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sopa de letras" id="Inw-hR-Vbu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5G-yu-7z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2398.5507246376815" y="2847.9910714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eLd-gS-P4k">

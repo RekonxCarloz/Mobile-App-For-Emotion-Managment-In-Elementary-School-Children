@@ -164,7 +164,7 @@ class GraficasSopaLetrasViewController: UIViewController {
     
     private func creacionGraficas(){
         consulta_partidasemociones()
-        dump(partidas_emociones, name: "Dictionario_total")
+        //dump(partidas_emociones, name: "Dictionario_total")
         
         //Creacion de grafica de barras emociones
         barGraficaemociones = BarChartView(frame: CGRect(x: 0,
@@ -179,31 +179,48 @@ class GraficasSopaLetrasViewController: UIViewController {
         //Configuracion legend
         
         //Supply data
-        var entradas_emociones = [BarChartDataEntry]()
-        entradas_emociones.append(BarChartDataEntry(
+        var entrada_miedo = [BarChartDataEntry]()
+        entrada_miedo.append(BarChartDataEntry(
             x: Double(1),
             y: Double( self.partidas_emociones["Miedo"]! )))
         
-        entradas_emociones.append(BarChartDataEntry(
+        var entrada_afecto = [BarChartDataEntry]()
+        entrada_afecto.append(BarChartDataEntry(
             x: Double(2),
             y: Double( self.partidas_emociones["Afecto"]! )))
         
-        entradas_emociones.append(BarChartDataEntry(
+        var entrada_tristeza = [BarChartDataEntry]()
+        entrada_tristeza.append(BarChartDataEntry(
             x: Double(3),
             y: Double( self.partidas_emociones["Tristeza"]! )))
         
-        entradas_emociones.append(BarChartDataEntry(
+        var entrada_ejono = [BarChartDataEntry]()
+        entrada_ejono.append(BarChartDataEntry(
             x: Double(4),
             y: Double( self.partidas_emociones["Enojo"]! )))
         
-        entradas_emociones.append(BarChartDataEntry(
+        var entrada_alegria = [BarChartDataEntry]()
+        entrada_alegria.append(BarChartDataEntry(
             x: Double(5),
             y: Double( self.partidas_emociones["Alegria"]! )))
         
-        let set_emociones = BarChartDataSet(entries: entradas_emociones, label: "Partidas")
-        set_emociones.colors = ChartColorTemplates.joyful()
-        let data_emociones = BarChartData(dataSet: set_emociones)
-        self.barGraficaemociones.data = data_emociones
+        let set_miedo = BarChartDataSet(entries: entrada_miedo, label: "Miedo")
+        set_miedo.colors = ChartColorTemplates.joyful()
+        
+        let set_afecto = BarChartDataSet(entries: entrada_afecto, label: "Afecto")
+        set_afecto.colors = ChartColorTemplates.pastel()
+        
+        let set_tristeza = BarChartDataSet(entries: entrada_tristeza, label: "Tristeza")
+        set_tristeza.colors = ChartColorTemplates.colorful()
+        
+        let set_enojo = BarChartDataSet(entries: entrada_ejono, label: "Enojo")
+        set_enojo.colors = ChartColorTemplates.material()
+        
+        let set_alegria = BarChartDataSet(entries: entrada_alegria, label: "Alegría")
+        set_alegria.colors = ChartColorTemplates.liberty()
+        
+        let datos_emociones = BarChartData(dataSets:[set_miedo,set_afecto,set_tristeza,set_enojo,set_alegria])
+        self.barGraficaemociones.data = datos_emociones
         
         consulta_partidassemaforo()
         calculo_semaforo()
@@ -220,24 +237,33 @@ class GraficasSopaLetrasViewController: UIViewController {
         //Configuracion legend
         
         //Supply data
-        var entradas_semaforo = [BarChartDataEntry]()
-        entradas_semaforo.append(BarChartDataEntry(
+        var entrada_semaforoverde = [BarChartDataEntry]()
+        entrada_semaforoverde.append(BarChartDataEntry(
             x: Double(1),
             //y: Double( self.partidas_semaforo["Verde"]! )))
             y: Double( 2 )))
-        entradas_semaforo.append(BarChartDataEntry(
+        var entrada_semaforoamarillo = [BarChartDataEntry]()
+        entrada_semaforoamarillo.append(BarChartDataEntry(
             x: Double(2),
             //y: Double( self.partidas_semaforo["Amarillo"]! )))
             y: Double( 3 )))
-        entradas_semaforo.append(BarChartDataEntry(
+        var entrada_semafororojo = [BarChartDataEntry]()
+        entrada_semafororojo.append(BarChartDataEntry(
             x: Double(3),
             //y: Double( self.partidas_semaforo["Rojo"]! )))
             y: Double(4 )))
         
-        let set_semaforo = BarChartDataSet(entries: entradas_semaforo, label: "Semaforo")
-        set_semaforo.colors = ChartColorTemplates.material()
-        let data_semaforo = BarChartData(dataSet: set_semaforo)
-        barGrafica_semaforo.data = data_semaforo
+        let set_semaforoverde = BarChartDataSet(entries: entrada_semaforoverde, label: "Verde")
+        set_semaforoverde.colors = ChartColorTemplates.material()
+        
+        let set_semaforoamarillo = BarChartDataSet(entries: entrada_semaforoamarillo, label: "Amarillo")
+        set_semaforoamarillo.colors = ChartColorTemplates.pastel()
+        
+        let set_semafororojo = BarChartDataSet(entries: entrada_semafororojo, label: "Rojo")
+        set_semafororojo.colors = ChartColorTemplates.liberty()
+        
+        let datos_semaforo = BarChartData(dataSets: [set_semaforoverde,set_semaforoamarillo,set_semafororojo ])
+        barGrafica_semaforo.data = datos_semaforo
         //var eliminar = true
         if bandera == "total" {
            //eliminar = true
@@ -284,17 +310,17 @@ class GraficasSopaLetrasViewController: UIViewController {
 //                    if(color == "Rojo"){
 //                        self.partidas_emociones_rojo["Tristeza"]! += 1
 //                    }
-//                   
-//                    
+//
+//
 //                }
-//                
+//
 //                //Emocion: enojo
 //                let consulta_enojo_rojo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("enojo").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Rojo")
 //                consulta_enojo_rojo.observe(.childAdded) { (snapshot) in
 //                    self.partidas_emociones_rojo["Enojo"] = Int(snapshot.childrenCount)
 //                }
 //
-//                
+//
 //                //Emocion: alegria
 //                let consulta_alegria_rojo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("alegria").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Rojo")
 //                consulta_alegria_rojo.observe(.childAdded) { (snapshot) in
@@ -316,13 +342,13 @@ class GraficasSopaLetrasViewController: UIViewController {
 //                consulta_tristeza_amarillo.observe(.childAdded) { (snapshot) in
 //                    self.partidas_emociones_amarillo["Tristeza"] = Int(snapshot.childrenCount)
 //                }
-//                
+//
 //                //Emocion: tristeza
 //                let consulta_enojo_amarillo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("tristeza").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Amarillo")
 //                consulta_enojo_amarillo.observe(.childAdded) { (snapshot) in
 //                    self.partidas_emociones_amarillo["Tristeza"] = Int(snapshot.childrenCount)
 //                }
-//                
+//
 //                //Emocion: alegria
 //                let consulta_alegria_amarillo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("alegria").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Amarillo")
 //                consulta_alegria_amarillo.observe(.childAdded) { (snapshot) in
@@ -344,13 +370,13 @@ class GraficasSopaLetrasViewController: UIViewController {
 //                consulta_tristeza_verder.observe(.childAdded) { (snapshot) in
 //                    self.partidas_emociones_verde["Tristeza"] = Int(snapshot.childrenCount)
 //                }
-//                
+//
 //                //Emocion: enojo
 //                let consulta_enojo_verder = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("enojo").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Verde")
 //                consulta_enojo_verder.observe(.childAdded) { (snapshot) in
 //                    self.partidas_emociones_verde["Enojo"] = Int(snapshot.childrenCount)
 //                }
-//                
+//
 //                //Emocion: alegria
 //                let consulta_alegria_verder = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("alegria").child("partidas").queryOrdered(byChild: "Color_Semaforo").queryEqual(toValue: "Verde")
 //                consulta_alegria_verder.observe(.childAdded) { (snapshot) in

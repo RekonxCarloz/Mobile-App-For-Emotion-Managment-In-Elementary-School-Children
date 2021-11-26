@@ -66,7 +66,6 @@ class StatsViewController: UIViewController {
     }
     
     @IBAction func mostrardatosAction(_ sender: UIButton) {
-        informacion_consulta()
         calculo_num_partidas()
         creacionGrafica()
     }
@@ -317,7 +316,7 @@ class StatsViewController: UIViewController {
     
     //Funcion para creacion de grafica
     private func creacionGrafica(){
-        informacion_consulta()
+//        informacion_consulta()
         //Creacion de grafica de barras
         let barGrafica = BarChartView(frame: CGRect(x: 0,
                                                     y: 0,
@@ -331,27 +330,40 @@ class StatsViewController: UIViewController {
         //Configuracion legend
         
         //Supply data
-        var entradas = [BarChartDataEntry]()
-        entradas.append(BarChartDataEntry(
+        var entrada_sopa = [BarChartDataEntry]()
+        entrada_sopa.append(BarChartDataEntry(
             x: Double(1),
             y: Double( self.partidas_juego_SL["Total"]! )))
         
-        entradas.append(BarChartDataEntry(
+        var entrada_memorama = [BarChartDataEntry]()
+        entrada_memorama.append(BarChartDataEntry(
             x: Double(2),
             y: Double( self.partidas_juego_M["Total"]! )))
         
-        entradas.append(BarChartDataEntry(
+        var entrada_gato = [BarChartDataEntry]()
+        entrada_gato.append(BarChartDataEntry(
             x: Double(3),
             y: Double( self.partidas_juego_GE )))
         
-        entradas.append(BarChartDataEntry(
+        var entrada_pizza = [BarChartDataEntry]()
+        entrada_pizza.append(BarChartDataEntry(
             x: Double(4),
             y: Double( self.partidas_juego_PE )))
         
-        let set = BarChartDataSet(entries: entradas, label: "Partidas")
-        set.colors = ChartColorTemplates.joyful()
-        let data = BarChartData(dataSet: set)
-        barGrafica.data = data
+        let set_sopa = BarChartDataSet(entries: entrada_sopa, label: "Sopa de letras")
+        set_sopa.colors = ChartColorTemplates.joyful()
+        
+        let set_memorama = BarChartDataSet(entries: entrada_memorama, label: "Memorama")
+        set_memorama.colors = ChartColorTemplates.liberty()
+        
+        let set_gato = BarChartDataSet(entries: entrada_gato, label: "Gato de emociones")
+        set_gato.colors = ChartColorTemplates.pastel()
+        
+        let set_pizza = BarChartDataSet(entries: entrada_pizza, label: "Pizza de emociones")
+        set_pizza.colors = ChartColorTemplates.vordiplom()
+        
+        let datos = BarChartData(dataSets: [set_sopa, set_memorama, set_gato, set_pizza] )
+        barGrafica.data = datos
         
         if bandera == false {
             view.willRemoveSubview(barGrafica)
@@ -366,17 +378,17 @@ class StatsViewController: UIViewController {
        
     }
     
-    private func informacion_consulta(){
-//        print("Numero de partidas miedo:\(self.partidas_juego_SL["Miedo"]!)")
-//        print("Numero de partidas afecto:\(self.partidas_juego_SL["Afecto"]!)")
-//        print("Numero de partidas tristeza:\(self.partidas_juego_SL["Tristeza"]!)")
-//        print("Numero de partidas enojo:\(self.partidas_juego_SL["Enojo"]!)")
-//        print("Numero de partidas alegria:\(self.partidas_juego_SL["Alegria"]!)")
-        dump(partidas_juego_SL , name: "Sopa de Letras")
-        dump(partidas_juego_M, name: "Memorama")
-        dump(partidas_juego_PE, name: "PIZZA")
-        dump(partidas_juego_GE, name: "gato")
-    }
+//    private func informacion_consulta(){
+////        print("Numero de partidas miedo:\(self.partidas_juego_SL["Miedo"]!)")
+////        print("Numero de partidas afecto:\(self.partidas_juego_SL["Afecto"]!)")
+////        print("Numero de partidas tristeza:\(self.partidas_juego_SL["Tristeza"]!)")
+////        print("Numero de partidas enojo:\(self.partidas_juego_SL["Enojo"]!)")
+////        print("Numero de partidas alegria:\(self.partidas_juego_SL["Alegria"]!)")
+//        dump(partidas_juego_SL , name: "Sopa de Letras")
+//        dump(partidas_juego_M, name: "Memorama")
+//        dump(partidas_juego_PE, name: "PIZZA")
+//        dump(partidas_juego_GE, name: "gato")
+//    }
     
     private func calculo_num_partidas (){
         self.partidas_juego_SL["Total"] = partidas_juego_SL["Miedo"]! + partidas_juego_SL["Afecto"]! + partidas_juego_SL["Tristeza"]! + partidas_juego_SL["Enojo"]! + partidas_juego_SL["Alegria"]!

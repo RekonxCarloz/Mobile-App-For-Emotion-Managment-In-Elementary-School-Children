@@ -117,7 +117,7 @@ class MemoramaViewController: UIViewController {
         case 1:
             name_emotion = "Miedo"
         case 2:
-            name_emotion = "Afecto"
+            name_emotion = "Alegria"
         case 3:
             name_emotion = "Tristeza"
         case 4:

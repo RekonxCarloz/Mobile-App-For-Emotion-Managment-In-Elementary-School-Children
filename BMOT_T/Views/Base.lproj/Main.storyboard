@@ -859,6 +859,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Memorama">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="MemoriaAction:" destination="F1r-gb-1Sw" eventType="touchUpInside" id="mka-jC-dWL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XA-EP-JMb">
                                 <rect key="frame" x="122" y="437" width="160" height="98"/>
@@ -866,6 +869,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Gato de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="GatoAction:" destination="F1r-gb-1Sw" eventType="touchUpInside" id="UXl-G9-HFd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqF-u6-844">
                                 <rect key="frame" x="122" y="588" width="170" height="97"/>
@@ -876,6 +882,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Pizza de emociones">
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="PizzaAction:" destination="F1r-gb-1Sw" eventType="touchUpInside" id="WUD-Ph-P7s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1uB-bz-Rrh"/>
@@ -903,6 +912,9 @@
                     <navigationItem key="navigationItem" title="Juegos" id="01n-4a-mea"/>
                     <connections>
                         <segue destination="ehk-Ea-161" kind="show" identifier="estadisticaSLSegue" id="iPz-cm-I0R"/>
+                        <segue destination="PP4-T9-lmB" kind="show" identifier="estadisticaMSegue" id="BPa-yw-jrQ"/>
+                        <segue destination="HHS-0m-pnp" kind="show" identifier="estadisticaGESegue" id="b5X-Xk-7JT"/>
+                        <segue destination="IL4-TS-AfI" kind="show" identifier="estadisticaPESegue" id="Q1D-FG-FUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftc-St-e1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -921,7 +933,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KS-cy-MXr">
-                                <rect key="frame" x="20" y="128" width="170" height="47"/>
+                                <rect key="frame" x="20" y="107" width="170" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="4pg-Up-NIE"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="7Ba-Wb-L5o"/>
@@ -935,7 +947,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-zp-Hfa">
-                                <rect key="frame" x="224" y="128" width="170" height="47"/>
+                                <rect key="frame" x="224" y="107" width="170" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="7EL-bN-RJa"/>
                                     <constraint firstAttribute="height" constant="47" id="KUn-1f-m94"/>
@@ -957,9 +969,9 @@
                             <constraint firstItem="u6m-8D-66k" firstAttribute="top" secondItem="Db5-wC-Pgd" secondAttribute="top" id="F3A-V6-7IW"/>
                             <constraint firstAttribute="bottom" secondItem="u6m-8D-66k" secondAttribute="bottom" id="NBR-uc-90M"/>
                             <constraint firstItem="g4H-zp-Hfa" firstAttribute="centerX" secondItem="u6m-8D-66k" secondAttribute="centerX" constant="102" id="QHh-Q8-TUu"/>
-                            <constraint firstItem="0KS-cy-MXr" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="40" id="Qmc-dy-J0N"/>
+                            <constraint firstItem="0KS-cy-MXr" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="19" id="Qmc-dy-J0N"/>
                             <constraint firstItem="u6m-8D-66k" firstAttribute="leading" secondItem="Db5-wC-Pgd" secondAttribute="leading" id="Vnp-Hw-kt8"/>
-                            <constraint firstItem="g4H-zp-Hfa" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="40" id="hdP-cl-pd8"/>
+                            <constraint firstItem="g4H-zp-Hfa" firstAttribute="top" secondItem="IsP-fV-UCj" secondAttribute="top" constant="19" id="hdP-cl-pd8"/>
                             <constraint firstItem="g4H-zp-Hfa" firstAttribute="centerX" secondItem="Db5-wC-Pgd" secondAttribute="centerX" constant="102" id="mOo-d2-oTR"/>
                         </constraints>
                     </view>
@@ -967,7 +979,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5G-yu-7z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398.5507246376815" y="2847.9910714285711"/>
+            <point key="canvasLocation" x="2371" y="2531"/>
+        </scene>
+        <!--Memora-->
+        <scene sceneID="fnM-Bk-3FZ">
+            <objects>
+                <viewController id="PP4-T9-lmB" customClass="GraficasMemoramaViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CCs-Sl-cyi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="REC-E0-3q0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loa-52-QKK">
+                                <rect key="frame" x="224" y="88" width="170" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Afr-tc-VZC"/>
+                                    <constraint firstAttribute="height" constant="47" id="Of3-NM-QQ7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Rango de puntaje">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostrarrangosAction:" destination="PP4-T9-lmB" eventType="touchUpInside" id="FhN-1z-FOt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRr-Eh-O7d">
+                                <rect key="frame" x="20" y="88" width="170" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="mDW-e0-ryY"/>
+                                    <constraint firstAttribute="height" constant="47" id="zIX-yu-6ef"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Partidas totales">
+                                    <color key="baseBackgroundColor" red="1" green="0.0" blue="0.330972934" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostrartotalAction:" destination="PP4-T9-lmB" eventType="touchUpInside" id="gDp-kd-OEs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HDr-rF-bOR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qRr-Eh-O7d" firstAttribute="top" secondItem="HDr-rF-bOR" secondAttribute="top" id="DNH-bf-AwJ"/>
+                            <constraint firstItem="qRr-Eh-O7d" firstAttribute="leading" secondItem="CCs-Sl-cyi" secondAttribute="leadingMargin" id="IzU-b1-p4Z"/>
+                            <constraint firstItem="qRr-Eh-O7d" firstAttribute="baseline" secondItem="loa-52-QKK" secondAttribute="baseline" id="Y3a-Qm-Yzf"/>
+                            <constraint firstItem="loa-52-QKK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qRr-Eh-O7d" secondAttribute="trailing" constant="8" symbolic="YES" id="eMh-6o-Bkd"/>
+                            <constraint firstItem="HDr-rF-bOR" firstAttribute="trailing" secondItem="loa-52-QKK" secondAttribute="trailing" constant="20" id="v86-qW-ENR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Memora" id="yao-4e-5Rk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfE-om-gci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3286" y="2821"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eLd-gS-P4k">
@@ -2719,6 +2788,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myx-e7-kwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="4410.9375"/>
+        </scene>
+        <!--Gato de emociones-->
+        <scene sceneID="QAZ-7E-T00">
+            <objects>
+                <viewController id="HHS-0m-pnp" customClass="GraficasGatoViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e0E-gs-jNa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="33z-C6-sdw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-DA-hft">
+                                <rect key="frame" x="20" y="88" width="374" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Emociones seleccionadas">
+                                    <color key="baseBackgroundColor" red="1" green="0.0" blue="0.330972934" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostraremocionesAction:" destination="HHS-0m-pnp" eventType="touchUpInside" id="HO8-Ii-lrb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VCA-zH-bdz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="33z-C6-sdw" firstAttribute="centerX" secondItem="uRz-DA-hft" secondAttribute="centerX" id="14E-iH-zKx"/>
+                            <constraint firstItem="uRz-DA-hft" firstAttribute="top" secondItem="VCA-zH-bdz" secondAttribute="top" id="A3f-92-zsI"/>
+                            <constraint firstAttribute="trailing" secondItem="33z-C6-sdw" secondAttribute="trailing" id="QTQ-28-jn6"/>
+                            <constraint firstItem="33z-C6-sdw" firstAttribute="leading" secondItem="e0E-gs-jNa" secondAttribute="leading" id="WmZ-rC-dd9"/>
+                            <constraint firstItem="uRz-DA-hft" firstAttribute="leading" secondItem="e0E-gs-jNa" secondAttribute="leadingMargin" id="fcu-67-pIJ"/>
+                            <constraint firstItem="VCA-zH-bdz" firstAttribute="bottom" secondItem="uRz-DA-hft" secondAttribute="bottom" constant="678" id="kJ8-2a-vzH"/>
+                            <constraint firstItem="33z-C6-sdw" firstAttribute="top" secondItem="e0E-gs-jNa" secondAttribute="top" id="lmE-aw-wWx"/>
+                            <constraint firstAttribute="bottom" secondItem="33z-C6-sdw" secondAttribute="bottom" id="wlo-3E-oe6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gato de emociones" id="bkJ-wb-9qh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zo-YM-ouW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285.507246376812" y="3509.5982142857142"/>
+        </scene>
+        <!--Pizza de emociones-->
+        <scene sceneID="MFo-jZ-BdJ">
+            <objects>
+                <viewController id="IL4-TS-AfI" customClass="GraficasPizzaViewController" customModule="BMOT_T" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7zi-c6-pgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WNn-E4-kfz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zug-UE-ZZH">
+                                <rect key="frame" x="20" y="88" width="374" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Rango de puntaje">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mostraremocionesAction:" destination="IL4-TS-AfI" eventType="touchUpInside" id="QsZ-gx-LAj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="74b-MQ-VBk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WNn-E4-kfz" firstAttribute="leading" secondItem="7zi-c6-pgQ" secondAttribute="leading" id="487-cn-Cyo"/>
+                            <constraint firstItem="zug-UE-ZZH" firstAttribute="leading" secondItem="7zi-c6-pgQ" secondAttribute="leadingMargin" id="FHF-FC-Xaf"/>
+                            <constraint firstItem="WNn-E4-kfz" firstAttribute="centerX" secondItem="zug-UE-ZZH" secondAttribute="centerX" id="FfH-WJ-j7O"/>
+                            <constraint firstItem="74b-MQ-VBk" firstAttribute="bottom" secondItem="zug-UE-ZZH" secondAttribute="bottom" constant="678" id="JT9-GB-W1K"/>
+                            <constraint firstItem="WNn-E4-kfz" firstAttribute="top" secondItem="7zi-c6-pgQ" secondAttribute="top" id="Ljt-ob-8cW"/>
+                            <constraint firstItem="zug-UE-ZZH" firstAttribute="top" secondItem="74b-MQ-VBk" secondAttribute="top" id="Ocl-bQ-nFn"/>
+                            <constraint firstAttribute="bottom" secondItem="WNn-E4-kfz" secondAttribute="bottom" id="kz0-nF-Ppy"/>
+                            <constraint firstAttribute="trailing" secondItem="WNn-E4-kfz" secondAttribute="trailing" id="y1X-Xf-fHM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pizza de emociones" id="41w-Ln-q67"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxC-pv-QmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369.5652173913045" y="3785.4910714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

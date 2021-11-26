@@ -44,16 +44,6 @@ class StatsViewController: UIViewController {
     
     //Variable de las partidas de Gato de emociones
     var partidas_juego_GE = 0
-//
-//    var partidas_emociones = [
-//        "Miedo"     :   0,
-//        "Afecto"    :   0,
-//        "Tristeza"  :   0,
-//        "Enojo"     :   0,
-//        "Alegria"   :   0,
-//        "Total"     :   0
-//
-//    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +52,6 @@ class StatsViewController: UIViewController {
         self.consulta_memorama()
         self.consulta_gatoemociones()
         self.consulta_pizzaemociones()
-        //self.prueba()
        
     }
     
@@ -117,9 +106,6 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("afecto").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida")
-                            //dump(num)
-                            //self.partidas_juego_SL["Afecto"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
                             
                         }
                         else{
@@ -135,9 +121,7 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("tristeza").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida")
-                            //dump(num)
                             self.partidas_juego_SL["Tristeza"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
                             
                         }
                         else{
@@ -154,9 +138,9 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("enojo").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida")
-                            //dump(num)
+                        
                             self.partidas_juego_SL["Enojo"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
+                            
                             
                         }
                         else{
@@ -173,9 +157,8 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("alegria").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida")
-                            //dump(num)
+                           
                             self.partidas_juego_SL["Alegria"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
                             
                         }
                         else{
@@ -200,7 +183,7 @@ class StatsViewController: UIViewController {
                         if error == nil{
                             print("Se guardo exitosa la partida en Memorama")
                             self.partidas_juego_M["Miedo"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_juego_M)
+                            
                             
                         }
                         else{
@@ -213,13 +196,13 @@ class StatsViewController: UIViewController {
             //Consulta para saber cuantas partidas hay en la emocion de Afecto
                 let consulta_afecto = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Afecto").queryOrdered(byChild: "partidas")
                 consulta_afecto.observe(.childAdded) { (snapshot)  in
-                    //self.partidas_juego_M["Afecto"]! = Int(snapshot.childrenCount)
+                    
                         self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Afecto").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Memorama")
-                            //dump(num)
+                            
                             self.partidas_juego_M["Afecto"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
+                            
                             
                         }
                         else{
@@ -232,13 +215,11 @@ class StatsViewController: UIViewController {
             //Consulta para saber cuantas partidas hay en la emocion de Tristeza
                 let consulta_tristeza = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Tristeza").queryOrdered(byChild: "partidas")
                 consulta_tristeza.observe(.childAdded) { (snapshot)  in
-                    //self.partidas_juego_M["Tristeza"]! = Int(snapshot.childrenCount)
+                    
                         self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Tristeza").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Memorama")
-                            //dump(num)
                             self.partidas_juego_M["Tristeza"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
                             
                         }
                         else{
@@ -251,14 +232,10 @@ class StatsViewController: UIViewController {
             //Consulta para saber cuantas partidas hay en la emocion de Enojo
                 let consulta_enojo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Enojo").queryOrdered(byChild: "partidas")
                 consulta_enojo.observe(.childAdded) { (snapshot)  in
-                    //self.partidas_juego_M["Enojo"]! = Int(snapshot.childrenCount)
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Enojo").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Memorama")
-                            //dump(num)
                             self.partidas_juego_M["Enojo"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
-                            
                         }
                         else{
                             print("El error es: \(error!)")
@@ -269,13 +246,12 @@ class StatsViewController: UIViewController {
             //Consulta para saber cuantas partidas hay en la emocion de Alegria
                 let consulta_alegria = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Alegria").queryOrdered(byChild: "partidas")
                 consulta_alegria.observe(.childAdded) { (snapshot)  in
-                    //self.partidas_juego_M["Alegria"]! = Int(snapshot.childrenCount)
                         self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Alegria").updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Memorama")
-                            //dump(num)
+                    
                             self.partidas_juego_M["Alegria"]! = Int(snapshot.childrenCount)
-                            //dump(self.partidas_emociones)
+                           
                             
                         }
                         else{
@@ -299,9 +275,9 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Gato")
-                            //dump(num)
+                          
                             self.partidas_juego_GE = Int(snapshot.childrenCount)
-                            dump(self.partidas_juego_GE)
+                      
                             
                         }else{
                             print("El error es: \(error!)")
@@ -324,9 +300,9 @@ class StatsViewController: UIViewController {
                     self.ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).updateChildValues(["num_partidas" : snapshot.childrenCount ]){ error, _ in
                         if error == nil{
                             print("Se guardo exitosa la partida en Pizza")
-                            //dump(num)
+                          
                             self.partidas_juego_PE = Int(snapshot.childrenCount)
-                            dump(self.partidas_juego_PE)
+                           
                             
                         }else{
                             print("El error es: \(error!)")
@@ -404,13 +380,13 @@ class StatsViewController: UIViewController {
     
     private func calculo_num_partidas (){
         self.partidas_juego_SL["Total"] = partidas_juego_SL["Miedo"]! + partidas_juego_SL["Afecto"]! + partidas_juego_SL["Tristeza"]! + partidas_juego_SL["Enojo"]! + partidas_juego_SL["Alegria"]!
-        dump(partidas_juego_SL["Total"], name: "Total Sopa")
+        //dump(partidas_juego_SL["Total"], name: "Total Sopa")
         
         self.partidas_juego_M["Total"] = partidas_juego_M["Miedo"]! + partidas_juego_M["Afecto"]! + partidas_juego_M["Tristeza"]! + partidas_juego_M["Enojo"]! + partidas_juego_M["Alegria"]!
-        dump(partidas_juego_M["Total"], name: "Total Memo")
+       // dump(partidas_juego_M["Total"], name: "Total Memo")
         
         self.total_partidas = self.partidas_juego_GE + self.partidas_juego_PE + self.partidas_juego_SL["Total"]! + self.partidas_juego_M["Total"]!
-        dump(total_partidas, name: "Total de partidas")
+       // dump(total_partidas, name: "Total de partidas")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

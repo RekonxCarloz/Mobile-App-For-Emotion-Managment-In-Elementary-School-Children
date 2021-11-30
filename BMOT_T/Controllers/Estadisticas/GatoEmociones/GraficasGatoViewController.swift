@@ -14,14 +14,14 @@ class GraficasGatoViewController: UIViewController {
     //Varaibles para necesarias para realizar la consulta
     var nombrePerfil:String?
     var ref_database = Database.database().reference()
-    let name_juego = "Gato_Emociones"
+    let nombre_juego = "Gato_Emociones"
     
     var partidas_emociones = [
-        "Miedo"     :   1,
-        "Afecto"    :   2,
-        "Tristeza"  :   3,
-        "Enojo"     :   4,
-        "Alegria"   :   5
+        "Miedo"     :   0,
+        "Afecto"    :   0,
+        "Tristeza"  :   0,
+        "Enojo"     :   0,
+        "Alegria"   :   0
     
     ]
     
@@ -29,6 +29,7 @@ class GraficasGatoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dump(nombrePerfil)
+        consulta()
 
         // Do any additional setup after loading the view.
     }
@@ -48,6 +49,41 @@ class GraficasGatoViewController: UIViewController {
     private func consulta(){
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
             if let safeProfilename = nombrePerfil{
+                ///Emocion: Miedo
+                let consulta_miedo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(nombre_juego).child("partidas").queryOrdered(byChild: "jugador_1").queryEqual(toValue: "Miedo")
+                var cont_miedo = 0
+                consulta_miedo.observe(.childAdded) { (snapshot) in
+                    cont_miedo  += 1
+                    self.partidas_emociones["Miedo"] = cont_miedo
+                }
+                ///Emocion: Afecto
+                let consulta_afecto = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(nombre_juego).child("partidas").queryOrdered(byChild: "jugador_1").queryEqual(toValue: "Afecto")
+                var cont_afecto = 0
+                consulta_afecto.observe(.childAdded) { (snapshot) in
+                    cont_afecto  += 1
+                    self.partidas_emociones["Afecto"] = cont_afecto
+                }
+                ///Emocion: Tristeza
+                let consulta_tristeza = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(nombre_juego).child("partidas").queryOrdered(byChild: "jugador_1").queryEqual(toValue: "Tristeza")
+                var cont_tristeza = 0
+                consulta_tristeza.observe(.childAdded) { (snapshot) in
+                    cont_tristeza  += 1
+                    self.partidas_emociones["Tristeza"] = cont_tristeza
+                }
+                ///Emocion: Enojo
+                let consulta_enojo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(nombre_juego).child("partidas").queryOrdered(byChild: "jugador_1").queryEqual(toValue: "Enojo")
+                var cont_enojo = 0
+                consulta_enojo.observe(.childAdded) { (snapshot) in
+                    cont_enojo  += 1
+                    self.partidas_emociones["Enojo"] = cont_enojo
+                }
+                ///Emocion: Alegria
+                let consulta_alegria = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(nombre_juego).child("partidas").queryOrdered(byChild: "jugador_1").queryEqual(toValue: "Alegre")
+                var cont_alegria = 0
+                consulta_alegria.observe(.childAdded) { (snapshot) in
+                    cont_alegria  += 1
+                    self.partidas_emociones["Alegria"] = cont_alegria
+                }
                 
             }
         }

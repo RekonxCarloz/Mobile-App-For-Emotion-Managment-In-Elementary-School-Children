@@ -15,8 +15,42 @@ class GraficasMemoramaViewController: UIViewController {
     var ref_database = Database.database().reference()
     let name_juego = "Memorama"
     
-    //Variable de las partidas de Sopa de Letras por emociones
+    //Variable de las partidas de Memorama por emociones
     var partidas_emociones = [
+        "Miedo"     :   0,
+        "Afecto"    :   0,
+        "Tristeza"  :   0,
+        "Enojo"     :   0,
+        "Alegria"   :   0
+    
+    ]
+    
+    //Variable de las partidas de memorama por puntaje
+    var partidas_puntaje = [
+        "Positivo"     :   0,
+        "Cero"        :   0,
+        "Negativo"    :   0
+    ]
+    
+    var partidas_emociones_cero = [
+        "Miedo"     :   0,
+        "Afecto"    :   0,
+        "Tristeza"  :   0,
+        "Enojo"     :   0,
+        "Alegria"   :   0
+    
+    ]
+    
+    var partidas_emociones_positivo = [
+        "Miedo"     :   0,
+        "Afecto"    :   0,
+        "Tristeza"  :   0,
+        "Enojo"     :   0,
+        "Alegria"   :   0
+    
+    ]
+    
+    var partidas_emociones_negativo = [
         "Miedo"     :   0,
         "Afecto"    :   0,
         "Tristeza"  :   0,
@@ -29,6 +63,7 @@ class GraficasMemoramaViewController: UIViewController {
         super.viewDidLoad()
         dump(nombrePerfil)
         consulta_partidastotal()
+        consulta_partidas_puntaje()
 
     }
     
@@ -43,6 +78,7 @@ class GraficasMemoramaViewController: UIViewController {
     
     
     @IBAction func mostrarrangosAction(_ sender: UIButton) {
+        general_grafica_puntaje()
         
     }
     
@@ -59,7 +95,6 @@ class GraficasMemoramaViewController: UIViewController {
                     let dict = snapshot.value as! [String : Any]
                     let miedo = dict["num_partidas"] as? Int ?? 0
                     self.partidas_emociones["Miedo"]! = miedo
-                    //dump(self.partidas_emociones["Miedo"]!, name: "Miedo")
                     
                 }
                 
@@ -70,7 +105,7 @@ class GraficasMemoramaViewController: UIViewController {
                         let dict = snapshot.value as! [String : Any]
                         let afecto = dict["num_partidas"] as? Int ?? 0
                         self.partidas_emociones["Afecto"]! = afecto
-                        //dump(self.partidas_emociones["Afecto"]!)
+
                         
                         
                     }
@@ -82,7 +117,7 @@ class GraficasMemoramaViewController: UIViewController {
                         let dict = snapshot.value as! [String : Any]
                         let tristeza = dict["num_partidas"] as? Int ?? 0
                         self.partidas_emociones["Tristeza"]! = tristeza
-                        //dump(self.partidas_emociones["Tristeza"]!)
+
                         
                         
                     }
@@ -94,7 +129,7 @@ class GraficasMemoramaViewController: UIViewController {
                         let dict = snapshot.value as! [String : Any]
                         let enojo = dict["num_partidas"] as? Int ?? 0
                         self.partidas_emociones["Enojo"]!  = enojo
-                        //dump(self.partidas_emociones["Enojo"]! )
+
                         
                     
                         }
@@ -106,9 +141,137 @@ class GraficasMemoramaViewController: UIViewController {
                     let dict = snapshot.value as! [String : Any]
                     let alegria = dict["num_partidas"] as? Int ?? 0
                         self.partidas_emociones["Alegria"]! = alegria
-                        //dump(self.partidas_emociones["Alegria"]! )
+
                     
                     }
+            }
+        }
+    }
+    
+    private func consulta_partidas_puntaje(){
+        if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
+            if let safeProfilename = nombrePerfil{
+                //Puntaje mayor a 0
+                /// Emoción: Miedo
+                let consulta_miedo_positvo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Miedo").child("partidas").queryOrdered(byChild: "puntaje").queryStarting(afterValue: 0)
+                var cont_p_1 = 0
+                consulta_miedo_positvo.observe(.childAdded) { (snapshot) in
+                    cont_p_1 += 1
+                    self.partidas_emociones_positivo["Miedo"] = cont_p_1
+                }
+                /// Emoción: Afecto
+                let consulta_afecto_positvo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Afecto").child("partidas").queryOrdered(byChild: "puntaje").queryStarting(afterValue: 0)
+                var cont_p_2 = 0
+                consulta_afecto_positvo.observe(.childAdded) { (snapshot) in
+                    cont_p_2 += 1
+                    self.partidas_emociones_positivo["Afecto"] = cont_p_2
+                }
+                /// Emoción: Tristeza
+                let consulta_tristeza_positvo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Tristeza").child("partidas").queryOrdered(byChild: "puntaje").queryStarting(afterValue: 0)
+                var cont_p_3 = 0
+                consulta_tristeza_positvo.observe(.childAdded) { (snapshot) in
+                    cont_p_3 += 1
+                    self.partidas_emociones_positivo["Tristeza"] = cont_p_3
+                }
+                /// Emoción: Enojo
+                let consulta_enojo_positvo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Enojo").child("partidas").queryOrdered(byChild: "puntaje").queryStarting(afterValue: 0)
+                var cont_p_4 = 0
+                consulta_enojo_positvo.observe(.childAdded) { (snapshot) in
+                    cont_p_4 += 1
+                    self.partidas_emociones_positivo["Enojo"] = cont_p_4
+                }
+                /// Emoción: Alegria
+                let consulta_alegria_positvo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Alegria").child("partidas").queryOrdered(byChild: "puntaje").queryStarting(afterValue: 0)
+                var cont_p_5 = 0
+                consulta_alegria_positvo.observe(.childAdded) { (snapshot) in
+                    cont_p_5 += 1
+                    self.partidas_emociones_positivo["Alegria"] = cont_p_5
+                }
+                
+                //Puntaje menor a 0
+                /// Emoción: Miedo
+                let consulta_miedo_negativo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Miedo").child("partidas").queryOrdered(byChild: "puntaje").queryEnding(beforeValue: 0)
+                var cont_n_1 = 0
+                consulta_miedo_negativo.observe(.childAdded) { (snapshot) in
+                    cont_n_1 += 1
+                    self.partidas_emociones_negativo["Miedo"] = cont_n_1
+                }
+                
+                /// Emoción: Afecto
+                let consulta_afecto_negativo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Afecto").child("partidas").queryOrdered(byChild: "puntaje").queryEnding(beforeValue: 0)
+                var cont_n_2 = 0
+                consulta_afecto_negativo.observe(.childAdded) { (snapshot) in
+                    cont_n_2 += 1
+                    self.partidas_emociones_negativo["Afecto"] = cont_n_2
+                }
+                
+                /// Emoción: Tristeza
+                let consulta_tristeza_negativo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Tristeza").child("partidas").queryOrdered(byChild: "puntaje").queryEnding(beforeValue: 0)
+                var cont_n_3 = 0
+                consulta_tristeza_negativo.observe(.childAdded) { (snapshot) in
+                    cont_n_3 += 1
+                    self.partidas_emociones_negativo["Tristeza"] = cont_n_3
+                }
+                
+                /// Emoción: Enojo
+                let consulta_enojo_negativo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Enojo").child("partidas").queryOrdered(byChild: "puntaje").queryEnding(beforeValue: 0)
+                var cont_n_4 = 0
+                consulta_enojo_negativo.observe(.childAdded) { (snapshot) in
+                    cont_n_4 += 1
+                    self.partidas_emociones_negativo["Enojo"] = cont_n_4
+                }
+                
+                /// Emoción: Alegria
+                let consulta_alegria_negativo = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Alegria").child("partidas").queryOrdered(byChild: "puntaje").queryEnding(beforeValue: 0)
+                var cont_n_5 = 0
+                consulta_alegria_negativo.observe(.childAdded) { (snapshot) in
+                    cont_n_5 += 1
+                    self.partidas_emociones_negativo["Alegria"] = cont_n_5
+                }
+                
+                //Puntaje igual a 0
+                /// Emoción: Miedo
+                let consulta_miedo_cero = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Miedo").child("partidas").queryOrdered(byChild: "puntaje").queryEqual(toValue: 0)
+                    var cont_0 = 0
+                consulta_miedo_cero.observe(.childAdded) { (snapshot) in
+                        cont_0 += 1
+                        self.partidas_emociones_cero["Miedo"] = cont_0
+                    
+                }
+                /// Emoción: Afecto
+                let consulta_afecto_cero = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Afecto").child("partidas").queryOrdered(byChild: "puntaje").queryEqual(toValue: 0)
+                    var cont_1 = 0
+                consulta_afecto_cero.observe(.childAdded) { (snapshot) in
+                        cont_1 += 1
+                        self.partidas_emociones_cero["Afecto"] = cont_1
+                    
+                }
+                /// Emoción: Tristeza
+                let consulta_tristeza_cero = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Tristeza").child("partidas").queryOrdered(byChild: "puntaje").queryEqual(toValue: 0)
+                    var cont_2 = 0
+                consulta_tristeza_cero.observe(.childAdded) { (snapshot) in
+                        cont_2 += 1
+                        self.partidas_emociones_cero["Tristeza"] = cont_2
+                    
+                }
+                /// Emoción: Enojo
+                let consulta_enojo_cero = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Enojo").child("partidas").queryOrdered(byChild: "puntaje").queryEqual(toValue: 0)
+                    var cont_3 = 0
+                consulta_enojo_cero.observe(.childAdded) { (snapshot) in
+                        cont_3 += 1
+                        self.partidas_emociones_cero["Enojo"] = cont_3
+                    
+                }
+                /// Emoción: Alegria
+                let consulta_alegria_cero = ref_database.child(userEmail).child("perfiles").child(safeProfilename).child("juegos").child(name_juego).child("emociones").child("Alegria").child("partidas").queryOrdered(byChild: "puntaje").queryEqual(toValue: 0)
+                    var cont_4 = 0
+                consulta_alegria_cero.observe(.childAdded) { (snapshot) in
+                        cont_4 += 1
+                        self.partidas_emociones_cero["Alegria"] = cont_4
+                    
+                }
+                
+                
             }
         }
     }
@@ -177,6 +340,65 @@ class GraficasMemoramaViewController: UIViewController {
         view.addSubview(barGraficaemociones)
         //barGraficaemociones.center = view.center
         
+    }
+    private func general_grafica_puntaje(){
+        consulta_partidas_puntaje()
+        calculo_partidas_puntaje()
+        //Creacion de grafica de barras
+        let barGrafica_semaforo = BarChartView(frame: CGRect(x: 0,
+                                                    y: 520,
+                                                    width: view.frame.size.width,
+                                                         height: 320))
+        
+        //Configuracion ejes
+        //let xAxis = barGrafica.xAxis
+        //let yAxis = barGrafica.rightAxis
+        
+        //Configuracion legend
+        
+        //Supply data
+        var entrada_puntajenegativa = [BarChartDataEntry]()
+        entrada_puntajenegativa.append(BarChartDataEntry(
+            x: Double(1),
+            y: Double( self.partidas_puntaje["Negativo"]! )))
+
+        var entrada_puntajecero = [BarChartDataEntry]()
+        entrada_puntajecero.append(BarChartDataEntry(
+            x: Double(2),
+            y: Double( self.partidas_puntaje["Cero"]! )))
+
+        var entrada_puntajepostiva = [BarChartDataEntry]()
+        entrada_puntajepostiva.append(BarChartDataEntry(
+            x: Double(3),
+            y: Double( self.partidas_puntaje["Positivo"]! )))
+        
+        let set_puntajenegativo = BarChartDataSet(entries: entrada_puntajenegativa, label: "Negativo")
+        set_puntajenegativo.colors = ChartColorTemplates.material()
+        
+        let set_puntajecero = BarChartDataSet(entries: entrada_puntajecero, label: "Cero")
+        set_puntajecero.colors = ChartColorTemplates.pastel()
+        
+        let set_puntajepositivo = BarChartDataSet(entries: entrada_puntajepostiva, label: "Positivo")
+        set_puntajepositivo.colors = ChartColorTemplates.liberty()
+        
+        let datos_puntaje = BarChartData(dataSets: [set_puntajenegativo,set_puntajecero,set_puntajepositivo ])
+        barGrafica_semaforo.data = datos_puntaje
+        view.addSubview(barGrafica_semaforo)
+        
+    }
+    
+    private func calculo_partidas_puntaje(){
+        dump(partidas_emociones_cero, name: "Puntaje de 0")
+        partidas_puntaje["Cero"] = partidas_emociones_cero["Miedo"]! + partidas_emociones_cero["Afecto"]! + partidas_emociones_cero["Tristeza"]! + partidas_emociones_cero["Enojo"]! + partidas_emociones_cero["Alegria"]!
+      
+        
+        dump(partidas_emociones_negativo, name: "Puntaje netativo")
+       partidas_puntaje["Negativo"] = partidas_emociones_negativo["Miedo"]! + partidas_emociones_negativo["Afecto"]! + partidas_emociones_negativo["Tristeza"]! + partidas_emociones_negativo["Enojo"]! + partidas_emociones_negativo["Alegria"]!
+        
+        dump(partidas_emociones_positivo, name: "Puntaje Positivo")
+        partidas_puntaje["Positivo"] = partidas_emociones_positivo["Miedo"]! + partidas_emociones_positivo["Afecto"]! + partidas_emociones_positivo["Tristeza"]! + partidas_emociones_positivo["Enojo"]! + partidas_emociones_positivo["Alegria"]!
+       
+        dump(partidas_puntaje,name: "Datos de la tabla")
     }
     
     

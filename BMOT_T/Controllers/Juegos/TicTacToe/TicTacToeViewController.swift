@@ -39,6 +39,8 @@ class TicTacToeViewController: UIViewController {
     
     
     var ficha1 = "Miedo"
+    var ficha2 = "Alegría"
+    
     
     
     
@@ -110,7 +112,7 @@ class TicTacToeViewController: UIViewController {
             turnoJugador.text = "Jugador 2"
             
         }else{
-            boardCells[cell]?.setBackgroundImage(UIImage.init(named: obtenerFicha2()), for: .normal)
+            boardCells[cell]?.setBackgroundImage(UIImage.init(named: ficha2), for: .normal)
             turnoJugador.text = "Jugador 1"
             
         }
@@ -121,7 +123,8 @@ class TicTacToeViewController: UIViewController {
             endGame()
             //Finaliza el juego -> Agregar la funcion de la de guardar en la base de datos
             self.P1_emocion = ficha1
-            self.P2_emocion = self.obtenerFicha2()
+            self.P2_emocion = ficha2
+            
             
             save_game(fecha_partida: self.dateText, jugador_1: self.P1_emocion!, jugador_2: self.P2_emocion!, ganador: self.jugador_ganador!)
         }
@@ -169,16 +172,7 @@ class TicTacToeViewController: UIViewController {
         winnerName.isHidden = false
     }
     
-    private func obtenerFicha2() -> String{
-        let ficha2random = ["Miedo", "Alegría", "Tristeza", "Enojo", "Afecto"]
-        
-        let ficha2 = ficha2random.randomElement()
-        
-        if ficha2 != ficha1{
-            return ficha2!
-        }
-        return ficha2random.randomElement()!
-    }
+   
     
     //Funcion para la obtener la fecha de la partida
     private func obtener_fecha(){

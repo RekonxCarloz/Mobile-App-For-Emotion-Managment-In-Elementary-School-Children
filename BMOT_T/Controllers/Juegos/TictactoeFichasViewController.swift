@@ -62,10 +62,22 @@ class TictactoeFichasViewController: UIViewController {
         
     }
     
+    private func obtenerFicha2() -> String{
+        let ficha2random = ["Miedo", "Alegría", "Tristeza", "Enojo", "Afecto"]
+        
+        let ficha = ficha2random.randomElement()
+        
+        while ficha != ficha1{
+            return ficha!
+        }
+        return ficha2random.randomElement()!
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Segues.gamesSegues.emotionTicTacToe{
             let destinoVC = segue.destination as! TicTacToeViewController
             destinoVC.ficha1 = ficha1
+            destinoVC.ficha2 = obtenerFicha2()
             destinoVC.nombrePerfil = nombrePerfil
         }
     }

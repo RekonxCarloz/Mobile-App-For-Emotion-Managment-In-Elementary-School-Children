@@ -48,9 +48,10 @@ class BmotViewController: UIViewController {
                     switch result {
                     case .success(let conversationId):
                         print("Conversation id: ",conversationId)
-                        Kommunicate.defaultConfiguration.hideFaqButtonInConversationList = true 
+                        Kommunicate.defaultConfiguration.hideFaqButtonInConversationList = true
                         Kommunicate.defaultConfiguration.hideFaqButtonInConversationView = true
                         Kommunicate.defaultConfiguration.chatBar.optionsToShow = .none
+                        Kommunicate.defaultConfiguration.hideAudioOptionInChatBar = true
                         Kommunicate.showConversationWith(
                             groupId: conversationId,
                             from: self,

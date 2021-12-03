@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Kommunicate
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        Kommunicate.setup(applicationId: "30fc55ae2d136c4afe1f7a5e960138b8")
+        
         return true
     }
 

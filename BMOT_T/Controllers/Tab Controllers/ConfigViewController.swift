@@ -14,6 +14,14 @@ struct settingCellModel{
 
 class ConfigViewController: UIViewController {
     
+    
+    @IBOutlet weak var cambiarNombreTextField: UITextField!
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    let avatars = ["Billy", "Coco", "Hairy", "Frankie", "Wilt"]
+    var avatarSelected = ""
+    
     var nombrePerfil:String?
     
     private let tableView: UITableView = {
@@ -30,9 +38,24 @@ class ConfigViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        avatar.layer.cornerRadius = 40
         
         navigationItem.hidesBackButton = true
     }
+    
+    
+    @IBAction func saveInfoPressed(_ sender: UIButton) {
+        if let nuevoNombre = cambiarNombreTextField.text{
+            print("Avatar actualizado: \(avatarSelected)\n Nombre actualizado: \(nuevoNombre)")
+        }
+        
+    }
+    
+    
+    
+    
     
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         let alertaCierre = UIAlertController(title: "Cerrar Sesión",
@@ -91,4 +114,24 @@ extension ConfigViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         data[indexPath.section][indexPath.row].handler()
     }
+}
+
+extension ConfigViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return avatars.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return avatars[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        avatar.image = UIImage(named: avatars[row])
+        avatarSelected = avatars[row]
+    }
+    
 }

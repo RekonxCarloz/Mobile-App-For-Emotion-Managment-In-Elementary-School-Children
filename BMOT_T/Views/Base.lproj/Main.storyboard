@@ -810,9 +810,87 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wYZ-GY-zHx">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambiar nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHz-La-mny">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HJH-LC-N3U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cambiar nombre del perfil" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-RW-1DF">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gfA-To-IWw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambiar avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-zw-3WX">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="EEn-Ms-f7w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSs-Fa-qcO">
+                                        <rect key="frame" x="0.0" y="180" width="374" height="72.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Billy" translatesAutoresizingMaskIntoConstraints="NO" id="mAg-vN-jq4">
+                                                <rect key="frame" x="104" y="0.0" width="166.5" height="72.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mAg-vN-jq4" firstAttribute="centerX" secondItem="rSs-Fa-qcO" secondAttribute="centerX" id="IeH-Ep-SoA"/>
+                                            <constraint firstAttribute="height" constant="130" id="Kf7-bs-6EI"/>
+                                            <constraint firstItem="mAg-vN-jq4" firstAttribute="top" secondItem="rSs-Fa-qcO" secondAttribute="top" id="OmJ-d4-hmD"/>
+                                            <constraint firstAttribute="bottom" secondItem="mAg-vN-jq4" secondAttribute="bottom" id="vAd-ik-Jxc"/>
+                                            <constraint firstItem="mAg-vN-jq4" firstAttribute="centerY" secondItem="rSs-Fa-qcO" secondAttribute="centerY" id="xSq-fH-u0E"/>
+                                        </constraints>
+                                    </view>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H24-oD-yIr">
+                                        <rect key="frame" x="0.0" y="273" width="374" height="212"/>
+                                    </pickerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-jr-fDd">
+                                        <rect key="frame" x="0.0" y="504.5" width="374" height="220.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-bV-HHF">
+                                                <rect key="frame" x="116.5" y="90.5" width="141" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="XUu-br-WEp"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="mEW-XV-5Sf"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Guardar información"/>
+                                                <connections>
+                                                    <action selector="saveInfoPressed:" destination="se9-V7-c3z" eventType="touchUpInside" id="nhX-OU-Wbz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="L9V-bV-HHF" firstAttribute="centerY" secondItem="iL4-jr-fDd" secondAttribute="centerY" id="PhJ-ox-4Tm"/>
+                                            <constraint firstItem="L9V-bV-HHF" firstAttribute="centerX" secondItem="iL4-jr-fDd" secondAttribute="centerX" id="fnh-mL-Ou4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HxK-6o-ggX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wYZ-GY-zHx" firstAttribute="top" secondItem="HxK-6o-ggX" secondAttribute="top" id="4r3-wv-Boo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wYZ-GY-zHx" secondAttribute="trailing" id="DHK-B7-sTF"/>
+                            <constraint firstItem="HxK-6o-ggX" firstAttribute="bottom" secondItem="wYZ-GY-zHx" secondAttribute="bottom" id="Idn-se-8ya"/>
+                            <constraint firstItem="wYZ-GY-zHx" firstAttribute="leading" secondItem="3zQ-wh-lid" secondAttribute="leadingMargin" id="S68-IA-hKo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Configuración" id="fOv-BW-36S">
                         <barButtonItem key="rightBarButtonItem" title="config" image="rectangle.portrait.and.arrow.right" catalog="system" id="Fn5-Bb-6bZ">
@@ -821,10 +899,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="avatar" destination="mAg-vN-jq4" id="Gr2-SB-Bmt"/>
+                        <outlet property="cambiarNombreTextField" destination="1Qd-RW-1DF" id="cKV-Kg-UMU"/>
+                        <outlet property="pickerView" destination="H24-oD-yIr" id="HQ1-RT-oUU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="550-Z7-VAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="2296"/>
+            <point key="canvasLocation" x="1285.5072463768117" y="2295.5357142857142"/>
         </scene>
         <!--Juegos-->
         <scene sceneID="PE8-Tn-Zck">
@@ -2879,6 +2962,7 @@
     <resources>
         <image name="Afecto" width="233" height="233"/>
         <image name="Alegre" width="233" height="233"/>
+        <image name="Billy" width="166.5" height="166.5"/>
         <image name="Enojo" width="233" height="233"/>
         <image name="Frankie" width="166.5" height="166.5"/>
         <image name="Miedo" width="233" height="233"/>

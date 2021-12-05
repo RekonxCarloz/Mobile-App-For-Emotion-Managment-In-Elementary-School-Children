@@ -11,3 +11,7 @@ struct ProfileList{
     let nombre: String
     let avatar: String
 }
+
+struct profileAvatars{
+    
+}

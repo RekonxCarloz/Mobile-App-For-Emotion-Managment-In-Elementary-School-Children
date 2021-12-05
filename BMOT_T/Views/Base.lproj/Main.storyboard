@@ -707,19 +707,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eng-ew-WcO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eng-ew-WcO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EH-hE-5ju">
+                                <rect key="frame" x="20" y="413" width="374" height="82"/>
+                                <fontDescription key="fontDescription" name="ManisBanget-Line" family="Manis Banget" pointSize="65"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="¿Platicamos?"/>
+                                <connections>
+                                    <action selector="mostrarBotAction:" destination="zT9-MC-G4K" eventType="touchUpInside" id="Hdz-zH-CpX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sXd-wk-ttb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="top" secondItem="YDs-S6-01r" secondAttribute="topMargin" constant="-88" id="5uL-JQ-JxO"/>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="centerY" secondItem="8EH-hE-5ju" secondAttribute="centerY" constant="-6" id="QNa-mz-aAb"/>
+                            <constraint firstItem="8EH-hE-5ju" firstAttribute="leading" secondItem="sXd-wk-ttb" secondAttribute="leading" constant="20" id="Y3S-d6-qos"/>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="centerX" secondItem="8EH-hE-5ju" secondAttribute="centerX" id="ZmO-lD-oxR"/>
+                            <constraint firstItem="8EH-hE-5ju" firstAttribute="top" secondItem="sXd-wk-ttb" secondAttribute="top" constant="325" id="ali-A1-pei"/>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="leading" secondItem="sXd-wk-ttb" secondAttribute="leading" id="fEZ-FO-6oh"/>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="centerX" secondItem="YDs-S6-01r" secondAttribute="centerX" id="kYj-av-0a9"/>
+                            <constraint firstItem="eng-ew-WcO" firstAttribute="centerY" secondItem="YDs-S6-01r" secondAttribute="centerY" id="zVZ-aI-ADX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BMOT" id="fgz-MG-ljr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0no-vI-AHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="2296"/>
+            <point key="canvasLocation" x="-213.04347826086959" y="2295.5357142857142"/>
         </scene>
         <!--StatsViewController-->
         <scene sceneID="C7B-tt-0kH">

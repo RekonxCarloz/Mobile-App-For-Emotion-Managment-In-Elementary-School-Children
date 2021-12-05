@@ -18,6 +18,9 @@ target 'BMOT_T' do
   # Charts
   pod 'Charts'
 
+  # Kommunicate
+  pod 'Kommunicate'
+
 
   target 'BMOT_TTests' do
     inherit! :search_paths

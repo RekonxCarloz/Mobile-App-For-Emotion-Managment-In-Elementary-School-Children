@@ -18,12 +18,14 @@ class BmotViewController: UIViewController {
   
     //Creacion de un objeto para el chatbot
     let kmUser = KMUser()
-    let botId = "bmot-mcbil"
+    let botId = "bmot-02wob"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         obtener_datos()
         navigationItem.hidesBackButton = true
+        
     }
     
     /*
@@ -35,7 +37,7 @@ class BmotViewController: UIViewController {
         self.kmUser.userId = nombre
         self.kmUser.email = correo
         self.kmUser.displayName = nombre
-        self.kmUser.applicationId = "30fc55ae2d136c4afe1f7a5e960138b8"
+        self.kmUser.applicationId = "122cca1a5e24941d3338757d8def9b986"
         Kommunicate.registerUser(self.kmUser, completion: {
             response, error in
             guard error == nil else {return}
@@ -55,7 +57,7 @@ class BmotViewController: UIViewController {
                         Kommunicate.showConversationWith(
                             groupId: conversationId,
                             from: self,
-                            showListOnBack: false,
+                            showListOnBack: true,
                             completionHandler: { success in
                             print("conversation was shown")
                         })

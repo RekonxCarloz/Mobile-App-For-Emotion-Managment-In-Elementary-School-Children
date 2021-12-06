@@ -34,7 +34,7 @@ class JuegosViewController: UIViewController {
     }
     
     @IBAction func pizzaButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.Segues.pizzaGameSegue, sender: self)
+        performSegue(withIdentifier: K.Segues.situacionesPizzaGame, sender: self)
     }
     
     
@@ -52,8 +52,8 @@ class JuegosViewController: UIViewController {
             let vc = segue.destination as! TictactoeFichasViewController
             vc.nombrePerfil = nombrePerfil
             
-        }else if segue.identifier == K.Segues.pizzaGameSegue{
-            let vc = segue.destination as! PizzaGameViewController
+        }else if segue.identifier == K.Segues.situacionesPizzaGame{
+            let vc = segue.destination as! SituacionesViewController
             vc.nombrePerfil = nombrePerfil
         }
     }

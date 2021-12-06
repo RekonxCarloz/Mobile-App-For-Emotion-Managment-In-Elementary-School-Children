@@ -22,7 +22,8 @@ struct K{
         static let wordSearcherGameToEmotions = "wordSearcherToEmotions"
         static let memoramaGameToEmotions = "memoramaToEmotions"
         static let ticTacToeGameToEmotions = "ticTacToeToEmotions"
-        static let pizzaGameSegue = "pizzaGameSegue"
+        //static let pizzaGameSegue = "pizzaGameSegue"
+        static let situacionesPizzaGame = "SituacionespizzaGameSegue"
         
         static let stadictToMenuJuegos = "menuJuegosSegue"
         struct estadisticasSegues{
@@ -36,6 +37,7 @@ struct K{
             static let emotionWordSearcher = "emotionWordSearcherSegue"
             static let emotionMemorama = "emotionMemoramaSegue"
             static let emotionTicTacToe = "startTicTacToeSegue"
+            static let emotionPizza = "pizzaGameSegue"
         }
     }
     

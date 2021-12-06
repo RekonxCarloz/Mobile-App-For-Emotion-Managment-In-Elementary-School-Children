@@ -39,7 +39,7 @@ class BmotViewController: UIViewController {
         Kommunicate.registerUser(self.kmUser, completion: {
             response, error in
             guard error == nil else {return}
-            print("Success")
+            //print("Success")
             if Kommunicate.isLoggedIn {
                 let kmConversation = KMConversationBuilder().withBotIds([self.botId])
                     .useLastConversation(false)
@@ -61,7 +61,7 @@ class BmotViewController: UIViewController {
                         })
                     // Launch conversation
                     case .failure(let kmConversationError):
-                        print("Failed to create a conversation: ", kmConversationError)
+                        print("Fallo en creación de la conversación: ", kmConversationError)
                     }
                 }
             
@@ -72,19 +72,15 @@ class BmotViewController: UIViewController {
         
     }
     
-    //Función que 
+    //Función
     private func obtener_datos(){
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
             if let safeProfileName = nombrePerfil {
                 ref_dabatabase.child(userEmail).child("perfiles").child(safeProfileName).observe(.value){ snapshot in
-                    
                     let dict = snapshot.value as! [String: Any]
                     let nombre = dict["nombre"] as? String ?? ""
                     self.correo = userEmail
                     self.nombre = nombre
-//                    self.welcomeLabel.text = "Hola, \(nombre)!"
-//                    self.presentMascot.text = "Yo soy \(avatar). Hoy vamos a conocer más sobre las emociones."
-//                    self.avatarSelected.image = UIImage(named: avatar)
                 }
             }
         }

@@ -56,6 +56,12 @@
 		61E4E02AA69265BE6CAF4EF6 /* Pods_BMOT_T_BMOT_TUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3C28BD76BAE5B9EBD98A /* Pods_BMOT_T_BMOT_TUITests.framework */; };
 		6C2EA8362744A87900199F16 /* PizzaGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */; };
 		6C2EA8382744A9B900199F16 /* PizzaGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */; };
+		6CA39073275D3EF6008FCEF9 /* SituacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39072275D3EF6008FCEF9 /* SituacionesViewController.swift */; };
+		6CA39078275DF62C008FCEF9 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6CA39077275DF62C008FCEF9 /* 1.mp4 */; };
+		6CA3907A275E1A55008FCEF9 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6CA39079275E1A55008FCEF9 /* 2.mp4 */; };
+		6CA3907C275E2110008FCEF9 /* 3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3907B275E2110008FCEF9 /* 3.mp4 */; };
+		6CA3907F275E2292008FCEF9 /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3907D275E2292008FCEF9 /* 4.mp4 */; };
+		6CA39080275E2292008FCEF9 /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6CA3907E275E2292008FCEF9 /* 5.mp4 */; };
 		6CD3EEC7274EF3EA001CCC3C /* MenuJuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EEC6274EF3EA001CCC3C /* MenuJuegosViewController.swift */; };
 		6CD3EECF274EF801001CCC3C /* MenuGraficasSopaLetrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EECE274EF801001CCC3C /* MenuGraficasSopaLetrasViewController.swift */; };
 		6CD3EED5274F00EC001CCC3C /* GraficasSopaLetrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD3EED4274F00EC001CCC3C /* GraficasSopaLetrasViewController.swift */; };
@@ -135,6 +141,12 @@
 		4CE81FF12733143F00F1943E /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaGameViewController.swift; sourceTree = "<group>"; };
 		6C2EA8372744A9B900199F16 /* PizzaGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CA39072275D3EF6008FCEF9 /* SituacionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituacionesViewController.swift; sourceTree = "<group>"; };
+		6CA39077275DF62C008FCEF9 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.mp4; path = "../../../../Trabajo Terminal/TT-2/Actividades/Videos/Situaciones_Fragementos /1.mp4"; sourceTree = "<group>"; };
+		6CA39079275E1A55008FCEF9 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
+		6CA3907B275E2110008FCEF9 /* 3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.mp4; sourceTree = "<group>"; };
+		6CA3907D275E2292008FCEF9 /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
+		6CA3907E275E2292008FCEF9 /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
 		6CD3EEC6274EF3EA001CCC3C /* MenuJuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuJuegosViewController.swift; sourceTree = "<group>"; };
 		6CD3EECE274EF801001CCC3C /* MenuGraficasSopaLetrasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGraficasSopaLetrasViewController.swift; sourceTree = "<group>"; };
 		6CD3EED4274F00EC001CCC3C /* GraficasSopaLetrasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraficasSopaLetrasViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +241,7 @@
 		4C5137F6272F940F00BF1D5C /* BMOT_T */ = {
 			isa = PBXGroup;
 			children = (
+				6CA39074275DDF4D008FCEF9 /* Videos */,
 				4C50168E2731C9F200F14F65 /* Database */,
 				4C54D68927303F65003E1AA1 /* Models */,
 				4C54D68827303F51003E1AA1 /* Views */,
@@ -375,6 +388,7 @@
 				4CB70D98273DB09700713082 /* SelectEmotionWordSearcherViewController.swift */,
 				4CA85184273F00AD003191EF /* SelectEmotionMemoramaViewController.swift */,
 				4CC27C872742C6520051CB08 /* TictactoeFichasViewController.swift */,
+				6CA39072275D3EF6008FCEF9 /* SituacionesViewController.swift */,
 			);
 			path = Juegos;
 			sourceTree = "<group>";
@@ -412,6 +426,18 @@
 				6C2EA8352744A87900199F16 /* PizzaGameViewController.swift */,
 			);
 			path = PizzaDragDrop;
+			sourceTree = "<group>";
+		};
+		6CA39074275DDF4D008FCEF9 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				6CA39077275DF62C008FCEF9 /* 1.mp4 */,
+				6CA39079275E1A55008FCEF9 /* 2.mp4 */,
+				6CA3907B275E2110008FCEF9 /* 3.mp4 */,
+				6CA3907D275E2292008FCEF9 /* 4.mp4 */,
+				6CA3907E275E2292008FCEF9 /* 5.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		6CD3EE9A27488006001CCC3C /* PizzaEmociones */ = {
@@ -589,12 +615,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA3907F275E2292008FCEF9 /* 4.mp4 in Resources */,
+				6CA3907C275E2110008FCEF9 /* 3.mp4 in Resources */,
+				6CA3907A275E1A55008FCEF9 /* 2.mp4 in Resources */,
 				4C513804272F941700BF1D5C /* LaunchScreen.storyboard in Resources */,
 				4C54D68B27304428003E1AA1 /* Bassy.ttf in Resources */,
 				4C9066A627441935007AA00D /* Manis-Banget.ttf in Resources */,
 				4C54D685272FA609003E1AA1 /* Pacifico-Regular.ttf in Resources */,
 				4CD3121F27397E1000CDFE32 /* ProfileCollectionViewCell.xib in Resources */,
+				6CA39080275E2292008FCEF9 /* 5.mp4 in Resources */,
 				4C513801272F941700BF1D5C /* Assets.xcassets in Resources */,
+				6CA39078275DF62C008FCEF9 /* 1.mp4 in Resources */,
 				4C5137FF272F940F00BF1D5C /* Main.storyboard in Resources */,
 				4C9407E3273191BA0036805A /* GoogleService-Info.plist in Resources */,
 			);
@@ -728,6 +759,7 @@
 				4C9407D927318C650036805A /* LoginViewController.swift in Sources */,
 				4CD312192734438C00CDFE32 /* TabBarController.swift in Sources */,
 				4CC27C882742C6520051CB08 /* TictactoeFichasViewController.swift in Sources */,
+				6CA39073275D3EF6008FCEF9 /* SituacionesViewController.swift in Sources */,
 				4C9407DE27318E320036805A /* ChooseProfileViewController.swift in Sources */,
 				4C5016962731D34000F14F65 /* ProfileList.swift in Sources */,
 				4C9407DB27318C6F0036805A /* RegisterViewController.swift in Sources */,

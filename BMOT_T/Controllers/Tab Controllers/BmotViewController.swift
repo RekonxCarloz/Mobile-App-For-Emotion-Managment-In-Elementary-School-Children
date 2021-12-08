@@ -18,12 +18,14 @@ class BmotViewController: UIViewController {
   
     //Creacion de un objeto para el chatbot
     let kmUser = KMUser()
-    let botId = "bmot-mcbil"
+    let botId = "bmot-02wob"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         obtener_datos()
         navigationItem.hidesBackButton = true
+        
     }
     
     /*
@@ -35,11 +37,11 @@ class BmotViewController: UIViewController {
         self.kmUser.userId = nombre
         self.kmUser.email = correo
         self.kmUser.displayName = nombre
-        self.kmUser.applicationId = "30fc55ae2d136c4afe1f7a5e960138b8"
+        self.kmUser.applicationId = "122cca1a5e24941d3338757d8def9b986"
         Kommunicate.registerUser(self.kmUser, completion: {
             response, error in
             guard error == nil else {return}
-            print("Success")
+            //print("Success")
             if Kommunicate.isLoggedIn {
                 let kmConversation = KMConversationBuilder().withBotIds([self.botId])
                     .useLastConversation(false)
@@ -55,13 +57,13 @@ class BmotViewController: UIViewController {
                         Kommunicate.showConversationWith(
                             groupId: conversationId,
                             from: self,
-                            showListOnBack: false,
+                            showListOnBack: true,
                             completionHandler: { success in
                             print("conversation was shown")
                         })
                     // Launch conversation
                     case .failure(let kmConversationError):
-                        print("Failed to create a conversation: ", kmConversationError)
+                        print("Fallo en creación de la conversación: ", kmConversationError)
                     }
                 }
             
@@ -72,19 +74,15 @@ class BmotViewController: UIViewController {
         
     }
     
-    //Función que 
+    //Función
     private func obtener_datos(){
         if let userEmail = Auth.auth().currentUser?.email?.safeDatabaseKey(){
             if let safeProfileName = nombrePerfil {
                 ref_dabatabase.child(userEmail).child("perfiles").child(safeProfileName).observe(.value){ snapshot in
-                    
                     let dict = snapshot.value as! [String: Any]
                     let nombre = dict["nombre"] as? String ?? ""
                     self.correo = userEmail
                     self.nombre = nombre
-//                    self.welcomeLabel.text = "Hola, \(nombre)!"
-//                    self.presentMascot.text = "Yo soy \(avatar). Hoy vamos a conocer más sobre las emociones."
-//                    self.avatarSelected.image = UIImage(named: avatar)
                 }
             }
         }

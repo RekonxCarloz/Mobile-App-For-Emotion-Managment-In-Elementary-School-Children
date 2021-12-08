@@ -859,10 +859,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSs-Fa-qcO">
-                                        <rect key="frame" x="0.0" y="180" width="374" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="180" width="374" height="71"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Billy" translatesAutoresizingMaskIntoConstraints="NO" id="mAg-vN-jq4">
-                                                <rect key="frame" x="104" y="0.0" width="166.5" height="72.5"/>
+                                                <rect key="frame" x="104" y="0.0" width="166.5" height="71"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -874,10 +874,10 @@
                                         </constraints>
                                     </view>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H24-oD-yIr">
-                                        <rect key="frame" x="0.0" y="273" width="374" height="212"/>
+                                        <rect key="frame" x="0.0" y="271" width="374" height="212.5"/>
                                     </pickerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-jr-fDd">
-                                        <rect key="frame" x="0.0" y="504.5" width="374" height="220.5"/>
+                                        <rect key="frame" x="0.0" y="503.5" width="374" height="221.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-bV-HHF">
                                                 <rect key="frame" x="116.5" y="90.5" width="141" height="40"/>
@@ -1021,7 +1021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftc-St-e1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.753623188406" y="3043.5267857142858"/>
+            <point key="canvasLocation" x="2062" y="3041"/>
         </scene>
         <!--Sopa de letras-->
         <scene sceneID="H3d-aO-YGm">
@@ -1081,7 +1081,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5G-yu-7z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371" y="2531"/>
+            <point key="canvasLocation" x="2819" y="2852"/>
         </scene>
         <!--Memora-->
         <scene sceneID="fnM-Bk-3FZ">
@@ -1138,7 +1138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfE-om-gci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3286" y="2821"/>
+            <point key="canvasLocation" x="3568" y="2852"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eLd-gS-P4k">
@@ -1198,7 +1198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yw-z0-WQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4253.623188405797" y="1848.8839285714284"/>
+            <point key="canvasLocation" x="-3917" y="2155"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YHi-s3-geR">
@@ -1246,7 +1246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPX-GR-7Oc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4604.347826086957" y="2530.5803571428569"/>
+            <point key="canvasLocation" x="-3917" y="2821"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="897-D5-KHL">
@@ -1299,7 +1299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1L-Qe-h99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3307.2463768115945" y="1541.5178571428571"/>
+            <point key="canvasLocation" x="-3168" y="2155"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="InG-Fh-7b1">
@@ -1411,7 +1411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7e-e2-EiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2572.463768115942" y="2220.5357142857142"/>
+            <point key="canvasLocation" x="-2371" y="2155"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f9b-LE-G6U">
@@ -1459,7 +1459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKS-Nv-wdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3771.0144927536235" y="2989.9553571428569"/>
+            <point key="canvasLocation" x="-3167" y="2821"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="p6j-PN-BSi">
@@ -1512,7 +1512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BC8-CC-Ohf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2572.463768115942" y="3009.375"/>
+            <point key="canvasLocation" x="-2371" y="2821"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="tyc-bO-aLO">
@@ -1693,7 +1693,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrp-wK-zoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959.4202898550727" y="3718.5267857142853"/>
+            <point key="canvasLocation" x="-2141" y="3719"/>
         </scene>
         <!--Select Emotion Memorama View Controller-->
         <scene sceneID="wWv-aV-1AI">
@@ -1785,7 +1785,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0n-mx-fRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-920.28985507246387" y="3718.5267857142853"/>
+            <point key="canvasLocation" x="-1168" y="3719"/>
         </scene>
         <!--Tictactoe Fichas View Controller-->
         <scene sceneID="kew-kU-6gi">
@@ -1962,7 +1962,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJe-yK-uNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="3728.5714285714284"/>
+            <point key="canvasLocation" x="-242" y="3719"/>
         </scene>
         <!--Pizza Game View Controller-->
         <scene sceneID="UfF-NT-sQw">
@@ -2180,7 +2180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0v-i9-Czy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.6956521739131" y="3728.5714285714284"/>
+            <point key="canvasLocation" x="677" y="3719"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="L0k-t1-2wM">
@@ -2367,7 +2367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poe-Af-tGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959" y="4412"/>
+            <point key="canvasLocation" x="-2142" y="4411"/>
         </scene>
         <!--Memorama View Controller-->
         <scene sceneID="vAD-V6-ji1">
@@ -2689,7 +2689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6be-RH-8s8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-920.28985507246387" y="4410.9375"/>
+            <point key="canvasLocation" x="-1168" y="4411"/>
         </scene>
         <!--Tic Tac Toe View Controller-->
         <scene sceneID="IAI-Hq-nQ3">
@@ -2889,7 +2889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myx-e7-kwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="4410.9375"/>
+            <point key="canvasLocation" x="-242" y="4411"/>
         </scene>
         <!--Gato de emociones-->
         <scene sceneID="QAZ-7E-T00">
@@ -2930,7 +2930,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zo-YM-ouW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3285.507246376812" y="3509.5982142857142"/>
+            <point key="canvasLocation" x="3568" y="3547"/>
         </scene>
         <!--Pizza de emociones-->
         <scene sceneID="MFo-jZ-BdJ">
@@ -2971,7 +2971,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxC-pv-QmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369.5652173913045" y="3785.4910714285711"/>
+            <point key="canvasLocation" x="2819" y="3547"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
